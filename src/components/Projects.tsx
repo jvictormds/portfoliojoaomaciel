@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { ExternalLink, Target, Users, TrendingUp, Calendar } from "lucide-react";
+import bancoMercantilApp from "@/assets/banco-mercantil-app.jpg";
 
 const Projects = () => {
   const projects = [
@@ -110,11 +111,21 @@ const Projects = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <Card key={index} className="group hover:shadow-strong transition-smooth overflow-hidden">
-              <div className="aspect-video bg-gradient-primary flex items-center justify-center">
-                <div className="text-center text-primary-foreground p-6">
-                  <h4 className="font-semibold mb-2">{project.title}</h4>
-                  <p className="text-sm opacity-90">Imagem do projeto a ser inserida</p>
-                </div>
+              <div className="aspect-video overflow-hidden rounded-t-lg">
+                {index === 0 ? (
+                  <img 
+                    src={bancoMercantilApp} 
+                    alt="Tela do aplicativo Banco Mercantil mostrando cartões Visa Diamante"
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="bg-gradient-primary flex items-center justify-center h-full">
+                    <div className="text-center text-primary-foreground p-6">
+                      <h4 className="font-semibold mb-2">{project.title}</h4>
+                      <p className="text-sm opacity-90">Imagem do projeto a ser inserida</p>
+                    </div>
+                  </div>
+                )}
               </div>
               
               <CardHeader>
