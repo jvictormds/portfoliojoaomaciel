@@ -171,7 +171,7 @@ const Contact = () => {
                 
                 <Button variant="cta" className="w-full justify-start" asChild>
                   <a 
-                    href="https://calendly.com/joaovictormaciel" 
+                    href="https://www.linkedin.com/in/jvictormds" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
