@@ -38,7 +38,7 @@ const Projects = () => {
       }
     },
     {
-      title: "Implementação da IA Conversacional Mel",
+      title: "Implementação da Mel (Chatbot & IA Conversacional) no Banco Mercantil",
       category: "Innovation",
       period: "2020 - 2021",
       summary: "Desenvolvimento e implementação de chatbot inteligente para atendimento multicanal.",
