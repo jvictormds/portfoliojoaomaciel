@@ -124,7 +124,7 @@ const Projects = () => {
                   <img 
                     src={melChatbot} 
                     alt="Conversa no WhatsApp com a Mel, chatbot do Banco Mercantil"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain bg-muted/50"
                   />
                 ) : index === 2 ? (
                   <img 
