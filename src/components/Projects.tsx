@@ -9,7 +9,7 @@ import bancoMercantilApp from "@/assets/banco-mercantil-app.jpg";
 const Projects = () => {
   const projects = [
     {
-      title: "Transformação Digital - Aplicativo Banco Mercantil",
+      title: "Gestão e desenvolvimento do aplicativo Mercantil",
       category: "Product Management",
       period: "2020 - Presente",
       summary: "Liderança da transformação digital completa do aplicativo bancário, resultando em crescimento significativo da base de usuários.",
@@ -66,7 +66,7 @@ const Projects = () => {
       }
     },
     {
-      title: "Ticketz.io - Plataforma de Eventos",
+      title: "POC Ticketz.io para pós em Gestão e desenvolvimento de produtos digitais",
       category: "Product Discovery",
       period: "2024",
       summary: "Facilitação do acesso a eventos relevantes no Brasil através de plataforma digital inovadora.",
@@ -137,7 +137,7 @@ const Projects = () => {
                   </span>
                 </div>
                 <h3 className="text-lg font-semibold group-hover:text-primary transition-smooth">
-                  Implementação da Mel (Chatbot & IA Conversacional) no Banco Mercantil
+                  {project.title}
                 </h3>
               </CardHeader>
               
