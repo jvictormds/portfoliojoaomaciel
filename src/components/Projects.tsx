@@ -126,7 +126,7 @@ const Projects = () => {
                   </span>
                 </div>
                 <h3 className="text-lg font-semibold group-hover:text-primary transition-smooth">
-                  {project.title}
+                  Gestão e desenvolvimento do aplicativo Banco Mercantil
                 </h3>
               </CardHeader>
               
