@@ -171,7 +171,7 @@ const Contact = () => {
                 
                 <Button variant="cta" className="w-full justify-start" asChild>
                   <a 
-                    href="https://www.linkedin.com/in/jvictormds" 
+                    href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Reunião%20com%20João%20Maciel&dates=&details=Conversa%20sobre%20oportunidades%20profissionais%20ou%20projetos&add=joaovictormaciel02@hotmail.com" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
