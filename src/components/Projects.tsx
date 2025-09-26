@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { ExternalLink, Target, Users, TrendingUp, Calendar } from "lucide-react";
 import bancoMercantilApp from "@/assets/banco-mercantil-app.jpg";
+import ticketzShowcase from "@/assets/ticketz-showcase.png";
 
 const Projects = () => {
   const projects = [
@@ -116,6 +117,12 @@ const Projects = () => {
                   <img 
                     src={bancoMercantilApp} 
                     alt="Tela do aplicativo Banco Mercantil mostrando cartões Visa Diamante"
+                    className="w-full h-full object-cover"
+                  />
+                ) : index === 2 ? (
+                  <img 
+                    src={ticketzShowcase} 
+                    alt="Ticketz.io - Plataforma de eventos mostrando múltiplos contextos de uso"
                     className="w-full h-full object-cover"
                   />
                 ) : (
