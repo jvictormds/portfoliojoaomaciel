@@ -97,12 +97,7 @@ const Hero = () => {
                   alt="João Maciel - Product Owner e Business Analyst"
                   className="w-full h-full object-cover"
                 />
-              </div>
-              
-              {/* Floating badge */}
-              <div className="absolute -bottom-4 -right-4 bg-accent text-accent-foreground px-4 py-2 rounded-full shadow-medium">
-                <span className="text-sm font-semibold">Disponível para novos desafios</span>
-              </div>
+            </div>
             </div>
           </div>
         </div>
