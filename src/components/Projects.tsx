@@ -137,7 +137,7 @@ const Projects = () => {
                   </span>
                 </div>
                 <h3 className="text-lg font-semibold group-hover:text-primary transition-smooth">
-                  Gestão e desenvolvimento do aplicativo Banco Mercantil
+                  Implementação da Mel (Chatbot & IA Conversacional) no Banco Mercantil
                 </h3>
               </CardHeader>
               
