@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { ExternalLink, Target, Users, TrendingUp, Calendar } from "lucide-react";
 import bancoMercantilApp from "@/assets/banco-mercantil-app.jpg";
+import melChatbot from "@/assets/mel-chatbot-whatsapp.png";
 import ticketzShowcase from "@/assets/ticketz-showcase.png";
 
 const Projects = () => {
@@ -117,6 +118,12 @@ const Projects = () => {
                   <img 
                     src={bancoMercantilApp} 
                     alt="Tela do aplicativo Banco Mercantil mostrando cartões Visa Diamante"
+                    className="w-full h-full object-cover"
+                  />
+                ) : index === 1 ? (
+                  <img 
+                    src={melChatbot} 
+                    alt="Conversa no WhatsApp com a Mel, chatbot do Banco Mercantil"
                     className="w-full h-full object-cover"
                   />
                 ) : index === 2 ? (
