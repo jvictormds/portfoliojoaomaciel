@@ -90,8 +90,8 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "linkedin.com/in/joaovictormaciel",
-      action: "https://linkedin.com/in/joaovictormaciel"
+      value: "linkedin.com/in/jvictormds",
+      action: "https://www.linkedin.com/in/jvictormds/"
     },
     {
       icon: MapPin,
@@ -160,7 +160,7 @@ const Contact = () => {
                 
                 <Button variant="outline" className="w-full justify-start" asChild>
                   <a 
-                    href="https://linkedin.com/in/joaovictormaciel" 
+                    href="https://www.linkedin.com/in/jvictormds/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >

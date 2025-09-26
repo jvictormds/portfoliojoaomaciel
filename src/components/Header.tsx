@@ -54,7 +54,7 @@ const Header = () => {
             </Button>
             <Button variant="default" size="sm" asChild>
               <a 
-                href="https://linkedin.com/in/joaovictormaciel" 
+                href="https://www.linkedin.com/in/jvictormds/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -97,7 +97,7 @@ const Header = () => {
                 </Button>
                 <Button variant="default" size="sm" asChild>
                   <a 
-                    href="https://linkedin.com/in/joaovictormaciel" 
+                    href="https://www.linkedin.com/in/jvictormds/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
