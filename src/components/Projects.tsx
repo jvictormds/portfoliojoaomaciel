@@ -11,7 +11,10 @@ import migracaoApp from "@/assets/migracao-xamarin-kotlin.png";
 import appXamarin2017 from "@/assets/app-xamarin-2017.png";
 import appKotlinSwift2022 from "@/assets/app-kotlin-swift-2022.png";
 
+import BackgroundRemovalButton from "./BackgroundRemovalButton";
+
 const Projects = () => {
+  const [processedImages, setProcessedImages] = useState<{[key: string]: string}>({});
   const projects = [
     {
       title: "Gestão e desenvolvimento do aplicativo Mercantil",
@@ -310,20 +313,36 @@ const Projects = () => {
                           <h4 className="font-semibold mb-4">Evolução Visual da Migração</h4>
                           <div className="grid md:grid-cols-2 gap-6">
                             <div className="space-y-2">
-                              <h5 className="text-sm font-medium text-muted-foreground">2017-2020: Xamarin</h5>
+                              <div className="flex items-center justify-between">
+                                <h5 className="text-sm font-medium text-muted-foreground">2017-2020: Xamarin</h5>
+                                <BackgroundRemovalButton
+                                  imageSrc={appXamarin2017}
+                                  altText="Aplicativo Mercantil em Xamarin"
+                                  onImageProcessed={(url) => setProcessedImages(prev => ({...prev, xamarin: url}))}
+                                  className="text-xs"
+                                />
+                              </div>
                               <img 
-                                src={appXamarin2017} 
+                                src={processedImages.xamarin || appXamarin2017} 
                                 alt="Aplicativo Mercantil em Xamarin (2017-2020)"
-                                className="w-full rounded-lg border shadow-sm"
+                                className="w-full rounded-lg border shadow-sm bg-gradient-to-br from-muted/30 to-muted/10"
                               />
                               <p className="text-xs text-muted-foreground">Interface em Xamarin com limitações de performance e customização</p>
                             </div>
                             <div className="space-y-2">
-                              <h5 className="text-sm font-medium text-muted-foreground">2021-2022: Kotlin/Swift</h5>
+                              <div className="flex items-center justify-between">
+                                <h5 className="text-sm font-medium text-muted-foreground">2021-2022: Kotlin/Swift</h5>
+                                <BackgroundRemovalButton
+                                  imageSrc={appKotlinSwift2022}
+                                  altText="Aplicativo Mercantil em Kotlin/Swift"
+                                  onImageProcessed={(url) => setProcessedImages(prev => ({...prev, native: url}))}
+                                  className="text-xs"
+                                />
+                              </div>
                               <img 
-                                src={appKotlinSwift2022} 
+                                src={processedImages.native || appKotlinSwift2022} 
                                 alt="Aplicativo Mercantil em Kotlin/Swift (2021-2022)"
-                                className="w-full rounded-lg border shadow-sm"
+                                className="w-full rounded-lg border shadow-sm bg-gradient-to-br from-muted/30 to-muted/10"
                               />
                               <p className="text-xs text-muted-foreground">Interface nativa moderna com melhor performance e experiência do usuário</p>
                             </div>
