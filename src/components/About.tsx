@@ -34,7 +34,7 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 mx-[5px] text-left">Sobre mim</h2>
-          <p className="text-muted-foreground max-w-3xl mx-[10px] py-0 my-0 px-0 text-justify text-xl font-medium">
+          <p className="text-muted-foreground max-w-3xl ml-[10px] mr-[30px] py-0 my-0 px-0 text-justify text-xl font-medium">
             7 anos de experiência no setor bancário, atuei como analista de dados, analista de segurança, analista de negócios e atualmente sou product manager na squad responsável pelo aplicativo Mercantil
           </p>
         </div>
