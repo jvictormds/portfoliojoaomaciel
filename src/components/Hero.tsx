@@ -69,7 +69,12 @@ const Hero = () => {
               </Button>
               
               <Button variant="outline" size="lg" asChild>
-                <a href="/curriculo-joao-maciel.pdf" download>
+                <a 
+                  href="/curriculo-joao-maciel.pdf" 
+                  download="curriculo-joao-maciel.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Download className="w-4 h-4" />
                   Download CV
                 </a>
