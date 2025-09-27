@@ -64,8 +64,7 @@ const About = () => {
             Sobre Mim
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Product Owner com mais de 4 anos de experiência no setor bancário, 
-            especializado em produtos digitais e transformação de jornadas do cliente.
+            7 anos de experiência no setor bancário, atuei como analista de dados, analista de segurança, analista de negócios e atualmente sou product manager na squad responsável pelo aplicativo Mercantil
           </p>
         </div>
 
