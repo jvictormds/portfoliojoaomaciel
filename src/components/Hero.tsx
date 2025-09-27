@@ -2,23 +2,17 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Download, ArrowDown, Linkedin, Mail } from "lucide-react";
 import profileImage from "@/assets/joao-profile-real.jpg";
-
 const Hero = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
-
-  const highlights = [
-    "+34% base de clientes ativos",
-    "124% crescimento em crédito",
-    "90% reuso de clientes"
-  ];
-
-  return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-20 pb-16">
+  const highlights = ["+34% base de clientes ativos", "124% crescimento em crédito", "90% reuso de clientes"];
+  return <section id="home" className="min-h-screen flex items-center justify-center pt-20 pb-16 py-[60px]">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
@@ -44,48 +38,30 @@ const Hero = () => {
 
               {/* Highlights */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {highlights.map((highlight, index) => (
-                  <div 
-                    key={index}
-                    className="text-center p-4 bg-card rounded-lg shadow-soft border"
-                  >
+                {highlights.map((highlight, index) => <div key={index} className="text-center p-4 bg-card rounded-lg shadow-soft border">
                     <div className="text-sm font-semibold text-primary">
                       {highlight}
                     </div>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
-              <Button 
-                variant="hero" 
-                size="lg"
-                onClick={() => scrollToSection("projects")}
-              >
+              <Button variant="hero" size="lg" onClick={() => scrollToSection("projects")}>
                 Ver Projetos
                 <ArrowDown className="w-4 h-4" />
               </Button>
               
               <Button variant="outline" size="lg" asChild>
-                <a 
-                  href="/curriculo-joao-maciel.pdf" 
-                  download="curriculo-joao-maciel.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="/curriculo-joao-maciel.pdf" download="curriculo-joao-maciel.pdf" target="_blank" rel="noopener noreferrer">
                   <Download className="w-4 h-4" />
                   Download CV
                 </a>
               </Button>
               
               <Button variant="ghost" size="lg" asChild>
-                <a 
-                  href="https://www.linkedin.com/in/jvictormds/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
+                <a href="https://www.linkedin.com/in/jvictormds/" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="w-4 h-4" />
                   LinkedIn
                 </a>
@@ -97,18 +73,12 @@ const Hero = () => {
           <div className="flex justify-center lg:justify-end animate-slide-up">
             <div className="relative">
               <div className="w-80 h-80 rounded-full overflow-hidden shadow-strong">
-                <img 
-                  src={profileImage} 
-                  alt="João Maciel - Product Owner e Business Analyst"
-                  className="w-full h-full object-cover"
-                />
+                <img src={profileImage} alt="João Maciel - Product Owner e Business Analyst" className="w-full h-full object-cover" />
             </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
