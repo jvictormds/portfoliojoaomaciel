@@ -25,7 +25,7 @@ const Hero = () => {
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-6">
               <Badge variant="secondary" className="w-fit">
-                Product Owner & Business Analyst
+                Product Manager
               </Badge>
               
               <div>
