@@ -39,7 +39,7 @@ const Hero = () => {
               
               <p className="text-lg text-muted-foreground max-w-lg">
                 Especialista em gestão de produtos digitais no setor bancário, 
-                com experiência comprovada em transformação digital e crescimento de base de usuários.
+                com foco em estratégica e resultados para o negócio.
               </p>
 
               {/* Highlights */}
