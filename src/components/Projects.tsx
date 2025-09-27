@@ -7,6 +7,7 @@ import { ExternalLink, Target, Users, TrendingUp, Calendar } from "lucide-react"
 import bancoMercantilApp from "@/assets/banco-mercantil-app.jpg";
 import melChatbot from "@/assets/mel-chatbot-whatsapp.png";
 import ticketzShowcase from "@/assets/ticketz-showcase.png";
+import migracaoApp from "@/assets/migracao-xamarin-kotlin.png";
 
 const Projects = () => {
   const projects = [
@@ -65,6 +66,37 @@ const Projects = () => {
         automation: "50% transações",
         expansion: "+59% WhatsApp",
         credit: "75M originação"
+      }
+    },
+    {
+      title: "Migração de Linguagem de Desenvolvimento - Aplicativo Mercantil",
+      category: "Product Operations",
+      period: "2017 - 2022",
+      summary: "Liderança da migração tecnológica completa do aplicativo bancário de Xamarin para tecnologias nativas, garantindo sustentação de projetos e gestão ágil.",
+      image: "/placeholder-migration.jpg",
+      challenge: "Migrar a arquitetura tecnológica do aplicativo de Xamarin para linguagens nativas (Kotlin/Swift) sem interromper o desenvolvimento de novas funcionalidades.",
+      role: "Product Owner e líder de Product Operations",
+      solution: [
+        "Coordenação das equipes de desenvolvimento durante a migração",
+        "Sustentação de projetos novos em paralelo à migração",
+        "Implementação de metodologias ágeis (Scrum) para gestão de processo",
+        "Gestão de Product Operations para otimizar fluxos de desenvolvimento",
+        "Acompanhamento técnico da evolução das linguagens (Xamarin → Kotlin/Swift)",
+        "Garantia da continuidade de entrega de valor durante a transição"
+      ],
+      results: [
+        "Migração completa bem-sucedida de Xamarin para linguagens nativas",
+        "Manutenção da velocidade de entrega durante toda a transição",
+        "Modernização da arquitetura tecnológica do aplicativo",
+        "Melhoria na performance e experiência do usuário",
+        "Redução de dependências externas de framework",
+        "Time preparado para tecnologias nativas modernas"
+      ],
+      technologies: ["Product Operations", "Scrum", "Xamarin", "Kotlin", "Swift", "Migração Tecnológica"],
+      metrics: {
+        migration: "100% migrado",
+        performance: "Arquitetura moderna",
+        delivery: "Sem interrupções"
       }
     },
     {
@@ -127,6 +159,12 @@ const Projects = () => {
                     className="w-full h-full object-contain bg-muted/50"
                   />
                 ) : index === 2 ? (
+                  <img 
+                    src={migracaoApp} 
+                    alt="Aplicativo Mercantil antes e depois da migração de Xamarin para linguagens nativas"
+                    className="w-full h-full object-cover"
+                  />
+                ) : index === 3 ? (
                   <img 
                     src={ticketzShowcase} 
                     alt="Ticketz.io - Plataforma de eventos mostrando múltiplos contextos de uso"
