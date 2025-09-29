@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { ExternalLink, Target, Users, TrendingUp, Calendar } from "lucide-react";
-import bancoMercantilApp from "@/assets/banco-mercantil-app.jpg";
+import bancoMercantilApp from "@/assets/banco-mercantil-cartoes-visa.jpg";
 import melChatbot from "@/assets/mel-chatbot-whatsapp.png";
 import ticketzShowcase from "@/assets/ticketz-showcase.png";
 import migracaoApp from "@/assets/migracao-xamarin-kotlin.png";
@@ -190,7 +190,7 @@ const Projects = () => {
                 ) : index === 1 ? (
                   <img 
                     src={bancoMercantilApp} 
-                    alt="Tela do aplicativo Banco Mercantil mostrando cartões Visa Diamante"
+                    alt="Tela do aplicativo Banco Mercantil mostrando cartões Visa Diamante e ofertas para beneficiários do INSS"
                     className="w-full h-full object-cover"
                   />
                 ) : index === 2 ? (
