@@ -388,22 +388,22 @@ const Projects = () => {
                           <h4 className="font-semibold mb-4">Comparação Visual: Antes vs Depois</h4>
                           <div className="grid md:grid-cols-2 gap-6">
                             <div className="space-y-2">
-                              <h5 className="text-sm font-medium text-muted-foreground">Versão Simplificada - Acesso por CPF</h5>
-                              <img 
-                                src={acessoAppDepois} 
-                                alt="Tela de acesso nova do aplicativo Mercantil com login por CPF"
-                                className="w-full rounded-lg border shadow-sm"
-                              />
-                              <p className="text-xs text-muted-foreground">Nova interface simplificada com acesso por CPF, eliminando barreiras e custos</p>
-                            </div>
-                            <div className="space-y-2">
                               <h5 className="text-sm font-medium text-muted-foreground">Versão Anterior - Acesso por Agência/Conta</h5>
                               <img 
-                                src={acessoAppAntes} 
+                                src={acessoAppDepois} 
                                 alt="Tela de acesso anterior do aplicativo Mercantil com campos de agência e conta"
                                 className="w-full rounded-lg border shadow-sm"
                               />
                               <p className="text-xs text-muted-foreground">Interface anterior que exigia agência e conta, gerando 4 mil atendimentos mensais</p>
+                            </div>
+                            <div className="space-y-2">
+                              <h5 className="text-sm font-medium text-muted-foreground">Versão Simplificada - Acesso por CPF</h5>
+                              <img 
+                                src={acessoAppAntes} 
+                                alt="Tela de acesso nova do aplicativo Mercantil com login por CPF"
+                                className="w-full rounded-lg border shadow-sm"
+                              />
+                              <p className="text-xs text-muted-foreground">Nova interface simplificada com acesso por CPF, eliminando barreiras e custos</p>
                             </div>
                           </div>
                         </div>
