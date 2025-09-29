@@ -10,9 +10,42 @@ import ticketzShowcase from "@/assets/ticketz-showcase.png";
 import migracaoApp from "@/assets/migracao-xamarin-kotlin.png";
 import appXamarin2017 from "@/assets/app-xamarin-2017.png";
 import appKotlinSwift2022 from "@/assets/app-kotlin-swift-2022.png";
+import appAreaInicialAntes from "@/assets/app-area-inicial-antes.jpg";
+import appAreaInicialDepois from "@/assets/app-area-inicial-depois.jpg";
+import modernizacaoAreaInicialCompleta from "@/assets/modernizacao-area-inicial-completa.jpg";
 
 const Projects = () => {
   const projects = [
+    {
+      title: "Modernização da área inicial do aplicativo",
+      category: "Product Management",
+      period: "2023",
+      summary: "Após a migração de linguagem, redesenho da área inicial para atender melhor as necessidades dos usuários e ofertar produtos e serviços de forma mais intuitiva.",
+      image: modernizacaoAreaInicialCompleta,
+      challenge: "Após a migração de linguagem, o aplicativo precisava atender melhor as principais necessidades do usuário e ofertar produtos e serviços enquanto deixava o app mais fácil de usar.",
+      role: "Idealizador e Product Manager",
+      solution: [
+        "Pesquisas com usuários para identificar pontos de dor",
+        "Testes A/B para validar soluções propostas",
+        "Redesign da interface da área inicial",
+        "Implementação de novos fluxos de navegação",
+        "Desenvolvimento iterativo com feedback contínuo",
+        "Lançamento gradual com monitoramento de métricas"
+      ],
+      results: [
+        "Crescimento da base de clientes utilizando o app",
+        "Melhoria na experiência do usuário na área inicial",
+        "Aumento na contratação de produtos e serviços",
+        "Redução do tempo para encontrar funcionalidades principais",
+        "Maior engajamento dos usuários com o aplicativo"
+      ],
+      technologies: ["Pesquisa", "Product Discovery", "Product Development", "UX/UI Design", "Testes A/B"],
+      metrics: {
+        users: "Crescimento ativo",
+        engagement: "Maior engajamento", 
+        usability: "UX melhorada"
+      }
+    },
     {
       title: "Gestão e desenvolvimento do aplicativo Mercantil",
       category: "Product Management",
@@ -150,11 +183,17 @@ const Projects = () => {
               <div className="aspect-video overflow-hidden rounded-t-lg">
                 {index === 0 ? (
                   <img 
+                    src={modernizacaoAreaInicialCompleta} 
+                    alt="Modernização da área inicial do aplicativo Mercantil - antes e depois"
+                    className="w-full h-full object-cover"
+                  />
+                ) : index === 1 ? (
+                  <img 
                     src={bancoMercantilApp} 
                     alt="Tela do aplicativo Banco Mercantil mostrando cartões Visa Diamante"
                     className="w-full h-full object-cover"
                   />
-                ) : index === 1 ? (
+                ) : index === 2 ? (
                   <img 
                     src={melChatbot} 
                     alt="Conversa no WhatsApp com a Mel, chatbot do Banco Mercantil"
@@ -304,8 +343,35 @@ const Projects = () => {
                         </div>
                       </div>
 
+                      {/* Modernization Visual - Only for modernization case */}
+                      {index === 0 && (
+                        <div>
+                          <h4 className="font-semibold mb-4">Comparação Visual: Antes vs Depois</h4>
+                          <div className="grid md:grid-cols-2 gap-6">
+                            <div className="space-y-2">
+                              <h5 className="text-sm font-medium text-muted-foreground">Versão Anterior</h5>
+                              <img 
+                                src={appAreaInicialAntes} 
+                                alt="Área inicial do aplicativo Mercantil - versão anterior"
+                                className="w-full rounded-lg border shadow-sm"
+                              />
+                              <p className="text-xs text-muted-foreground">Interface anterior com limitações na apresentação de produtos e navegação</p>
+                            </div>
+                            <div className="space-y-2">
+                              <h5 className="text-sm font-medium text-muted-foreground">Versão Modernizada</h5>
+                              <img 
+                                src={appAreaInicialDepois} 
+                                alt="Área inicial do aplicativo Mercantil - versão modernizada"
+                                className="w-full rounded-lg border shadow-sm"
+                              />
+                              <p className="text-xs text-muted-foreground">Nova interface com melhor organização, ofertas personalizadas e navegação intuitiva</p>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+
                       {/* Migration Visual - Only for migration case */}
-                      {index === 2 && (
+                      {index === 3 && (
                         <div>
                           <h4 className="font-semibold mb-4">Evolução Visual da Migração</h4>
                           <div className="grid md:grid-cols-2 gap-6">
