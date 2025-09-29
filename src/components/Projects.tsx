@@ -13,9 +13,42 @@ import appKotlinSwift2022 from "@/assets/app-kotlin-swift-2022.png";
 import appAreaInicialAntes from "@/assets/app-area-inicial-antes-final.jpg";
 import appAreaInicialDepois from "@/assets/app-area-inicial-depois-nova.jpg";
 import modernizacaoAreaInicialCompleta from "@/assets/modernizacao-area-inicial-completa.jpg";
+import acessoAppAntes from "@/assets/acesso-app-antes.png";
+import acessoAppDepois from "@/assets/acesso-app-depois.png";
 
 const Projects = () => {
   const projects = [
+    {
+      title: "Facilitação da forma de acesso",
+      category: "Product Management",
+      period: "2023",
+      summary: "Implementação do acesso por CPF para eliminar barreiras de entrada no aplicativo, reduzindo custos operacionais e melhorando a experiência do usuário.",
+      image: acessoAppDepois,
+      challenge: "O acesso ao aplicativo era feito por agência e conta, e muitos clientes não tinham essa informação, o que além de impedir que acessassem, gerava ligações e atendimentos via chat para obter a informação. Com cerca de 4 mil atendimentos mensais por esse motivo, tínhamos um custo de cerca de 25 mil reais mensais para atender essa demanda.",
+      role: "Idealizador e Product Manager",
+      solution: [
+        "Análise de viabilidade técnica e de negócio",
+        "Estudo analítico dos dados de atendimento",
+        "Proposta estratégica para simplificação do acesso",
+        "Desenvolvimento da funcionalidade de acesso por CPF",
+        "Lançamento gradual com monitoramento de adoção",
+        "Otimização contínua da experiência de login"
+      ],
+      results: [
+        "Economia de 25 mil reais mensais com atendimento",
+        "Crescimento da base de clientes utilizando o app",
+        "Redução de 4 mil atendimentos mensais",
+        "Melhoria significativa na experiência de onboarding",
+        "Maior acessibilidade para novos usuários",
+        "Redução de abandono na tela de login"
+      ],
+      technologies: ["Análise de Negócios", "Análise de Dados", "Product Discovery", "Product Development"],
+      metrics: {
+        savings: "25k/mês economia",
+        support: "-4k atendimentos",
+        access: "CPF simplificado"
+      }
+    },
     {
       title: "Modernização da área inicial do aplicativo",
       category: "Product Management",
@@ -183,29 +216,35 @@ const Projects = () => {
               <div className="aspect-video overflow-hidden rounded-t-lg">
                 {index === 0 ? (
                   <img 
+                    src={acessoAppDepois} 
+                    alt="Tela de acesso do aplicativo Mercantil com login por CPF - versão simplificada"
+                    className="w-full h-full object-cover"
+                  />
+                ) : index === 1 ? (
+                  <img 
                     src={modernizacaoAreaInicialCompleta} 
                     alt="Modernização da área inicial do aplicativo Mercantil - antes e depois"
                     className="w-full h-full object-cover"
                   />
-                ) : index === 1 ? (
+                ) : index === 2 ? (
                   <img 
                     src={bancoMercantilApp} 
                     alt="Tela do aplicativo Banco Mercantil mostrando cartões Visa Diamante e ofertas para beneficiários do INSS"
                     className="w-full h-full object-cover"
                   />
-                ) : index === 2 ? (
+                ) : index === 3 ? (
                   <img 
                     src={melChatbot} 
                     alt="Conversa no WhatsApp com a Mel, chatbot do Banco Mercantil"
                     className="w-full h-full object-contain bg-muted/50"
                   />
-                ) : index === 2 ? (
+                ) : index === 4 ? (
                   <img 
                     src={migracaoApp} 
                     alt="Aplicativo Mercantil antes e depois da migração de Xamarin para linguagens nativas"
                     className="w-full h-full object-cover"
                   />
-                ) : index === 3 ? (
+                ) : index === 5 ? (
                   <img 
                     src={ticketzShowcase} 
                     alt="Ticketz.io - Plataforma de eventos mostrando múltiplos contextos de uso"
@@ -343,8 +382,35 @@ const Projects = () => {
                         </div>
                       </div>
 
+                      {/* Access Facilitation Visual - Only for access facilitation case */}
+                      {index === 0 && (
+                        <div>
+                          <h4 className="font-semibold mb-4">Comparação Visual: Antes vs Depois</h4>
+                          <div className="grid md:grid-cols-2 gap-6">
+                            <div className="space-y-2">
+                              <h5 className="text-sm font-medium text-muted-foreground">Versão Anterior - Acesso por Agência/Conta</h5>
+                              <img 
+                                src={acessoAppAntes} 
+                                alt="Tela de acesso anterior do aplicativo Mercantil com campos de agência e conta"
+                                className="w-full rounded-lg border shadow-sm"
+                              />
+                              <p className="text-xs text-muted-foreground">Interface anterior que exigia agência e conta, gerando 4 mil atendimentos mensais</p>
+                            </div>
+                            <div className="space-y-2">
+                              <h5 className="text-sm font-medium text-muted-foreground">Versão Simplificada - Acesso por CPF</h5>
+                              <img 
+                                src={acessoAppDepois} 
+                                alt="Tela de acesso nova do aplicativo Mercantil com login por CPF"
+                                className="w-full rounded-lg border shadow-sm"
+                              />
+                              <p className="text-xs text-muted-foreground">Nova interface simplificada com acesso por CPF, eliminando barreiras e custos</p>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+
                       {/* App Development Visual - Only for main app case */}
-                      {index === 1 && (
+                      {index === 2 && (
                         <div>
                           <h4 className="font-semibold mb-4">Resultado Visual do Aplicativo</h4>
                           <div className="space-y-4">
@@ -361,7 +427,7 @@ const Projects = () => {
                       )}
 
                       {/* Modernization Visual - Only for modernization case */}
-                      {index === 0 && (
+                      {index === 1 && (
                         <div>
                           <h4 className="font-semibold mb-4">Comparação Visual: Antes vs Depois</h4>
                           <div className="grid md:grid-cols-2 gap-6">
@@ -388,7 +454,7 @@ const Projects = () => {
                       )}
 
                       {/* Migration Visual - Only for migration case */}
-                      {index === 3 && (
+                      {index === 4 && (
                         <div>
                           <h4 className="font-semibold mb-4">Evolução Visual da Migração</h4>
                           <div className="grid md:grid-cols-2 gap-6">
