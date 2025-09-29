@@ -10,7 +10,7 @@ import ticketzShowcase from "@/assets/ticketz-showcase.png";
 import migracaoApp from "@/assets/migracao-xamarin-kotlin.png";
 import appXamarin2017 from "@/assets/app-xamarin-2017.png";
 import appKotlinSwift2022 from "@/assets/app-kotlin-swift-2022.png";
-import appAreaInicialAntes from "@/assets/app-area-inicial-antes-nova.jpg";
+import appAreaInicialAntes from "@/assets/app-area-inicial-antes-final.jpg";
 import appAreaInicialDepois from "@/assets/app-area-inicial-depois-nova.jpg";
 import modernizacaoAreaInicialCompleta from "@/assets/modernizacao-area-inicial-completa.jpg";
 
