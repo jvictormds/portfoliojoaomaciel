@@ -343,6 +343,23 @@ const Projects = () => {
                         </div>
                       </div>
 
+                      {/* App Development Visual - Only for main app case */}
+                      {index === 1 && (
+                        <div>
+                          <h4 className="font-semibold mb-4">Resultado Visual do Aplicativo</h4>
+                          <div className="space-y-4">
+                            <img 
+                              src={bancoMercantilApp} 
+                              alt="Aplicativo Banco Mercantil - Tela mostrando cartões Visa Diamante e ofertas para beneficiários do INSS"
+                              className="w-full max-w-md mx-auto rounded-lg border shadow-sm"
+                            />
+                            <p className="text-sm text-muted-foreground text-center">
+                              Interface moderna do aplicativo com foco em produtos bancários e experiência personalizada para diferentes perfis de clientes
+                            </p>
+                          </div>
+                        </div>
+                      )}
+
                       {/* Modernization Visual - Only for modernization case */}
                       {index === 0 && (
                         <div>
