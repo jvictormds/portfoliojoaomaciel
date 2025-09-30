@@ -17,6 +17,7 @@ import acessoAppAntes from "@/assets/acesso-app-antes.png";
 import acessoAppDepois from "@/assets/acesso-app-depois.png";
 import acessoCpfPreview from "@/assets/acesso-cpf-preview.png";
 import modernizacaoAreaPreview from "@/assets/modernizacao-area-preview.png";
+import melChatbotPreview from "@/assets/mel-chatbot-preview.png";
 
 const Projects = () => {
   const projects = [
@@ -115,7 +116,7 @@ const Projects = () => {
       category: "Innovation",
       period: "2020 - 2021",
       summary: "Desenvolvimento e implementação de chatbot inteligente para atendimento multicanal.",
-      image: "/placeholder-chatbot.jpg", 
+      image: melChatbotPreview, 
       challenge: "Automatizar o atendimento ao cliente e reduzir custos operacionais mantendo a qualidade do serviço.",
       role: "Analista de Negócios e Product Owner",
       solution: [
@@ -238,7 +239,7 @@ const Projects = () => {
                     />
                   ) : index === 3 ? (
                     <img 
-                      src={melChatbot} 
+                      src={melChatbotPreview} 
                       alt="Conversa no WhatsApp com a Mel, chatbot do Banco Mercantil"
                       className="w-full h-full object-contain max-h-[400px]"
                     />
