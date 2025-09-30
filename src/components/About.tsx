@@ -35,9 +35,9 @@ const About = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+        <div className="mb-16">
           {/* Professional Summary */}
-          <div className="space-y-6">
+          <div className="space-y-6 mb-8">
             <h3 className="text-2xl font-semibold">Perfil Profissional</h3>
             <div className="space-y-4 text-muted-foreground">
               <p>
@@ -50,7 +50,7 @@ const About = () => {
           </div>
 
           {/* Key Highlights */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {highlights.map((item, index) => <Card key={index} className="border-none shadow-soft">
                 <CardContent className="p-6">
                   <item.icon className="w-8 h-8 text-primary mb-3" />
