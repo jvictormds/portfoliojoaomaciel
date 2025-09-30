@@ -117,7 +117,7 @@ const Projects = () => {
       }
     },
     {
-      title: "Gestão e desenvolvimento do aplicativo Mercantil",
+      title: "Implantação abertura de conta via aplicativo",
       category: "Product Management",
       period: "2020 - Presente",
       summary: "Liderança da transformação digital completa do aplicativo bancário, resultando em crescimento significativo da base de usuários.",
