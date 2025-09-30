@@ -25,10 +25,6 @@ const About = () => {
     icon: Users,
     title: "Liderança de Time",
     description: "Experiência liderando equipes multidisciplinares de até 20 profissionais."
-  }, {
-    icon: Globe,
-    title: "Transformação Digital",
-    description: "Especialista em digitalização de processos e modernização de canais bancários."
   }];
   return <section id="about" className="bg-muted/30 py-1">
       <div className="container mx-auto px-4">
