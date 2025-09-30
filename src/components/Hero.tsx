@@ -12,7 +12,7 @@ const Hero = () => {
     }
   };
   const highlights = ["+34% base de clientes ativos", "124% crescimento em crédito", "90% reuso de clientes"];
-  return <section id="home" className="min-h-screen flex items-center justify-center pt-8 pb-16 py-[40px]">
+  return <section id="home" className="min-h-screen flex items-center justify-center pt-8 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
