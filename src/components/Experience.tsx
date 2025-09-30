@@ -13,7 +13,6 @@ const Experience = () => {
       description: "Liderança de roadmap e visão estratégica para o aplicativo Mercantil, alinhando requisitos ao plano de negócios do banco.",
       achievements: [
         "+34% na base de clientes ativos no app (2020–2021)",
-        "-15% na perda de cadastros iniciados via melhorias na validação de reconhecimento facial",
         "+15 p.p. na penetração de clientes do banco usando o aplicativo",
         "90% de reuso de clientes com penetração ao app",
         "124% de crescimento em valor de contratação de crédito YoY no aplicativo"
