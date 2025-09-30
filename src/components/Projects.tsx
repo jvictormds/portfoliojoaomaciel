@@ -21,6 +21,7 @@ import melChatbotPreview from "@/assets/mel-chatbot-preview.png";
 import migracaoPreview from "@/assets/migracao-preview.png";
 import novaMarcaAntes from "@/assets/nova-marca-antes.png";
 import novaMarcaDepois from "@/assets/nova-marca-depois.png";
+import novaMarcaPreview from "@/assets/nova-marca-preview.png";
 
 const Projects = () => {
   const projects = [
@@ -29,7 +30,7 @@ const Projects = () => {
       category: "Product Management",
       period: "2023",
       summary: "Refatoramento da marca e identidade visual do aplicativo, posicionando a instituição como um banco 'figital' e ampliando a presença no mercado.",
-      image: novaMarcaDepois,
+      image: novaMarcaPreview,
       challenge: "Em 2023 mudamos a marca de Mercantil do Brasil para Banco Mercantil, posicionando a instituição como um banco 'figital' e ampliando a presença no mercado. Uma dessas ampliações foi o refatoramento da marca e da identidade visual do aplicativo.",
       role: "Product Manager",
       solution: [
@@ -253,8 +254,8 @@ const Projects = () => {
                 <div className="overflow-hidden bg-muted/30 flex items-center justify-center p-4">
                   {index === 0 ? (
                     <img 
-                      src={novaMarcaDepois} 
-                      alt="Nova identidade visual do Banco Mercantil no aplicativo"
+                      src={novaMarcaPreview} 
+                      alt="Comparação antes e depois da nova identidade visual do Banco Mercantil"
                       className="w-full h-full object-contain max-h-[400px]"
                     />
                   ) : index === 1 ? (
