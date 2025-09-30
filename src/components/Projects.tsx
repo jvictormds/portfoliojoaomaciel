@@ -80,35 +80,6 @@ const Projects = () => {
       }
     },
     {
-      title: "Gestão e desenvolvimento do aplicativo Mercantil",
-      category: "Product Management",
-      period: "2020 - Presente",
-      summary: "Liderança da transformação digital completa do aplicativo bancário, resultando em crescimento significativo da base de usuários.",
-      image: "/placeholder-app.jpg",
-      challenge: "Modernizar a experiência digital do banco e aumentar a penetração de clientes no aplicativo móvel.",
-      role: "Product Owner e líder estratégico",
-      solution: [
-        "Implementação de metodologias ágeis",
-        "Redesign completo da UX/UI",
-        "Integração com sistemas de CRM",
-        "Desenvolvimento de funcionalidades de autoatendimento",
-        "Otimização das jornadas de cadastro e autenticação"
-      ],
-      results: [
-        "+34% base de clientes ativos no app",
-        "124% crescimento em contratação de crédito",
-        "90% taxa de reuso de clientes",
-        "64% de todas as transações feitas no aplicativo",
-        "Redução de ciclos de lançamento de mensal para semanal"
-      ],
-      technologies: ["Product Management", "Metodologias Ágeis", "UX/UI", "CRM Integration"],
-      metrics: {
-        users: "+34% usuários ativos",
-        revenue: "124% crescimento",
-        retention: "90% reuso"
-      }
-    },
-    {
       title: "Implementação da Mel (Chatbot & IA Conversacional) no Banco Mercantil",
       category: "Innovation",
       period: "2020 - 2021",
