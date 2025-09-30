@@ -18,6 +18,7 @@ import acessoAppDepois from "@/assets/acesso-app-depois.png";
 import acessoCpfPreview from "@/assets/acesso-cpf-preview.png";
 import modernizacaoAreaPreview from "@/assets/modernizacao-area-preview.png";
 import melChatbotPreview from "@/assets/mel-chatbot-preview.png";
+import migracaoPreview from "@/assets/migracao-preview.png";
 
 const Projects = () => {
   const projects = [
@@ -144,7 +145,7 @@ const Projects = () => {
       category: "Product Operations",
       period: "2017 - 2022",
       summary: "Liderança da migração tecnológica completa do aplicativo bancário de Xamarin para tecnologias nativas, garantindo sustentação de projetos e gestão ágil.",
-      image: "/placeholder-migration.jpg",
+      image: migracaoPreview,
       challenge: "Migrar a arquitetura tecnológica do aplicativo de Xamarin para linguagens nativas (Kotlin/Swift) sem interromper o desenvolvimento de novas funcionalidades.",
       role: "Product Owner e líder de Product Operations",
       solution: [
@@ -245,7 +246,7 @@ const Projects = () => {
                     />
                   ) : index === 4 ? (
                     <img 
-                      src={migracaoApp} 
+                      src={migracaoPreview} 
                       alt="Aplicativo Mercantil antes e depois da migração de Xamarin para linguagens nativas"
                       className="w-full h-full object-contain max-h-[400px]"
                     />
