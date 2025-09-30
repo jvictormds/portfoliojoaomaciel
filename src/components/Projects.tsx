@@ -16,6 +16,7 @@ import modernizacaoAreaInicialCompleta from "@/assets/modernizacao-area-inicial-
 import acessoAppAntes from "@/assets/acesso-app-antes.png";
 import acessoAppDepois from "@/assets/acesso-app-depois.png";
 import acessoCpfPreview from "@/assets/acesso-cpf-preview.png";
+import modernizacaoAreaPreview from "@/assets/modernizacao-area-preview.png";
 
 const Projects = () => {
   const projects = [
@@ -55,7 +56,7 @@ const Projects = () => {
       category: "Product Management",
       period: "2023",
       summary: "Após a migração de linguagem, redesenho da área inicial para atender melhor as necessidades dos usuários e ofertar produtos e serviços de forma mais intuitiva.",
-      image: modernizacaoAreaInicialCompleta,
+      image: modernizacaoAreaPreview,
       challenge: "Após a migração de linguagem, o aplicativo precisava atender melhor as principais necessidades do usuário e ofertar produtos e serviços enquanto deixava o app mais fácil de usar.",
       role: "Idealizador e Product Manager",
       solution: [
@@ -225,7 +226,7 @@ const Projects = () => {
                     />
                   ) : index === 1 ? (
                     <img 
-                      src={modernizacaoAreaInicialCompleta} 
+                      src={modernizacaoAreaPreview} 
                       alt="Modernização da área inicial do aplicativo Mercantil - antes e depois"
                       className="w-full h-full object-contain max-h-[400px]"
                     />
