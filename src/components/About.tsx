@@ -30,7 +30,7 @@ const About = () => {
     title: "Transformação Digital",
     description: "Especialista em digitalização de processos e modernização de canais bancários."
   }];
-  return <section id="about" className="bg-muted/30 py-[20px]">
+  return <section id="about" className="bg-muted/30 py-[12px]">
       <div className="container mx-auto px-4">
         <div className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Sobre mim</h2>
