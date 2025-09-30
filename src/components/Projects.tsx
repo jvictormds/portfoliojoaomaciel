@@ -491,6 +491,23 @@ const Projects = () => {
                             </div>
                           )}
 
+                          {/* Mel Chatbot Visual - Only for Mel case */}
+                          {index === 4 && (
+                            <div>
+                              <h4 className="font-semibold mb-4">1° versão da Mel no aplicativo e no whatsapp</h4>
+                              <div className="space-y-4">
+                                <img 
+                                  src={melChatbot} 
+                                  alt="Primeira versão da Mel, chatbot do Banco Mercantil, funcionando no aplicativo e WhatsApp"
+                                  className="w-full rounded-lg border shadow-sm"
+                                />
+                                <p className="text-sm text-muted-foreground text-center">
+                                  Interface da Mel em diferentes canais: aplicativo móvel e WhatsApp, mostrando a experiência conversacional integrada
+                                </p>
+                              </div>
+                            </div>
+                          )}
+
                           {/* Modernization Visual - Only for modernization case */}
                           {index === 2 && (
                             <div>
