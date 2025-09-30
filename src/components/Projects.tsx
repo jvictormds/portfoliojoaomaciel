@@ -210,279 +210,285 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="space-y-8">
           {projects.map((project, index) => (
             <Card key={index} className="group hover:shadow-strong transition-smooth overflow-hidden">
-              <div className="aspect-video overflow-hidden rounded-t-lg">
-                {index === 0 ? (
-                  <img 
-                    src={acessoAppDepois} 
-                    alt="Tela de acesso do aplicativo Mercantil com login por CPF - versão simplificada"
-                    className="w-full h-full object-cover"
-                  />
-                ) : index === 1 ? (
-                  <img 
-                    src={modernizacaoAreaInicialCompleta} 
-                    alt="Modernização da área inicial do aplicativo Mercantil - antes e depois"
-                    className="w-full h-full object-cover"
-                  />
-                ) : index === 2 ? (
-                  <img 
-                    src={bancoMercantilApp} 
-                    alt="Tela do aplicativo Banco Mercantil mostrando cartões Visa Diamante e ofertas para beneficiários do INSS"
-                    className="w-full h-full object-cover"
-                  />
-                ) : index === 3 ? (
-                  <img 
-                    src={melChatbot} 
-                    alt="Conversa no WhatsApp com a Mel, chatbot do Banco Mercantil"
-                    className="w-full h-full object-contain bg-muted/50"
-                  />
-                ) : index === 4 ? (
-                  <img 
-                    src={migracaoApp} 
-                    alt="Aplicativo Mercantil antes e depois da migração de Xamarin para linguagens nativas"
-                    className="w-full h-full object-cover"
-                  />
-                ) : index === 5 ? (
-                  <img 
-                    src={ticketzShowcase} 
-                    alt="Ticketz.io - Plataforma de eventos mostrando múltiplos contextos de uso"
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <div className="bg-gradient-primary flex items-center justify-center h-full">
-                    <div className="text-center text-primary-foreground p-6">
-                      <h4 className="font-semibold mb-2">{project.title}</h4>
-                      <p className="text-sm opacity-90">Imagem do projeto a ser inserida</p>
+              <div className="grid md:grid-cols-[300px_1fr] gap-0">
+                {/* Image Section - Left Side */}
+                <div className="overflow-hidden bg-muted/30 flex items-center justify-center p-4">
+                  {index === 0 ? (
+                    <img 
+                      src={acessoAppDepois} 
+                      alt="Tela de acesso do aplicativo Mercantil com login por CPF - versão simplificada"
+                      className="w-full h-full object-contain max-h-[400px]"
+                    />
+                  ) : index === 1 ? (
+                    <img 
+                      src={modernizacaoAreaInicialCompleta} 
+                      alt="Modernização da área inicial do aplicativo Mercantil - antes e depois"
+                      className="w-full h-full object-contain max-h-[400px]"
+                    />
+                  ) : index === 2 ? (
+                    <img 
+                      src={bancoMercantilApp} 
+                      alt="Tela do aplicativo Banco Mercantil mostrando cartões Visa Diamante e ofertas para beneficiários do INSS"
+                      className="w-full h-full object-contain max-h-[400px]"
+                    />
+                  ) : index === 3 ? (
+                    <img 
+                      src={melChatbot} 
+                      alt="Conversa no WhatsApp com a Mel, chatbot do Banco Mercantil"
+                      className="w-full h-full object-contain max-h-[400px]"
+                    />
+                  ) : index === 4 ? (
+                    <img 
+                      src={migracaoApp} 
+                      alt="Aplicativo Mercantil antes e depois da migração de Xamarin para linguagens nativas"
+                      className="w-full h-full object-contain max-h-[400px]"
+                    />
+                  ) : index === 5 ? (
+                    <img 
+                      src={ticketzShowcase} 
+                      alt="Ticketz.io - Plataforma de eventos mostrando múltiplos contextos de uso"
+                      className="w-full h-full object-contain max-h-[400px]"
+                    />
+                  ) : (
+                    <div className="bg-gradient-primary flex items-center justify-center h-full w-full min-h-[300px]">
+                      <div className="text-center text-primary-foreground p-6">
+                        <h4 className="font-semibold mb-2">{project.title}</h4>
+                        <p className="text-sm opacity-90">Imagem do projeto a ser inserida</p>
+                      </div>
                     </div>
-                  </div>
-                )}
-              </div>
-              
-              <CardHeader>
-                <div className="flex items-center justify-between">
-                  <Badge variant="outline">{project.category}</Badge>
-                  <span className="text-sm text-muted-foreground flex items-center gap-1">
-                    <Calendar className="w-3 h-3" />
-                    {project.period}
-                  </span>
-                </div>
-                <h3 className="text-lg font-semibold group-hover:text-primary transition-smooth">
-                  {project.title}
-                </h3>
-              </CardHeader>
-              
-              <CardContent className="space-y-4">
-                <p className="text-sm text-muted-foreground line-clamp-3">
-                  {project.summary}
-                </p>
-                
-                {/* Quick Metrics */}
-                <div className="grid grid-cols-3 gap-2 text-center">
-                  {Object.values(project.metrics).map((metric, metricIndex) => (
-                    <div key={metricIndex} className="p-2 bg-muted rounded-md">
-                      <div className="text-xs font-semibold text-primary">{metric}</div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Technologies */}
-                <div className="flex flex-wrap gap-1">
-                  {project.technologies.slice(0, 3).map((tech, techIndex) => (
-                    <Badge key={techIndex} variant="secondary" className="text-xs">
-                      {tech}
-                    </Badge>
-                  ))}
-                  {project.technologies.length > 3 && (
-                    <Badge variant="secondary" className="text-xs">
-                      +{project.technologies.length - 3}
-                    </Badge>
                   )}
                 </div>
 
-                {/* View Case Button */}
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <Button variant="outline" className="w-full group-hover:border-primary transition-smooth">
-                      Ver Case Completo
-                      <ExternalLink className="w-4 h-4" />
-                    </Button>
-                  </DialogTrigger>
+                {/* Content Section - Right Side */}
+                <div className="flex flex-col">
+                  <CardHeader>
+                    <div className="flex items-center justify-between mb-2">
+                      <Badge variant="outline">{project.category}</Badge>
+                      <span className="text-sm text-muted-foreground flex items-center gap-1">
+                        <Calendar className="w-3 h-3" />
+                        {project.period}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-semibold group-hover:text-primary transition-smooth">
+                      {project.title}
+                    </h3>
+                  </CardHeader>
                   
-                  <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
-                    <DialogHeader>
-                      <DialogTitle className="text-2xl">{project.title}</DialogTitle>
-                    </DialogHeader>
+                  <CardContent className="space-y-4 flex-1">
+                    <p className="text-sm text-muted-foreground">
+                      {project.summary}
+                    </p>
                     
-                    <div className="space-y-8">
-                      {/* Project Overview */}
-                      <div className="grid md:grid-cols-3 gap-6">
-                        <div>
-                          <h4 className="font-semibold mb-2 flex items-center gap-2">
-                            <Target className="w-4 h-4 text-primary" />
-                            Contexto
-                          </h4>
-                          <p className="text-sm text-muted-foreground">{project.challenge}</p>
+                    {/* Quick Metrics */}
+                    <div className="grid grid-cols-3 gap-2 text-center">
+                      {Object.values(project.metrics).map((metric, metricIndex) => (
+                        <div key={metricIndex} className="p-2 bg-muted rounded-md">
+                          <div className="text-xs font-semibold text-primary">{metric}</div>
                         </div>
-                        <div>
-                          <h4 className="font-semibold mb-2 flex items-center gap-2">
-                            <Users className="w-4 h-4 text-primary" />
-                            Meu Papel
-                          </h4>
-                          <p className="text-sm text-muted-foreground">{project.role}</p>
-                        </div>
-                        <div>
-                          <h4 className="font-semibold mb-2 flex items-center gap-2">
-                            <Calendar className="w-4 h-4 text-primary" />
-                            Período
-                          </h4>
-                          <p className="text-sm text-muted-foreground">{project.period}</p>
-                        </div>
-                      </div>
+                      ))}
+                    </div>
 
-                      {/* Solution */}
-                      <div>
-                        <h4 className="font-semibold mb-4">Solução Implementada</h4>
-                        <ul className="space-y-2">
-                          {project.solution.map((item, itemIndex) => (
-                            <li key={itemIndex} className="flex items-start gap-2 text-sm">
-                              <span className="text-primary">•</span>
-                              <span>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      {/* Results */}
-                      <div>
-                        <h4 className="font-semibold mb-4 flex items-center gap-2">
-                          <TrendingUp className="w-4 h-4 text-primary" />
-                          Resultados Alcançados
-                        </h4>
-                        <div className="grid md:grid-cols-2 gap-4">
-                          {project.results.map((result, resultIndex) => (
-                            <div key={resultIndex} className="flex items-start gap-2 text-sm p-3 bg-muted rounded-md">
-                              <span className="text-primary font-semibold">✓</span>
-                              <span>{result}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* Technologies */}
-                      <div>
-                        <h4 className="font-semibold mb-4">Tecnologias e Metodologias</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {project.technologies.map((tech, techIndex) => (
-                            <Badge key={techIndex} variant="default">
-                              {tech}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* Access Facilitation Visual - Only for access facilitation case */}
-                      {index === 0 && (
-                        <div>
-                          <h4 className="font-semibold mb-4">Comparação Visual: Antes vs Depois</h4>
-                          <div className="grid md:grid-cols-2 gap-6">
-                            <div className="space-y-2">
-                              <h5 className="text-sm font-medium text-muted-foreground">Versão Anterior - Acesso por Agência/Conta</h5>
-                              <img 
-                                src={acessoAppDepois} 
-                                alt="Tela de acesso anterior do aplicativo Mercantil com campos de agência e conta"
-                                className="w-full rounded-lg border shadow-sm"
-                              />
-                              <p className="text-xs text-muted-foreground">Interface anterior que exigia agência e conta, gerando 4 mil atendimentos mensais</p>
-                            </div>
-                            <div className="space-y-2">
-                              <h5 className="text-sm font-medium text-muted-foreground">Versão Simplificada - Acesso por CPF</h5>
-                              <img 
-                                src={acessoAppAntes} 
-                                alt="Tela de acesso nova do aplicativo Mercantil com login por CPF"
-                                className="w-full rounded-lg border shadow-sm"
-                              />
-                              <p className="text-xs text-muted-foreground">Nova interface simplificada com acesso por CPF, eliminando barreiras e custos</p>
-                            </div>
-                          </div>
-                        </div>
-                      )}
-
-                      {/* App Development Visual - Only for main app case */}
-                      {index === 2 && (
-                        <div>
-                          <h4 className="font-semibold mb-4">Resultado Visual do Aplicativo</h4>
-                          <div className="space-y-4">
-                            <img 
-                              src={bancoMercantilApp} 
-                              alt="Aplicativo Banco Mercantil - Tela mostrando cartões Visa Diamante e ofertas para beneficiários do INSS"
-                              className="w-full max-w-md mx-auto rounded-lg border shadow-sm"
-                            />
-                            <p className="text-sm text-muted-foreground text-center">
-                              Interface moderna do aplicativo com foco em produtos bancários e experiência personalizada para diferentes perfis de clientes
-                            </p>
-                          </div>
-                        </div>
-                      )}
-
-                      {/* Modernization Visual - Only for modernization case */}
-                      {index === 1 && (
-                        <div>
-                          <h4 className="font-semibold mb-4">Comparação Visual: Antes vs Depois</h4>
-                          <div className="grid md:grid-cols-2 gap-6">
-                            <div className="space-y-2">
-                              <h5 className="text-sm font-medium text-muted-foreground">Versão Anterior</h5>
-                              <img 
-                                src={appAreaInicialAntes} 
-                                alt="Área inicial do aplicativo Mercantil - versão anterior"
-                                className="w-full rounded-lg border shadow-sm"
-                              />
-                              <p className="text-xs text-muted-foreground">Interface anterior com limitações na apresentação de produtos e navegação</p>
-                            </div>
-                            <div className="space-y-2">
-                              <h5 className="text-sm font-medium text-muted-foreground">Versão Modernizada</h5>
-                              <img 
-                                src={appAreaInicialDepois} 
-                                alt="Área inicial do aplicativo Mercantil - versão modernizada"
-                                className="w-full rounded-lg border shadow-sm"
-                              />
-                              <p className="text-xs text-muted-foreground">Nova interface com melhor organização, ofertas personalizadas e navegação intuitiva</p>
-                            </div>
-                          </div>
-                        </div>
-                      )}
-
-                      {/* Migration Visual - Only for migration case */}
-                      {index === 4 && (
-                        <div>
-                          <h4 className="font-semibold mb-4">Evolução Visual da Migração</h4>
-                          <div className="grid md:grid-cols-2 gap-6">
-                            <div className="space-y-2">
-                              <h5 className="text-sm font-medium text-muted-foreground">2017-2020: Xamarin</h5>
-                              <img 
-                                src={appXamarin2017} 
-                                alt="Aplicativo Mercantil em Xamarin (2017-2020)"
-                                className="w-full rounded-lg border shadow-sm"
-                              />
-                              <p className="text-xs text-muted-foreground">Interface em Xamarin com limitações de performance e customização</p>
-                            </div>
-                            <div className="space-y-2">
-                              <h5 className="text-sm font-medium text-muted-foreground">2021-2022: Kotlin/Swift</h5>
-                              <img 
-                                src={appKotlinSwift2022} 
-                                alt="Aplicativo Mercantil em Kotlin/Swift (2021-2022)"
-                                className="w-full rounded-lg border shadow-sm"
-                              />
-                              <p className="text-xs text-muted-foreground">Interface nativa moderna com melhor performance e experiência do usuário</p>
-                            </div>
-                          </div>
-                        </div>
+                    {/* Technologies */}
+                    <div className="flex flex-wrap gap-1">
+                      {project.technologies.slice(0, 3).map((tech, techIndex) => (
+                        <Badge key={techIndex} variant="secondary" className="text-xs">
+                          {tech}
+                        </Badge>
+                      ))}
+                      {project.technologies.length > 3 && (
+                        <Badge variant="secondary" className="text-xs">
+                          +{project.technologies.length - 3}
+                        </Badge>
                       )}
                     </div>
-                  </DialogContent>
-                </Dialog>
-              </CardContent>
+
+                    {/* View Case Button */}
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button variant="outline" className="w-full group-hover:border-primary transition-smooth">
+                          Ver Case Completo
+                          <ExternalLink className="w-4 h-4" />
+                        </Button>
+                      </DialogTrigger>
+                      
+                      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+                        <DialogHeader>
+                          <DialogTitle className="text-2xl">{project.title}</DialogTitle>
+                        </DialogHeader>
+                        
+                        <div className="space-y-8">
+                          {/* Project Overview */}
+                          <div className="grid md:grid-cols-3 gap-6">
+                            <div>
+                              <h4 className="font-semibold mb-2 flex items-center gap-2">
+                                <Target className="w-4 h-4 text-primary" />
+                                Contexto
+                              </h4>
+                              <p className="text-sm text-muted-foreground">{project.challenge}</p>
+                            </div>
+                            <div>
+                              <h4 className="font-semibold mb-2 flex items-center gap-2">
+                                <Users className="w-4 h-4 text-primary" />
+                                Meu Papel
+                              </h4>
+                              <p className="text-sm text-muted-foreground">{project.role}</p>
+                            </div>
+                            <div>
+                              <h4 className="font-semibold mb-2 flex items-center gap-2">
+                                <Calendar className="w-4 h-4 text-primary" />
+                                Período
+                              </h4>
+                              <p className="text-sm text-muted-foreground">{project.period}</p>
+                            </div>
+                          </div>
+
+                          {/* Solution */}
+                          <div>
+                            <h4 className="font-semibold mb-4">Solução Implementada</h4>
+                            <ul className="space-y-2">
+                              {project.solution.map((item, itemIndex) => (
+                                <li key={itemIndex} className="flex items-start gap-2 text-sm">
+                                  <span className="text-primary">•</span>
+                                  <span>{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+
+                          {/* Results */}
+                          <div>
+                            <h4 className="font-semibold mb-4 flex items-center gap-2">
+                              <TrendingUp className="w-4 h-4 text-primary" />
+                              Resultados Alcançados
+                            </h4>
+                            <div className="grid md:grid-cols-2 gap-4">
+                              {project.results.map((result, resultIndex) => (
+                                <div key={resultIndex} className="flex items-start gap-2 text-sm p-3 bg-muted rounded-md">
+                                  <span className="text-primary font-semibold">✓</span>
+                                  <span>{result}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+
+                          {/* Technologies */}
+                          <div>
+                            <h4 className="font-semibold mb-4">Tecnologias e Metodologias</h4>
+                            <div className="flex flex-wrap gap-2">
+                              {project.technologies.map((tech, techIndex) => (
+                                <Badge key={techIndex} variant="default">
+                                  {tech}
+                                </Badge>
+                              ))}
+                            </div>
+                          </div>
+
+                          {/* Access Facilitation Visual - Only for access facilitation case */}
+                          {index === 0 && (
+                            <div>
+                              <h4 className="font-semibold mb-4">Comparação Visual: Antes vs Depois</h4>
+                              <div className="grid md:grid-cols-2 gap-6">
+                                <div className="space-y-2">
+                                  <h5 className="text-sm font-medium text-muted-foreground">Versão Anterior - Acesso por Agência/Conta</h5>
+                                  <img 
+                                    src={acessoAppDepois} 
+                                    alt="Tela de acesso anterior do aplicativo Mercantil com campos de agência e conta"
+                                    className="w-full rounded-lg border shadow-sm"
+                                  />
+                                  <p className="text-xs text-muted-foreground">Interface anterior que exigia agência e conta, gerando 4 mil atendimentos mensais</p>
+                                </div>
+                                <div className="space-y-2">
+                                  <h5 className="text-sm font-medium text-muted-foreground">Versão Simplificada - Acesso por CPF</h5>
+                                  <img 
+                                    src={acessoAppAntes} 
+                                    alt="Tela de acesso nova do aplicativo Mercantil com login por CPF"
+                                    className="w-full rounded-lg border shadow-sm"
+                                  />
+                                  <p className="text-xs text-muted-foreground">Nova interface simplificada com acesso por CPF, eliminando barreiras e custos</p>
+                                </div>
+                              </div>
+                            </div>
+                          )}
+
+                          {/* App Development Visual - Only for main app case */}
+                          {index === 2 && (
+                            <div>
+                              <h4 className="font-semibold mb-4">Resultado Visual do Aplicativo</h4>
+                              <div className="space-y-4">
+                                <img 
+                                  src={bancoMercantilApp} 
+                                  alt="Aplicativo Banco Mercantil - Tela mostrando cartões Visa Diamante e ofertas para beneficiários do INSS"
+                                  className="w-full max-w-md mx-auto rounded-lg border shadow-sm"
+                                />
+                                <p className="text-sm text-muted-foreground text-center">
+                                  Interface moderna do aplicativo com foco em produtos bancários e experiência personalizada para diferentes perfis de clientes
+                                </p>
+                              </div>
+                            </div>
+                          )}
+
+                          {/* Modernization Visual - Only for modernization case */}
+                          {index === 1 && (
+                            <div>
+                              <h4 className="font-semibold mb-4">Comparação Visual: Antes vs Depois</h4>
+                              <div className="grid md:grid-cols-2 gap-6">
+                                <div className="space-y-2">
+                                  <h5 className="text-sm font-medium text-muted-foreground">Versão Anterior</h5>
+                                  <img 
+                                    src={appAreaInicialAntes} 
+                                    alt="Área inicial do aplicativo Mercantil - versão anterior"
+                                    className="w-full rounded-lg border shadow-sm"
+                                  />
+                                  <p className="text-xs text-muted-foreground">Interface anterior com limitações na apresentação de produtos e navegação</p>
+                                </div>
+                                <div className="space-y-2">
+                                  <h5 className="text-sm font-medium text-muted-foreground">Versão Modernizada</h5>
+                                  <img 
+                                    src={appAreaInicialDepois} 
+                                    alt="Área inicial do aplicativo Mercantil - versão modernizada"
+                                    className="w-full rounded-lg border shadow-sm"
+                                  />
+                                  <p className="text-xs text-muted-foreground">Nova interface com melhor organização, ofertas personalizadas e navegação intuitiva</p>
+                                </div>
+                              </div>
+                            </div>
+                          )}
+
+                          {/* Migration Visual - Only for migration case */}
+                          {index === 4 && (
+                            <div>
+                              <h4 className="font-semibold mb-4">Evolução Visual da Migração</h4>
+                              <div className="grid md:grid-cols-2 gap-6">
+                                <div className="space-y-2">
+                                  <h5 className="text-sm font-medium text-muted-foreground">2017-2020: Xamarin</h5>
+                                  <img 
+                                    src={appXamarin2017} 
+                                    alt="Aplicativo Mercantil em Xamarin (2017-2020)"
+                                    className="w-full rounded-lg border shadow-sm"
+                                  />
+                                  <p className="text-xs text-muted-foreground">Interface em Xamarin com limitações de performance e customização</p>
+                                </div>
+                                <div className="space-y-2">
+                                  <h5 className="text-sm font-medium text-muted-foreground">2021-2022: Kotlin/Swift</h5>
+                                  <img 
+                                    src={appKotlinSwift2022} 
+                                    alt="Aplicativo Mercantil em Kotlin/Swift (2021-2022)"
+                                    className="w-full rounded-lg border shadow-sm"
+                                  />
+                                  <p className="text-xs text-muted-foreground">Interface nativa moderna com melhor performance e experiência do usuário</p>
+                                </div>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </DialogContent>
+                    </Dialog>
+                  </CardContent>
+                </div>
+              </div>
             </Card>
           ))}
         </div>
