@@ -27,32 +27,32 @@ import novaMarcaComparacao from "@/assets/nova-marca-comparacao.png";
 const Projects = () => {
   const projects = [
     {
-      title: "Nova marca Banco Mercantil",
+      title: "Implantação abertura de conta via aplicativo",
       category: "Product Management",
-      period: "2023",
-      summary: "Refatoramento da marca e identidade visual do aplicativo, posicionando a instituição como um banco 'figital' e ampliando a presença no mercado.",
-      image: novaMarcaPreview,
-      challenge: "Em 2023 mudamos a marca de Mercantil do Brasil para Banco Mercantil, posicionando a instituição como um banco 'figital' e ampliando a presença no mercado. Uma dessas ampliações foi o refatoramento da marca e da identidade visual do aplicativo.",
-      role: "Product Manager",
+      period: "2020 - Presente",
+      summary: "Liderança da transformação digital completa do aplicativo bancário, resultando em crescimento significativo da base de usuários.",
+      image: "/placeholder-app.jpg",
+      challenge: "Modernizar a experiência digital do banco e aumentar a penetração de clientes no aplicativo móvel.",
+      role: "Product Owner e líder estratégico",
       solution: [
-        "Acompanhamento do desenvolvimento",
-        "Priorização e fatiamento das entregas",
-        "Negociação de expectativas com todo o time de marketing, atendimento e compliance",
-        "Coordenação entre equipes multidisciplinares",
-        "Gestão de roadmap para implementação gradual",
-        "Monitoramento de impacto nas métricas de produto"
+        "Implementação de metodologias ágeis",
+        "Redesign completo da UX/UI",
+        "Integração com sistemas de CRM",
+        "Desenvolvimento de funcionalidades de autoatendimento",
+        "Otimização das jornadas de cadastro e autenticação"
       ],
       results: [
-        "Atualização da marca e identidade visual",
-        "Padronização de experiência do cliente em todos os canais digitais",
-        "Crescimento da base de clientes utilizando o app",
-        "Fortalecimento do posicionamento 'figital' no mercado"
+        "+34% base de clientes ativos no app",
+        "124% crescimento em contratação de crédito",
+        "90% taxa de reuso de clientes",
+        "64% de todas as transações feitas no aplicativo",
+        "Redução de ciclos de lançamento de mensal para semanal"
       ],
-      technologies: ["Priorização de Roadmap", "Azure DevOps", "MoSCoW", "Testes de Interface", "DoD and DoR"],
+      technologies: ["Product Management", "Metodologias Ágeis", "UX/UI", "CRM Integration"],
       metrics: {
-        brand: "Nova identidade",
-        standardization: "Canais unificados",
-        growth: "Base crescente"
+        users: "+34% usuários ativos",
+        revenue: "124% crescimento",
+        retention: "90% reuso"
       }
     },
     {
@@ -117,60 +117,32 @@ const Projects = () => {
       }
     },
     {
-      title: "Implantação abertura de conta via aplicativo",
+      title: "Nova marca Banco Mercantil",
       category: "Product Management",
-      period: "2020 - Presente",
-      summary: "Liderança da transformação digital completa do aplicativo bancário, resultando em crescimento significativo da base de usuários.",
-      image: "/placeholder-app.jpg",
-      challenge: "Modernizar a experiência digital do banco e aumentar a penetração de clientes no aplicativo móvel.",
-      role: "Product Owner e líder estratégico",
+      period: "2023",
+      summary: "Refatoramento da marca e identidade visual do aplicativo, posicionando a instituição como um banco 'figital' e ampliando a presença no mercado.",
+      image: novaMarcaPreview,
+      challenge: "Em 2023 mudamos a marca de Mercantil do Brasil para Banco Mercantil, posicionando a instituição como um banco 'figital' e ampliando a presença no mercado. Uma dessas ampliações foi o refatoramento da marca e da identidade visual do aplicativo.",
+      role: "Product Manager",
       solution: [
-        "Implementação de metodologias ágeis",
-        "Redesign completo da UX/UI",
-        "Integração com sistemas de CRM",
-        "Desenvolvimento de funcionalidades de autoatendimento",
-        "Otimização das jornadas de cadastro e autenticação"
+        "Acompanhamento do desenvolvimento",
+        "Priorização e fatiamento das entregas",
+        "Negociação de expectativas com todo o time de marketing, atendimento e compliance",
+        "Coordenação entre equipes multidisciplinares",
+        "Gestão de roadmap para implementação gradual",
+        "Monitoramento de impacto nas métricas de produto"
       ],
       results: [
-        "+34% base de clientes ativos no app",
-        "124% crescimento em contratação de crédito",
-        "90% taxa de reuso de clientes",
-        "64% de todas as transações feitas no aplicativo",
-        "Redução de ciclos de lançamento de mensal para semanal"
+        "Atualização da marca e identidade visual",
+        "Padronização de experiência do cliente em todos os canais digitais",
+        "Crescimento da base de clientes utilizando o app",
+        "Fortalecimento do posicionamento 'figital' no mercado"
       ],
-      technologies: ["Product Management", "Metodologias Ágeis", "UX/UI", "CRM Integration"],
+      technologies: ["Priorização de Roadmap", "Azure DevOps", "MoSCoW", "Testes de Interface", "DoD and DoR"],
       metrics: {
-        users: "+34% usuários ativos",
-        revenue: "124% crescimento",
-        retention: "90% reuso"
-      }
-    },
-    {
-      title: "Implementação da Mel (Chatbot & IA Conversacional) no Banco Mercantil",
-      category: "Innovation",
-      period: "2020 - 2021",
-      summary: "Desenvolvimento e implementação de chatbot inteligente para atendimento multicanal.",
-      image: melChatbotPreview, 
-      challenge: "Automatizar o atendimento ao cliente e reduzir custos operacionais mantendo a qualidade do serviço.",
-      role: "Analista de Negócios e Product Owner",
-      solution: [
-        "Análise de necessidades dos clientes",
-        "Definição de fluxos conversacionais",
-        "Integração com sistemas bancários",
-        "Implementação em múltiplos canais (Web, Mobile, WhatsApp)",
-        "Monitoramento e otimização contínua"
-      ],
-      results: [
-        "+59% expansão de atendimento via WhatsApp",
-        "50% das transações automatizadas",
-        "+75 milhões em originação de crédito via WhatsApp",
-        "Redução significativa no tempo de atendimento"
-      ],
-      technologies: ["Chatbot", "IA Conversacional", "WhatsApp API", "Integração de Sistemas"],
-      metrics: {
-        automation: "50% transações",
-        expansion: "+59% WhatsApp",
-        credit: "75M originação"
+        brand: "Nova identidade",
+        standardization: "Canais unificados",
+        growth: "Base crescente"
       }
     },
     {
@@ -202,6 +174,34 @@ const Projects = () => {
         migration: "100% migrado",
         performance: "Arquitetura moderna",
         delivery: "Sem interrupções"
+      }
+    },
+    {
+      title: "Implementação da Mel (Chatbot & IA Conversacional) no Banco Mercantil",
+      category: "Innovation",
+      period: "2020 - 2021",
+      summary: "Desenvolvimento e implementação de chatbot inteligente para atendimento multicanal.",
+      image: melChatbotPreview, 
+      challenge: "Automatizar o atendimento ao cliente e reduzir custos operacionais mantendo a qualidade do serviço.",
+      role: "Analista de Negócios e Product Owner",
+      solution: [
+        "Análise de necessidades dos clientes",
+        "Definição de fluxos conversacionais",
+        "Integração com sistemas bancários",
+        "Implementação em múltiplos canais (Web, Mobile, WhatsApp)",
+        "Monitoramento e otimização contínua"
+      ],
+      results: [
+        "+59% expansão de atendimento via WhatsApp",
+        "50% das transações automatizadas",
+        "+75 milhões em originação de crédito via WhatsApp",
+        "Redução significativa no tempo de atendimento"
+      ],
+      technologies: ["Chatbot", "IA Conversacional", "WhatsApp API", "Integração de Sistemas"],
+      metrics: {
+        automation: "50% transações",
+        expansion: "+59% WhatsApp",
+        credit: "75M originação"
       }
     },
     {
@@ -255,8 +255,8 @@ const Projects = () => {
                 <div className="overflow-hidden bg-muted/30 flex items-center justify-center p-4">
                   {index === 0 ? (
                     <img 
-                      src={novaMarcaPreview} 
-                      alt="Comparação antes e depois da nova identidade visual do Banco Mercantil"
+                      src={bancoMercantilApp} 
+                      alt="Tela do aplicativo Banco Mercantil mostrando cartões Visa Diamante e ofertas para beneficiários do INSS"
                       className="w-full h-full object-contain max-h-[400px]"
                     />
                   ) : index === 1 ? (
@@ -273,20 +273,20 @@ const Projects = () => {
                     />
                   ) : index === 3 ? (
                     <img 
-                      src={bancoMercantilApp} 
-                      alt="Tela do aplicativo Banco Mercantil mostrando cartões Visa Diamante e ofertas para beneficiários do INSS"
+                      src={novaMarcaPreview} 
+                      alt="Comparação antes e depois da nova identidade visual do Banco Mercantil"
                       className="w-full h-full object-contain max-h-[400px]"
                     />
                   ) : index === 4 ? (
                     <img 
-                      src={melChatbotPreview} 
-                      alt="Conversa no WhatsApp com a Mel, chatbot do Banco Mercantil"
+                      src={migracaoPreview} 
+                      alt="Aplicativo Mercantil antes e depois da migração de Xamarin para linguagens nativas"
                       className="w-full h-full object-contain max-h-[400px]"
                     />
                   ) : index === 5 ? (
                     <img 
-                      src={migracaoPreview} 
-                      alt="Aplicativo Mercantil antes e depois da migração de Xamarin para linguagens nativas"
+                      src={melChatbotPreview} 
+                      alt="Conversa no WhatsApp com a Mel, chatbot do Banco Mercantil"
                       className="w-full h-full object-contain max-h-[400px]"
                     />
                   ) : index === 6 ? (
@@ -429,19 +429,18 @@ const Projects = () => {
                             </div>
                           </div>
 
-                          {/* Nova Marca Visual - Only for nova marca case */}
+                          {/* App Development Visual - Only for main app case */}
                           {index === 0 && (
                             <div>
-                              <h4 className="font-semibold mb-4">Comparação Visual: Antes vs Depois</h4>
+                              <h4 className="font-semibold mb-4">Resultado Visual do Aplicativo</h4>
                               <div className="space-y-4">
                                 <img 
-                                  src={novaMarcaComparacao} 
-                                  alt="Comparação completa antes e depois da nova identidade visual do Banco Mercantil"
-                                  className="w-full rounded-lg border shadow-sm"
+                                  src={bancoMercantilApp} 
+                                  alt="Aplicativo Banco Mercantil - Tela mostrando cartões Visa Diamante e ofertas para beneficiários do INSS"
+                                  className="w-full max-w-md mx-auto rounded-lg border shadow-sm"
                                 />
                                 <p className="text-sm text-muted-foreground text-center">
-                                  Evolução completa da identidade visual do aplicativo: de Mercantil do Brasil para Banco Mercantil, 
-                                  com modernização de cores, tipografia e posicionamento 'figital'
+                                  Interface moderna do aplicativo com foco em produtos bancários e experiência personalizada para diferentes perfis de clientes
                                 </p>
                               </div>
                             </div>
@@ -474,36 +473,47 @@ const Projects = () => {
                             </div>
                           )}
 
-                          {/* App Development Visual - Only for main app case */}
+                          {/* Nova Marca Visual - Only for nova marca case */}
                           {index === 3 && (
                             <div>
-                              <h4 className="font-semibold mb-4">Resultado Visual do Aplicativo</h4>
+                              <h4 className="font-semibold mb-4">Comparação Visual: Antes vs Depois</h4>
                               <div className="space-y-4">
                                 <img 
-                                  src={bancoMercantilApp} 
-                                  alt="Aplicativo Banco Mercantil - Tela mostrando cartões Visa Diamante e ofertas para beneficiários do INSS"
-                                  className="w-full max-w-md mx-auto rounded-lg border shadow-sm"
+                                  src={novaMarcaComparacao} 
+                                  alt="Comparação completa antes e depois da nova identidade visual do Banco Mercantil"
+                                  className="w-full rounded-lg border shadow-sm"
                                 />
                                 <p className="text-sm text-muted-foreground text-center">
-                                  Interface moderna do aplicativo com foco em produtos bancários e experiência personalizada para diferentes perfis de clientes
+                                  Evolução completa da identidade visual do aplicativo: de Mercantil do Brasil para Banco Mercantil, 
+                                  com modernização de cores, tipografia e posicionamento 'figital'
                                 </p>
                               </div>
                             </div>
                           )}
 
-                          {/* Mel Chatbot Visual - Only for Mel case */}
+                          {/* Migration Visual - Only for migration case */}
                           {index === 4 && (
                             <div>
-                              <h4 className="font-semibold mb-4">1° versão da Mel no aplicativo e no whatsapp</h4>
-                              <div className="space-y-4">
-                                <img 
-                                  src={melChatbot} 
-                                  alt="Primeira versão da Mel, chatbot do Banco Mercantil, funcionando no aplicativo e WhatsApp"
-                                  className="w-full rounded-lg border shadow-sm"
-                                />
-                                <p className="text-sm text-muted-foreground text-center">
-                                  Interface da Mel em diferentes canais: aplicativo móvel e WhatsApp, mostrando a experiência conversacional integrada
-                                </p>
+                              <h4 className="font-semibold mb-4">Evolução Visual da Migração</h4>
+                              <div className="grid md:grid-cols-2 gap-6">
+                                <div className="space-y-2">
+                                  <h5 className="text-sm font-medium text-muted-foreground">2017-2020: Xamarin</h5>
+                                  <img 
+                                    src={appXamarin2017} 
+                                    alt="Aplicativo Mercantil em Xamarin (2017-2020)"
+                                    className="w-full rounded-lg border shadow-sm"
+                                  />
+                                  <p className="text-xs text-muted-foreground">Interface em Xamarin com limitações de performance e customização</p>
+                                </div>
+                                <div className="space-y-2">
+                                  <h5 className="text-sm font-medium text-muted-foreground">2021-2022: Kotlin/Swift</h5>
+                                  <img 
+                                    src={appKotlinSwift2022} 
+                                    alt="Aplicativo Mercantil em Kotlin/Swift (2021-2022)"
+                                    className="w-full rounded-lg border shadow-sm"
+                                  />
+                                  <p className="text-xs text-muted-foreground">Interface nativa moderna com melhor performance e experiência do usuário</p>
+                                </div>
                               </div>
                             </div>
                           )}
@@ -535,29 +545,19 @@ const Projects = () => {
                             </div>
                           )}
 
-                          {/* Migration Visual - Only for migration case */}
+                          {/* Mel Chatbot Visual - Only for Mel case */}
                           {index === 5 && (
                             <div>
-                              <h4 className="font-semibold mb-4">Evolução Visual da Migração</h4>
-                              <div className="grid md:grid-cols-2 gap-6">
-                                <div className="space-y-2">
-                                  <h5 className="text-sm font-medium text-muted-foreground">2017-2020: Xamarin</h5>
-                                  <img 
-                                    src={appXamarin2017} 
-                                    alt="Aplicativo Mercantil em Xamarin (2017-2020)"
-                                    className="w-full rounded-lg border shadow-sm"
-                                  />
-                                  <p className="text-xs text-muted-foreground">Interface em Xamarin com limitações de performance e customização</p>
-                                </div>
-                                <div className="space-y-2">
-                                  <h5 className="text-sm font-medium text-muted-foreground">2021-2022: Kotlin/Swift</h5>
-                                  <img 
-                                    src={appKotlinSwift2022} 
-                                    alt="Aplicativo Mercantil em Kotlin/Swift (2021-2022)"
-                                    className="w-full rounded-lg border shadow-sm"
-                                  />
-                                  <p className="text-xs text-muted-foreground">Interface nativa moderna com melhor performance e experiência do usuário</p>
-                                </div>
+                              <h4 className="font-semibold mb-4">1° versão da Mel no aplicativo e no whatsapp</h4>
+                              <div className="space-y-4">
+                                <img 
+                                  src={melChatbot} 
+                                  alt="Primeira versão da Mel, chatbot do Banco Mercantil, funcionando no aplicativo e WhatsApp"
+                                  className="w-full rounded-lg border shadow-sm"
+                                />
+                                <p className="text-sm text-muted-foreground text-center">
+                                  Interface da Mel em diferentes canais: aplicativo móvel e WhatsApp, mostrando a experiência conversacional integrada
+                                </p>
                               </div>
                             </div>
                           )}
