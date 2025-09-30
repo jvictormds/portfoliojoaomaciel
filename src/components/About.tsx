@@ -45,18 +45,10 @@ const About = () => {
             <h3 className="text-2xl font-semibold">Perfil Profissional</h3>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                Atualmente lidero o roadmap e visão estratégica para o aplicativo Banco Mercantil, 
-                alinhando requisitos ao plano de negócios e impulsionando o crescimento da base de usuários ativos.
+                Apoio na estratégia do aplicativo do Banco Mercantil, alinhando requisitos ao plano de negócios e focado em impulsionar o crescimento da base de usuários ativos.
               </p>
               <p>
-                Com formação acadêmica em Letras pela UFMG e especializações em Gestão de Produtos Digitais 
-                pela PUC Minas e Business Analytics pela Harvard Business School, combino habilidades técnicas 
-                e visão de negócios para entregar soluções inovadoras.
-              </p>
-              <p>
-                Minha experiência inclui implementação de práticas ágeis que reduziram ciclos de lançamento 
-                de produtos de mensal/bimestral para semanal/quinzenal, resultando em melhor time-to-market 
-                e maior satisfação do cliente.
+                Formado pela UFMG e com especializações em Gestão de Produtos Digitais pela PUC Minas e Business Analytics pela Harvard Business School, combino habilidades técnicas e visão de negócios para entregar soluções inovadoras.
               </p>
             </div>
           </div>
