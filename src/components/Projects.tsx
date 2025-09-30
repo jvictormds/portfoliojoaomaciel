@@ -22,6 +22,7 @@ import migracaoPreview from "@/assets/migracao-preview.png";
 import novaMarcaAntes from "@/assets/nova-marca-antes.png";
 import novaMarcaDepois from "@/assets/nova-marca-depois.png";
 import novaMarcaPreview from "@/assets/nova-marca-preview.png";
+import novaMarcaComparacao from "@/assets/nova-marca-comparacao.png";
 
 const Projects = () => {
   const projects = [
@@ -432,25 +433,16 @@ const Projects = () => {
                           {index === 0 && (
                             <div>
                               <h4 className="font-semibold mb-4">Comparação Visual: Antes vs Depois</h4>
-                              <div className="grid md:grid-cols-2 gap-6">
-                                <div className="space-y-2">
-                                  <h5 className="text-sm font-medium text-muted-foreground">Marca Anterior - Mercantil do Brasil</h5>
-                                  <img 
-                                    src={novaMarcaAntes} 
-                                    alt="Telas do aplicativo com a marca anterior Mercantil do Brasil"
-                                    className="w-full rounded-lg border shadow-sm"
-                                  />
-                                  <p className="text-xs text-muted-foreground">Identidade visual anterior com a marca Mercantil do Brasil</p>
-                                </div>
-                                <div className="space-y-2">
-                                  <h5 className="text-sm font-medium text-muted-foreground">Nova Marca - Banco Mercantil</h5>
-                                  <img 
-                                    src={novaMarcaDepois} 
-                                    alt="Telas do aplicativo com a nova marca Banco Mercantil"
-                                    className="w-full rounded-lg border shadow-sm"
-                                  />
-                                  <p className="text-xs text-muted-foreground">Nova identidade visual com posicionamento 'figital' e padronização entre canais digitais</p>
-                                </div>
+                              <div className="space-y-4">
+                                <img 
+                                  src={novaMarcaComparacao} 
+                                  alt="Comparação completa antes e depois da nova identidade visual do Banco Mercantil"
+                                  className="w-full rounded-lg border shadow-sm"
+                                />
+                                <p className="text-sm text-muted-foreground text-center">
+                                  Evolução completa da identidade visual do aplicativo: de Mercantil do Brasil para Banco Mercantil, 
+                                  com modernização de cores, tipografia e posicionamento 'figital'
+                                </p>
                               </div>
                             </div>
                           )}
