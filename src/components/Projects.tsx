@@ -19,9 +19,40 @@ import acessoCpfPreview from "@/assets/acesso-cpf-preview.png";
 import modernizacaoAreaPreview from "@/assets/modernizacao-area-preview.png";
 import melChatbotPreview from "@/assets/mel-chatbot-preview.png";
 import migracaoPreview from "@/assets/migracao-preview.png";
+import novaMarcaAntes from "@/assets/nova-marca-antes.png";
+import novaMarcaDepois from "@/assets/nova-marca-depois.png";
 
 const Projects = () => {
   const projects = [
+    {
+      title: "Nova marca Banco Mercantil",
+      category: "Product Management",
+      period: "2023",
+      summary: "Refatoramento da marca e identidade visual do aplicativo, posicionando a instituição como um banco 'figital' e ampliando a presença no mercado.",
+      image: novaMarcaDepois,
+      challenge: "Em 2023 mudamos a marca de Mercantil do Brasil para Banco Mercantil, posicionando a instituição como um banco 'figital' e ampliando a presença no mercado. Uma dessas ampliações foi o refatoramento da marca e da identidade visual do aplicativo.",
+      role: "Product Manager",
+      solution: [
+        "Acompanhamento do desenvolvimento",
+        "Priorização e fatiamento das entregas",
+        "Negociação de expectativas com todo o time de marketing, atendimento e compliance",
+        "Coordenação entre equipes multidisciplinares",
+        "Gestão de roadmap para implementação gradual",
+        "Monitoramento de impacto nas métricas de produto"
+      ],
+      results: [
+        "Atualização da marca e identidade visual",
+        "Padronização de experiência do cliente em todos os canais digitais",
+        "Crescimento da base de clientes utilizando o app",
+        "Fortalecimento do posicionamento 'figital' no mercado"
+      ],
+      technologies: ["Priorização de Roadmap", "Azure DevOps", "MoSCoW", "Testes de Interface", "DoD and DoR"],
+      metrics: {
+        brand: "Nova identidade",
+        standardization: "Canais unificados",
+        growth: "Base crescente"
+      }
+    },
     {
       title: "Facilitação da forma de acesso",
       category: "Product Management",
@@ -222,35 +253,41 @@ const Projects = () => {
                 <div className="overflow-hidden bg-muted/30 flex items-center justify-center p-4">
                   {index === 0 ? (
                     <img 
+                      src={novaMarcaDepois} 
+                      alt="Nova identidade visual do Banco Mercantil no aplicativo"
+                      className="w-full h-full object-contain max-h-[400px]"
+                    />
+                  ) : index === 1 ? (
+                    <img 
                       src={acessoCpfPreview} 
                       alt="Tela de acesso do aplicativo Mercantil com login por CPF - versão simplificada"
                       className="w-full h-full object-contain max-h-[400px]"
                     />
-                  ) : index === 1 ? (
+                  ) : index === 2 ? (
                     <img 
                       src={modernizacaoAreaPreview} 
                       alt="Modernização da área inicial do aplicativo Mercantil - antes e depois"
                       className="w-full h-full object-contain max-h-[400px]"
                     />
-                  ) : index === 2 ? (
+                  ) : index === 3 ? (
                     <img 
                       src={bancoMercantilApp} 
                       alt="Tela do aplicativo Banco Mercantil mostrando cartões Visa Diamante e ofertas para beneficiários do INSS"
                       className="w-full h-full object-contain max-h-[400px]"
                     />
-                  ) : index === 3 ? (
+                  ) : index === 4 ? (
                     <img 
                       src={melChatbotPreview} 
                       alt="Conversa no WhatsApp com a Mel, chatbot do Banco Mercantil"
                       className="w-full h-full object-contain max-h-[400px]"
                     />
-                  ) : index === 4 ? (
+                  ) : index === 5 ? (
                     <img 
                       src={migracaoPreview} 
                       alt="Aplicativo Mercantil antes e depois da migração de Xamarin para linguagens nativas"
                       className="w-full h-full object-contain max-h-[400px]"
                     />
-                  ) : index === 5 ? (
+                  ) : index === 6 ? (
                     <img 
                       src={ticketzShowcase} 
                       alt="Ticketz.io - Plataforma de eventos mostrando múltiplos contextos de uso"
@@ -390,8 +427,35 @@ const Projects = () => {
                             </div>
                           </div>
 
-                          {/* Access Facilitation Visual - Only for access facilitation case */}
+                          {/* Nova Marca Visual - Only for nova marca case */}
                           {index === 0 && (
+                            <div>
+                              <h4 className="font-semibold mb-4">Comparação Visual: Antes vs Depois</h4>
+                              <div className="grid md:grid-cols-2 gap-6">
+                                <div className="space-y-2">
+                                  <h5 className="text-sm font-medium text-muted-foreground">Marca Anterior - Mercantil do Brasil</h5>
+                                  <img 
+                                    src={novaMarcaAntes} 
+                                    alt="Telas do aplicativo com a marca anterior Mercantil do Brasil"
+                                    className="w-full rounded-lg border shadow-sm"
+                                  />
+                                  <p className="text-xs text-muted-foreground">Identidade visual anterior com a marca Mercantil do Brasil</p>
+                                </div>
+                                <div className="space-y-2">
+                                  <h5 className="text-sm font-medium text-muted-foreground">Nova Marca - Banco Mercantil</h5>
+                                  <img 
+                                    src={novaMarcaDepois} 
+                                    alt="Telas do aplicativo com a nova marca Banco Mercantil"
+                                    className="w-full rounded-lg border shadow-sm"
+                                  />
+                                  <p className="text-xs text-muted-foreground">Nova identidade visual com posicionamento 'figital' e padronização entre canais digitais</p>
+                                </div>
+                              </div>
+                            </div>
+                          )}
+
+                          {/* Access Facilitation Visual - Only for access facilitation case */}
+                          {index === 1 && (
                             <div>
                               <h4 className="font-semibold mb-4">Comparação Visual: Antes vs Depois</h4>
                               <div className="grid md:grid-cols-2 gap-6">
@@ -418,7 +482,7 @@ const Projects = () => {
                           )}
 
                           {/* App Development Visual - Only for main app case */}
-                          {index === 2 && (
+                          {index === 3 && (
                             <div>
                               <h4 className="font-semibold mb-4">Resultado Visual do Aplicativo</h4>
                               <div className="space-y-4">
@@ -435,7 +499,7 @@ const Projects = () => {
                           )}
 
                           {/* Modernization Visual - Only for modernization case */}
-                          {index === 1 && (
+                          {index === 2 && (
                             <div>
                               <h4 className="font-semibold mb-4">Comparação Visual: Antes vs Depois</h4>
                               <div className="grid md:grid-cols-2 gap-6">
@@ -462,7 +526,7 @@ const Projects = () => {
                           )}
 
                           {/* Migration Visual - Only for migration case */}
-                          {index === 4 && (
+                          {index === 5 && (
                             <div>
                               <h4 className="font-semibold mb-4">Evolução Visual da Migração</h4>
                               <div className="grid md:grid-cols-2 gap-6">
