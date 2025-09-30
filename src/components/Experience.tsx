@@ -27,9 +27,10 @@ const Experience = () => {
       type: "CLT",
       description: "Gestão e análise de performance de canais digitais. Atuação estratégica em BI, planejamento e gestão de produtos.",
       achievements: [
-        "Análise estratégica de performance de canais digitais",
-        "Implementação de soluções de Business Intelligence",
-        "Planejamento estratégico de produtos digitais"
+        "Implantação da Mel (IA conversacional) no Site e WhatsApp",
+        "+31% de utilização de transações no aplicativo (2019-2020)",
+        "+18% de utilização de transações no aplicativo (2020-2021)",
+        "+94% de originação de crédito no aplicativo"
       ],
       skills: ["Business Intelligence", "Análise de Negócios", "Gestão de Produtos"]
     },
@@ -41,12 +42,8 @@ const Experience = () => {
       type: "CLT",
       description: "Desenvolvimento de dashboards e painéis de acompanhamento de performance de canais digitais.",
       achievements: [
-        "+31% de utilização de transações no aplicativo (2019-2020)",
-        "+18% de utilização de transações no aplicativo (2020-2021)",
-        "Implantação da Mel (IA conversacional) no Site e WhatsApp",
         "50% de todas as transações feitas diretamente pelos clientes no app",
         "+59% expansão de atendimento das solicitações dos clientes pela Mel no WhatsApp",
-        "+94% de originação de crédito no aplicativo",
         "+75 milhões de originação de crédito no novo canal WhatsApp"
       ],
       skills: ["Power BI", "SQL", "SSIS", "APIs", "Análise de Dados"]
