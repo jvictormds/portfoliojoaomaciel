@@ -15,6 +15,7 @@ import appAreaInicialDepois from "@/assets/app-area-inicial-depois-nova.jpg";
 import modernizacaoAreaInicialCompleta from "@/assets/modernizacao-area-inicial-completa.jpg";
 import acessoAppAntes from "@/assets/acesso-app-antes.png";
 import acessoAppDepois from "@/assets/acesso-app-depois.png";
+import acessoCpfPreview from "@/assets/acesso-cpf-preview.png";
 
 const Projects = () => {
   const projects = [
@@ -23,7 +24,7 @@ const Projects = () => {
       category: "Product Management",
       period: "2023",
       summary: "Implementação do acesso por CPF para eliminar barreiras de entrada no aplicativo, reduzindo custos operacionais e melhorando a experiência do usuário.",
-      image: acessoAppDepois,
+      image: acessoCpfPreview,
       challenge: "O acesso ao aplicativo era feito por agência e conta, e muitos clientes não tinham essa informação, o que além de impedir que acessassem, gerava ligações e atendimentos via chat para obter a informação. Com cerca de 4 mil atendimentos mensais por esse motivo, tínhamos um custo de cerca de 25 mil reais mensais para atender essa demanda.",
       role: "Idealizador e Product Manager",
       solution: [
@@ -218,7 +219,7 @@ const Projects = () => {
                 <div className="overflow-hidden bg-muted/30 flex items-center justify-center p-4">
                   {index === 0 ? (
                     <img 
-                      src={acessoAppDepois} 
+                      src={acessoCpfPreview} 
                       alt="Tela de acesso do aplicativo Mercantil com login por CPF - versão simplificada"
                       className="w-full h-full object-contain max-h-[400px]"
                     />
