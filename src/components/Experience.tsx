@@ -15,8 +15,6 @@ const Experience = () => {
         "+34% na base de clientes ativos no app (2020–2021)",
         "-15% na perda de cadastros iniciados via melhorias na validação de reconhecimento facial",
         "+15 p.p. na penetração de clientes do banco usando o aplicativo",
-        "Implementação de práticas ágeis que reduziram ciclos de lançamento de mensal/bimestral para semanal/quinzenal",
-        "Liderança de equipe de 20 profissionais",
         "90% de reuso de clientes com penetração ao app",
         "124% de crescimento em valor de contratação de crédito YoY no aplicativo"
       ],
