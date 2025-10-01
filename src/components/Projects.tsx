@@ -29,7 +29,7 @@ const Projects = () => {
     {
       title: "Implantação abertura de conta via aplicativo",
       category: "Product Management",
-      period: "2020 - Presente",
+      period: "2025",
       summary: "Gestão do desenvolvimento da nova funcionalidade de abertura de conta para beneficiário INSS pelo aplicativo, coliderando desde a descoberta do produto até a entrega e acompanhamento de resultados, já trabalhando em melhorias e incentivos para o ciclo de vida do produto.",
       image: "/placeholder-app.jpg",
       challenge: "Modernizar a experiência digital do banco e aumentar a penetração de clientes no aplicativo móvel.",
@@ -56,7 +56,7 @@ const Projects = () => {
     {
       title: "Facilitação da forma de acesso",
       category: "Product Management",
-      period: "2023",
+      period: "2024",
       summary: "Implementação do acesso por CPF para eliminar barreiras de entrada no aplicativo, reduzindo custos operacionais e melhorando a experiência do usuário.",
       image: acessoCpfPreview,
       challenge: "O acesso ao aplicativo era feito por agência e conta, e muitos clientes não tinham essa informação, o que além de impedir que acessassem, gerava ligações e atendimentos via chat para obter a informação. Com cerca de 4 mil atendimentos mensais por esse motivo, tínhamos um custo de cerca de 25 mil reais mensais para atender essa demanda.",
@@ -117,7 +117,7 @@ const Projects = () => {
     {
       title: "Nova marca Banco Mercantil",
       category: "Product Management",
-      period: "2023",
+      period: "2022",
       summary: "Refatoramento da marca e identidade visual do aplicativo, posicionando a instituição como um banco 'figital' e ampliando a presença no mercado.",
       image: novaMarcaPreview,
       challenge: "Em 2023 mudamos a marca de Mercantil do Brasil para Banco Mercantil, posicionando a instituição como um banco 'figital' e ampliando a presença no mercado. Uma dessas ampliações foi o refatoramento da marca e da identidade visual do aplicativo.",
@@ -146,7 +146,7 @@ const Projects = () => {
     {
       title: "Migração de Linguagem de Desenvolvimento - Aplicativo Mercantil",
       category: "Product Operations",
-      period: "2017 - 2022",
+      period: "2021",
       summary: "Liderança da migração tecnológica completa do aplicativo bancário de Xamarin para tecnologias nativas, garantindo sustentação de projetos e gestão ágil.",
       image: migracaoPreview,
       challenge: "Migrar a arquitetura tecnológica do aplicativo de Xamarin para linguagens nativas (Kotlin/Swift) sem interromper o desenvolvimento de novas funcionalidades.",
@@ -177,7 +177,7 @@ const Projects = () => {
     {
       title: "Implementação da Mel (Chatbot & IA Conversacional) no Banco Mercantil",
       category: "Innovation",
-      period: "2020 - 2021",
+      period: "2019 - 2020",
       summary: "Desenvolvimento e implementação de chatbot inteligente para atendimento multicanal.",
       image: melChatbotPreview, 
       challenge: "Automatizar o atendimento ao cliente e reduzir custos operacionais mantendo a qualidade do serviço.",
@@ -205,7 +205,7 @@ const Projects = () => {
     {
       title: "POC Ticketz.io para pós em Gestão e desenvolvimento de produtos digitais",
       category: "Product Discovery",
-      period: "2024",
+      period: "2022",
       summary: "Facilitação do acesso a eventos relevantes no Brasil através de plataforma digital inovadora.",
       image: "/placeholder-events.jpg",
       challenge: "Democratizar o acesso a eventos de qualidade e criar uma experiência única para organizadores e participantes.",
