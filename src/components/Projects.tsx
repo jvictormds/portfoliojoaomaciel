@@ -50,9 +50,7 @@ const Projects = () => {
       ],
       technologies: ["Product Management", "Metodologias Ágeis", "UX/UI", "CRM Integration"],
       metrics: {
-        users: "Resultados internos, não passíveis de divulgação",
-        revenue: "Resultados internos, não passíveis de divulgação",
-        retention: "Resultados internos, não passíveis de divulgação"
+        info: "Resultados internos, não passíveis de divulgação"
       }
     },
     {
