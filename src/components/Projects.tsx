@@ -30,7 +30,7 @@ const Projects = () => {
       title: "Implantação abertura de conta via aplicativo",
       category: "Product Management",
       period: "2020 - Presente",
-      summary: "Liderança da transformação digital completa do aplicativo bancário, resultando em crescimento significativo da base de usuários.",
+      summary: "Gestão do desenvolvimento da nova funcionalidade de abertura de conta para beneficiário INSS pelo aplicativo, coliderando desde a descoberta do produto até a entrega e acompanhamento de resultados, já trabalhando em melhorias e incentivos para o ciclo de vida do produto.",
       image: "/placeholder-app.jpg",
       challenge: "Modernizar a experiência digital do banco e aumentar a penetração de clientes no aplicativo móvel.",
       role: "Product Owner e líder estratégico",
