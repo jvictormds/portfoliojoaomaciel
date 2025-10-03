@@ -1,8 +1,10 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, TrendingUp } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Experience = () => {
+  const { t } = useLanguage();
   const experiences = [
     {
       title: "Product Owner",
@@ -70,7 +72,7 @@ const Experience = () => {
       <div className="container mx-auto px-4">
         <div className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">
-            Experiência Profissional
+            {t.experience.title}
           </h2>
         </div>
 
@@ -103,7 +105,7 @@ const Experience = () => {
                 <div>
                   <h5 className="font-semibold mb-3 flex items-center gap-2">
                     <TrendingUp className="w-4 h-4 text-primary" />
-                    Principais Resultados
+                    {t.experience.achievements}
                   </h5>
                   <ul className="space-y-2">
                     {exp.achievements.map((achievement, achIndex) => (
@@ -117,7 +119,7 @@ const Experience = () => {
 
                 {/* Skills */}
                 <div>
-                  <h5 className="font-semibold mb-3">Competências Utilizadas</h5>
+                  <h5 className="font-semibold mb-3">{t.experience.skillsUsed}</h5>
                   <div className="flex flex-wrap gap-2">
                     {exp.skills.map((skill, skillIndex) => (
                       <Badge key={skillIndex} variant="secondary" className="text-xs">

@@ -1,8 +1,10 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, GraduationCap, Award, ExternalLink } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Education = () => {
+  const { t } = useLanguage();
   const education = [
     {
       degree: "Business Analytics",
@@ -91,11 +93,10 @@ const Education = () => {
       <div className="container mx-auto px-4">
         <div className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Formação & Certificações
+            {t.education.title}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl">
-            Formação acadêmica sólida e certificações reconhecidas internacionalmente 
-            em gestão de produtos e análise de negócios.
+            {t.education.subtitle}
           </p>
         </div>
 
@@ -103,7 +104,7 @@ const Education = () => {
         <div className="mb-16">
           <h3 className="text-2xl font-semibold mb-8 flex items-center gap-2">
             <GraduationCap className="w-6 h-6 text-primary" />
-            Formação Acadêmica
+            {t.education.academic}
           </h3>
           <div className="space-y-6">
             {education.map((edu, index) => (
@@ -114,7 +115,7 @@ const Education = () => {
                       <h4 className="text-xl font-semibold text-primary">{edu.degree}</h4>
                       <h5 className="text-lg font-medium">{edu.institution}</h5>
                       <Badge variant={edu.status === "Em andamento" ? "default" : "secondary"} className="mt-2">
-                        {edu.status}
+                        {edu.status === "Em andamento" ? t.education.status.ongoing : t.education.status.completed}
                       </Badge>
                     </div>
                     <div className="flex flex-col md:items-end gap-2">
@@ -131,7 +132,7 @@ const Education = () => {
                   <p className="text-muted-foreground">{edu.description}</p>
                   
                   <div>
-                    <h6 className="font-semibold mb-2">Competências Desenvolvidas</h6>
+                    <h6 className="font-semibold mb-2">{t.education.skillsDeveloped}</h6>
                     <div className="flex flex-wrap gap-2">
                       {edu.skills.map((skill, skillIndex) => (
                         <Badge key={skillIndex} variant="secondary" className="text-xs">
@@ -150,7 +151,7 @@ const Education = () => {
         <div className="mb-16">
           <h3 className="text-2xl font-semibold mb-8 flex items-center gap-2">
             <Award className="w-6 h-6 text-primary" />
-            Principais Certificações
+            {t.education.certifications}
           </h3>
           <div className="grid md:grid-cols-2 gap-6">
             {certifications.map((cert, index) => (
@@ -175,7 +176,7 @@ const Education = () => {
                     </div>
                     {cert.expiry && (
                       <span className="text-xs text-muted-foreground">
-                        Expira: {cert.expiry}
+                        {t.education.expires}: {cert.expiry}
                       </span>
                     )}
                   </div>
@@ -186,7 +187,7 @@ const Education = () => {
                     variant={cert.status === "Ativo" ? "default" : "secondary"} 
                     className="text-xs"
                   >
-                    {cert.status}
+                    {cert.status === "Ativo" ? t.education.status.active : cert.status}
                   </Badge>
                 </CardContent>
               </Card>
@@ -197,7 +198,7 @@ const Education = () => {
         {/* Additional Courses */}
         <div>
           <h3 className="text-2xl font-semibold mb-6">
-            Cursos Complementares
+            {t.education.courses}
           </h3>
           <Card className="shadow-soft">
             <CardContent className="p-6">

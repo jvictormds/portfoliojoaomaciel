@@ -2,7 +2,10 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Download, ArrowDown, Linkedin, Mail } from "lucide-react";
 import profileImage from "@/assets/joao-profile-real.jpg";
+import { useLanguage } from "@/contexts/LanguageContext";
+
 const Hero = () => {
+  const { t } = useLanguage();
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -11,7 +14,7 @@ const Hero = () => {
       });
     }
   };
-  const highlights = ["+34% base de clientes ativos", "124% crescimento em crédito", "90% reuso de clientes"];
+  const highlights = [t.hero.highlights.growth, t.hero.highlights.credit, t.hero.highlights.retention];
   return <section id="home" className="min-h-screen flex items-center justify-center pt-8 pb-1">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -19,21 +22,20 @@ const Hero = () => {
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-6">
               <Badge variant="secondary" className="w-fit">
-                Product Manager
+                {t.hero.role}
               </Badge>
               
               <div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                  João Maciel
+                  {t.hero.name}
                 </h1>
                 <h2 className="text-xl md:text-2xl text-muted-foreground mt-4">
-                  Gestor de produtos digitais com foco em resultados
+                  {t.hero.subtitle}
                 </h2>
               </div>
               
               <p className="text-lg text-muted-foreground max-w-lg">
-                Especialista em gestão de produtos digitais no setor bancário, 
-                com foco em estratégica e resultados para o negócio.
+                {t.hero.description}
               </p>
 
               {/* Highlights */}
@@ -49,21 +51,21 @@ const Hero = () => {
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
               <Button variant="hero" size="lg" onClick={() => scrollToSection("projects")}>
-                Ver Projetos
+                {t.hero.cta.viewProjects}
                 <ArrowDown className="w-4 h-4" />
               </Button>
               
               <Button variant="outline" size="lg" asChild>
                 <a href="/curriculo-joao-maciel.pdf" download="curriculo-joao-maciel.pdf" target="_blank" rel="noopener noreferrer">
                   <Download className="w-4 h-4" />
-                  Download CV
+                  {t.hero.cta.downloadCV}
                 </a>
               </Button>
               
               <Button variant="ghost" size="lg" asChild>
                 <a href="https://www.linkedin.com/in/jvictormds/" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="w-4 h-4" />
-                  LinkedIn
+                  {t.hero.cta.linkedin}
                 </a>
               </Button>
             </div>

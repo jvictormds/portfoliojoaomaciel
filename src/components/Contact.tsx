@@ -7,8 +7,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, Linkedin, Download, Send, MapPin } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -38,8 +40,8 @@ const Contact = () => {
     
     if (!formData.consent) {
       toast({
-        title: "Consentimento necessário",
-        description: "Por favor, aceite os termos de privacidade para continuar.",
+        title: t.contact.toasts.consentRequired.title,
+        description: t.contact.toasts.consentRequired.description,
         variant: "destructive"
       });
       return;
@@ -52,8 +54,8 @@ const Contact = () => {
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       toast({
-        title: "Mensagem enviada!",
-        description: "Obrigado pelo contato. Retornarei em breve!",
+        title: t.contact.toasts.success.title,
+        description: t.contact.toasts.success.description,
       });
       
       // Reset form
@@ -65,8 +67,8 @@ const Contact = () => {
       });
     } catch (error) {
       toast({
-        title: "Erro ao enviar",
-        description: "Tente novamente ou entre em contato diretamente por e-mail.",
+        title: t.contact.toasts.error.title,
+        description: t.contact.toasts.error.description,
         variant: "destructive"
       });
     } finally {
@@ -77,25 +79,25 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Mail,
-      label: "E-mail",
+      label: t.contact.labels.email,
       value: "joaovictormaciel02@hotmail.com",
       action: "mailto:joaovictormaciel02@hotmail.com"
     },
     {
       icon: Phone,
-      label: "Telefone",
+      label: t.contact.labels.phone,
       value: "+55 (31) 9 9785-7798",
       action: "tel:+5531997857798"
     },
     {
       icon: Linkedin,
-      label: "LinkedIn",
+      label: t.contact.labels.linkedin,
       value: "linkedin.com/in/jvictormds",
       action: "https://www.linkedin.com/in/jvictormds/"
     },
     {
       icon: MapPin,
-      label: "Localização",
+      label: t.contact.labels.location,
       value: "Belo Horizonte, MG",
       action: null
     }
@@ -110,7 +112,7 @@ const Contact = () => {
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-semibold mb-6">
-                Informações de Contato
+                {t.contact.infoTitle}
               </h3>
               <div className="space-y-4">
                 {contactInfo.map((contact, index) => (
@@ -140,12 +142,12 @@ const Contact = () => {
 
             {/* Quick Actions */}
             <div className="space-y-4">
-              <h4 className="text-lg font-semibold">Ações Rápidas</h4>
+              <h4 className="text-lg font-semibold">{t.contact.quickActions}</h4>
               <div className="space-y-3">
                 <Button variant="outline" className="w-full justify-start" asChild>
                   <a href="/curriculo-joao-maciel.pdf" download>
                     <Download className="w-4 h-4" />
-                    Download do Currículo
+                    {t.contact.actions.downloadCV}
                   </a>
                 </Button>
                 
@@ -156,7 +158,7 @@ const Contact = () => {
                     rel="noopener noreferrer"
                   >
                     <Linkedin className="w-4 h-4" />
-                    Conectar no LinkedIn
+                    {t.contact.actions.connectLinkedIn}
                   </a>
                 </Button>
                 
@@ -167,7 +169,7 @@ const Contact = () => {
                     rel="noopener noreferrer"
                   >
                     <Send className="w-4 h-4" />
-                    Agendar Conversa
+                    {t.contact.actions.scheduleCall}
                   </a>
                 </Button>
               </div>
@@ -177,12 +179,12 @@ const Contact = () => {
           {/* Contact Form */}
           <Card className="shadow-medium">
             <CardHeader>
-              <CardTitle>Envie uma Mensagem</CardTitle>
+              <CardTitle>{t.contact.formTitle}</CardTitle>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
-                  <Label htmlFor="name">Nome Completo</Label>
+                  <Label htmlFor="name">{t.contact.labels.name}</Label>
                   <Input
                     id="name"
                     name="name"
@@ -190,12 +192,12 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    placeholder="Seu nome completo"
+                    placeholder={t.contact.placeholders.name}
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="email">E-mail</Label>
+                  <Label htmlFor="email">{t.contact.labels.email}</Label>
                   <Input
                     id="email"
                     name="email"
@@ -203,19 +205,19 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    placeholder="seu.email@exemplo.com"
+                    placeholder={t.contact.placeholders.email}
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="message">Mensagem</Label>
+                  <Label htmlFor="message">{t.contact.labels.message}</Label>
                   <Textarea
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
                     required
-                    placeholder="Conte-me sobre sua ideia, projeto ou oportunidade..."
+                    placeholder={t.contact.placeholders.message}
                     rows={5}
                   />
                 </div>
@@ -228,9 +230,7 @@ const Contact = () => {
                     required
                   />
                   <Label htmlFor="consent" className="text-sm leading-relaxed">
-                    Concordo com o processamento dos meus dados pessoais de acordo com a 
-                    LGPD (Lei Geral de Proteção de Dados) para fins de contato profissional. 
-                    Seus dados não serão compartilhados com terceiros.
+                    {t.contact.consent}
                   </Label>
                 </div>
 
@@ -243,12 +243,12 @@ const Contact = () => {
                   {isSubmitting ? (
                     <>
                       <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                      Enviando...
+                      {t.contact.actions.sending}
                     </>
                   ) : (
                     <>
                       <Send className="w-4 h-4" />
-                      Enviar Mensagem
+                      {t.contact.actions.send}
                     </>
                   )}
                 </Button>

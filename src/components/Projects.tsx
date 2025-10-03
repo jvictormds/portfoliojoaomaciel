@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { ExternalLink, Target, Users, TrendingUp, Calendar } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import bancoMercantilApp from "@/assets/banco-mercantil-cartoes-visa.jpg";
 import melChatbot from "@/assets/mel-chatbot-whatsapp.png";
 import ticketzShowcase from "@/assets/ticketz-showcase.png";
@@ -25,6 +26,7 @@ import novaMarcaPreview from "@/assets/nova-marca-preview.png";
 import novaMarcaComparacao from "@/assets/nova-marca-comparacao.png";
 
 const Projects = () => {
+  const { t } = useLanguage();
   const projects = [
     {
       title: "Implantação abertura de conta via aplicativo",
@@ -237,11 +239,10 @@ const Projects = () => {
       <div className="container mx-auto px-4">
         <div className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Projetos & Cases
+            {t.projects.title}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl">
-            Principais projetos desenvolvidos com foco em inovação, 
-            crescimento e transformação digital.
+            {t.projects.subtitle}
           </p>
         </div>
 
@@ -350,7 +351,7 @@ const Projects = () => {
                     <Dialog>
                       <DialogTrigger asChild>
                         <Button variant="outline" className="w-full group-hover:border-primary transition-smooth">
-                          Ver Case Completo
+                          {t.projects.viewCase}
                           <ExternalLink className="w-4 h-4" />
                         </Button>
                       </DialogTrigger>
@@ -366,14 +367,14 @@ const Projects = () => {
                             <div>
                               <h4 className="font-semibold mb-2 flex items-center gap-2">
                                 <Target className="w-4 h-4 text-primary" />
-                                Contexto
+                                {t.projects.challenge}
                               </h4>
                               <p className="text-sm text-muted-foreground">{project.challenge}</p>
                             </div>
                             <div>
                               <h4 className="font-semibold mb-2 flex items-center gap-2">
                                 <Users className="w-4 h-4 text-primary" />
-                                Meu Papel
+                                {t.projects.role}
                               </h4>
                               <p className="text-sm text-muted-foreground">{project.role}</p>
                             </div>
@@ -388,7 +389,7 @@ const Projects = () => {
 
                           {/* Solution */}
                           <div>
-                            <h4 className="font-semibold mb-4">Solução Implementada</h4>
+                            <h4 className="font-semibold mb-4">{t.projects.solution}</h4>
                             <ul className="space-y-2">
                               {project.solution.map((item, itemIndex) => (
                                 <li key={itemIndex} className="flex items-start gap-2 text-sm">
@@ -403,7 +404,7 @@ const Projects = () => {
                           <div>
                             <h4 className="font-semibold mb-4 flex items-center gap-2">
                               <TrendingUp className="w-4 h-4 text-primary" />
-                              Resultados Alcançados
+                              {t.projects.results}
                             </h4>
                             <div className="grid md:grid-cols-2 gap-4">
                               {project.results.map((result, resultIndex) => (
@@ -417,7 +418,7 @@ const Projects = () => {
 
                           {/* Technologies */}
                           <div>
-                            <h4 className="font-semibold mb-4">Tecnologias e Metodologias</h4>
+                            <h4 className="font-semibold mb-4">{t.projects.technologies}</h4>
                             <div className="flex flex-wrap gap-2">
                               {project.technologies.map((tech, techIndex) => (
                                 <Badge key={techIndex} variant="default">

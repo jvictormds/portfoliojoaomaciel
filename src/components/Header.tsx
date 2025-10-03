@@ -5,7 +5,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { language, setLanguage } = useLanguage();
+  const { language, setLanguage, t } = useLanguage();
 
   const toggleLanguage = () => {
     setLanguage(language === 'pt' ? 'en' : 'pt');
@@ -20,12 +20,12 @@ const Header = () => {
   };
 
   const navigationItems = [
-    { label: "Início", id: "home" },
-    { label: "Sobre", id: "about" },
-    { label: "Experiência", id: "experience" },
-    { label: "Projetos", id: "projects" },
-    { label: "Formação", id: "education" },
-    { label: "Contato", id: "contact" },
+    { label: t.header.nav.home, id: "home" },
+    { label: t.header.nav.about, id: "about" },
+    { label: t.header.nav.experience, id: "experience" },
+    { label: t.header.nav.projects, id: "projects" },
+    { label: t.header.nav.education, id: "education" },
+    { label: t.header.nav.contact, id: "contact" },
   ];
 
   return (
@@ -64,7 +64,7 @@ const Header = () => {
             <Button variant="outline" size="sm" asChild>
               <a href="/curriculo-joao-maciel.pdf" download aria-label="Download currículo">
                 <Download className="w-4 h-4" />
-                CV
+                {t.header.cv}
               </a>
             </Button>
             <Button variant="default" size="sm" asChild>
@@ -75,7 +75,7 @@ const Header = () => {
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-4 h-4" />
-                LinkedIn
+                {t.header.linkedin}
               </a>
             </Button>
           </div>
@@ -115,7 +115,7 @@ const Header = () => {
                 <Button variant="outline" size="sm" asChild>
                   <a href="/curriculo-joao-maciel.pdf" download>
                     <Download className="w-4 h-4" />
-                    Download CV
+                    {t.header.cv}
                   </a>
                 </Button>
                 <Button variant="default" size="sm" asChild>
@@ -125,7 +125,7 @@ const Header = () => {
                     rel="noopener noreferrer"
                   >
                     <Linkedin className="w-4 h-4" />
-                    LinkedIn
+                    {t.header.linkedin}
                   </a>
                 </Button>
               </div>
