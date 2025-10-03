@@ -1,9 +1,15 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Download, Linkedin, Mail } from "lucide-react";
+import { Menu, X, Download, Linkedin, Languages } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { language, setLanguage } = useLanguage();
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'pt' ? 'en' : 'pt');
+  };
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -46,6 +52,15 @@ const Header = () => {
 
           {/* CTA Buttons - Desktop */}
           <div className="hidden md:flex items-center space-x-4">
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              onClick={toggleLanguage}
+              aria-label={language === 'pt' ? 'Switch to English' : 'Mudar para Português'}
+            >
+              <Languages className="w-4 h-4" />
+              {language === 'pt' ? 'EN' : 'PT'}
+            </Button>
             <Button variant="outline" size="sm" asChild>
               <a href="/curriculo-joao-maciel.pdf" download aria-label="Download currículo">
                 <Download className="w-4 h-4" />
@@ -89,6 +104,14 @@ const Header = () => {
                 </button>
               ))}
               <div className="flex flex-col space-y-2 pt-4 border-t border-border">
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  onClick={toggleLanguage}
+                >
+                  <Languages className="w-4 h-4" />
+                  {language === 'pt' ? 'English' : 'Português'}
+                </Button>
                 <Button variant="outline" size="sm" asChild>
                   <a href="/curriculo-joao-maciel.pdf" download>
                     <Download className="w-4 h-4" />
