@@ -547,8 +547,26 @@ const Projects = () => {
                             </div>
                           )}
 
-                          {/* Modernization Visual - Only for modernization case */}
+                          {/* Dynamic Offer Visual - Only for dynamic offer case */}
                           {index === 2 && (
+                            <div>
+                              <h4 className="font-semibold mb-4">Evolução do Sistema de Ações Comerciais</h4>
+                              <div className="space-y-4">
+                                <img 
+                                  src={acoesComerciais} 
+                                  alt="Exemplos diversos de ações comerciais dinâmicas no aplicativo Mercantil"
+                                  className="w-full rounded-lg border shadow-sm"
+                                />
+                                <p className="text-sm text-muted-foreground text-center">
+                                  Sistema de ações comerciais dinâmicas com cartões chamativos para ofertas de produtos e serviços, 
+                                  permitindo flexibilidade para as áreas de CRM, Growth e Marketing
+                                </p>
+                              </div>
+                            </div>
+                          )}
+
+                          {/* Modernization Visual - Only for modernization case */}
+                          {index === 3 && (
                             <div>
                               <h4 className="font-semibold mb-4">Comparação Visual: Antes vs Depois</h4>
                               <div className="grid md:grid-cols-2 gap-6">
