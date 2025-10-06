@@ -24,6 +24,7 @@ import novaMarcaAntes from "@/assets/nova-marca-antes.png";
 import novaMarcaDepois from "@/assets/nova-marca-depois.png";
 import novaMarcaPreview from "@/assets/nova-marca-preview.png";
 import novaMarcaComparacao from "@/assets/nova-marca-comparacao.png";
+import ofertaDinamicaPreview from "@/assets/oferta-dinamica-preview.png";
 
 const Projects = () => {
   const { t } = useLanguage();
@@ -84,6 +85,29 @@ const Projects = () => {
         savings: "25k/mês economia",
         support: "-4k atendimentos",
         access: "CPF simplificado"
+      }
+    },
+    {
+      title: "Oferta dinâmica de produtos e serviços",
+      category: "Product Management",
+      period: "2023",
+      summary: "Desenvolvimento de sistema de ações comerciais para oferta dinâmica de produtos através de cartões chamativos, com flexibilidade para as áreas de CRM, Growth e Marketing.",
+      image: ofertaDinamicaPreview,
+      challenge: "Após a migração de linguagem, identificamos a necessidade de melhorar a forma de ofertar produtos e serviços na área inicial do aplicativo, por meio de cartões mais chamativos e que pudessem não impedir a navegação do cliente, ao mesmo tempo em que tivesse liberdade o suficiente para a área de CRM, Growth e Marketing trabalhar.",
+      role: "Product Manager",
+      solution: [
+        "Definição de solução técnica e visual",
+        "Desenho da solução de negócios",
+        "Desenho da arquitetura da funcionalidade"
+      ],
+      results: [
+        "A maior parte do crescimento em crédito (124% em 2024) dentro do canal se deve ao sistema de ações comerciais implementado"
+      ],
+      technologies: ["Product Discovery", "Product Development", "Product Design"],
+      metrics: {
+        credit: "124% crescimento",
+        system: "Ações comerciais",
+        impact: "Canal principal"
       }
     },
     {
@@ -266,29 +290,35 @@ const Projects = () => {
                     />
                   ) : index === 2 ? (
                     <img 
+                      src={ofertaDinamicaPreview} 
+                      alt="Oferta dinâmica de produtos e serviços no aplicativo Mercantil"
+                      className="w-full h-full object-contain max-h-[400px]"
+                    />
+                  ) : index === 3 ? (
+                    <img 
                       src={modernizacaoAreaPreview} 
                       alt="Modernização da área inicial do aplicativo Mercantil - antes e depois"
                       className="w-full h-full object-contain max-h-[400px]"
                     />
-                  ) : index === 3 ? (
+                  ) : index === 4 ? (
                     <img 
                       src={novaMarcaPreview} 
                       alt="Comparação antes e depois da nova identidade visual do Banco Mercantil"
                       className="w-full h-full object-contain max-h-[400px]"
                     />
-                  ) : index === 4 ? (
+                  ) : index === 5 ? (
                     <img 
                       src={migracaoPreview} 
                       alt="Aplicativo Mercantil antes e depois da migração de Xamarin para linguagens nativas"
                       className="w-full h-full object-contain max-h-[400px]"
                     />
-                  ) : index === 5 ? (
+                  ) : index === 6 ? (
                     <img 
                       src={melChatbotPreview} 
                       alt="Conversa no WhatsApp com a Mel, chatbot do Banco Mercantil"
                       className="w-full h-full object-contain max-h-[400px]"
                     />
-                  ) : index === 6 ? (
+                  ) : index === 7 ? (
                     <img 
                       src={ticketzShowcase} 
                       alt="Ticketz.io - Plataforma de eventos mostrando múltiplos contextos de uso"
