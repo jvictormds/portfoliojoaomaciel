@@ -24,7 +24,7 @@ import novaMarcaAntes from "@/assets/nova-marca-antes.png";
 import novaMarcaDepois from "@/assets/nova-marca-depois.png";
 import novaMarcaPreview from "@/assets/nova-marca-preview.png";
 import novaMarcaComparacao from "@/assets/nova-marca-comparacao.png";
-import ofertaDinamicaPreview from "@/assets/oferta-dinamica-preview.png";
+import acoesComerciais from "@/assets/acoes-comerciais-completo.jpg";
 
 const Projects = () => {
   const { t } = useLanguage();
@@ -92,7 +92,7 @@ const Projects = () => {
       category: "Product Management",
       period: "2023",
       summary: "Desenvolvimento de sistema de ações comerciais para oferta dinâmica de produtos através de cartões chamativos, com flexibilidade para as áreas de CRM, Growth e Marketing.",
-      image: ofertaDinamicaPreview,
+      image: acoesComerciais,
       challenge: "Após a migração de linguagem, identificamos a necessidade de melhorar a forma de ofertar produtos e serviços na área inicial do aplicativo, por meio de cartões mais chamativos e que pudessem não impedir a navegação do cliente, ao mesmo tempo em que tivesse liberdade o suficiente para a área de CRM, Growth e Marketing trabalhar.",
       role: "Product Manager",
       solution: [
@@ -290,8 +290,8 @@ const Projects = () => {
                     />
                   ) : index === 2 ? (
                     <img 
-                      src={ofertaDinamicaPreview} 
-                      alt="Oferta dinâmica de produtos e serviços no aplicativo Mercantil"
+                      src={acoesComerciais} 
+                      alt="Exemplos de ações comerciais dinâmicas no aplicativo Mercantil mostrando diferentes ofertas de produtos e serviços"
                       className="w-full h-full object-contain max-h-[400px]"
                     />
                   ) : index === 3 ? (
