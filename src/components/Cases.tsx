@@ -25,7 +25,7 @@ const Cases = () => {
       subtitle: t.cases.items.interArcade.subtitle,
       description: t.cases.items.interArcade.description,
       category: t.cases.items.interArcade.category,
-      year: "2024",
+      year: "2025",
       pdfUrl: "/cases/case-inter-arcade.pdf",
       tags: t.cases.items.interArcade.tags,
     },
