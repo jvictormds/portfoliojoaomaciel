@@ -105,11 +105,29 @@ const Cases = () => {
                   <DialogHeader>
                     <DialogTitle>{caseItem.title}</DialogTitle>
                   </DialogHeader>
-                  <iframe
-                    src={caseItem.pdfUrl}
-                    className="w-full h-full rounded-md"
-                    title={`PDF: ${caseItem.title}`}
-                  />
+                  <div className="w-full h-full flex flex-col gap-4">
+                    <object
+                      data={caseItem.pdfUrl}
+                      type="application/pdf"
+                      className="w-full flex-1 rounded-md"
+                    >
+                      <div className="flex flex-col items-center justify-center gap-4 p-8">
+                        <p className="text-muted-foreground text-center">
+                          Não foi possível exibir o PDF no navegador.
+                        </p>
+                        <Button asChild>
+                          <a
+                            href={caseItem.pdfUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <FileText className="w-4 h-4" />
+                            Abrir PDF em nova aba
+                          </a>
+                        </Button>
+                      </div>
+                    </object>
+                  </div>
                 </DialogContent>
               </Dialog>
             </Card>
