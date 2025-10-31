@@ -1,8 +1,15 @@
-import { FileText, ExternalLink } from "lucide-react";
+import { FileText } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 interface Case {
   id: string;
@@ -83,23 +90,28 @@ const Cases = () => {
                 ))}
               </div>
 
-              <Button
-                variant="default"
-                size="sm"
-                className="w-full bg-purple-600 hover:bg-purple-700 dark:bg-purple-700 dark:hover:bg-purple-800"
-                asChild
-              >
-                <a
-                  href={caseItem.pdfUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2"
-                >
-                  <FileText className="w-4 h-4" />
-                  {t.cases.readCase}
-                  <ExternalLink className="w-3 h-3" />
-                </a>
-              </Button>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button
+                    variant="default"
+                    size="sm"
+                    className="w-full bg-purple-600 hover:bg-purple-700 dark:bg-purple-700 dark:hover:bg-purple-800"
+                  >
+                    <FileText className="w-4 h-4" />
+                    {t.cases.readCase}
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-6xl h-[90vh]">
+                  <DialogHeader>
+                    <DialogTitle>{caseItem.title}</DialogTitle>
+                  </DialogHeader>
+                  <iframe
+                    src={caseItem.pdfUrl}
+                    className="w-full h-full rounded-md"
+                    title={`PDF: ${caseItem.title}`}
+                  />
+                </DialogContent>
+              </Dialog>
             </Card>
           ))}
         </div>
