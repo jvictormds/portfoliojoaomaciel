@@ -24,6 +24,7 @@ const Header = () => {
     { label: t.header.nav.about, id: "about" },
     { label: t.header.nav.experience, id: "experience" },
     { label: t.header.nav.projects, id: "projects" },
+    { label: t.header.nav.cases, id: "cases" },
     { label: t.header.nav.education, id: "education" },
     { label: t.header.nav.contact, id: "contact" },
   ];

@@ -7,6 +7,7 @@ export const translations = {
         about: "Sobre",
         experience: "Experiência",
         projects: "Projetos",
+        cases: "Cases",
         education: "Formação",
         contact: "Contato"
       },
@@ -85,6 +86,22 @@ export const translations = {
       solution: "Solução",
       results: "Resultados",
       technologies: "Tecnologias & Metodologias"
+    },
+    
+    // Cases
+    cases: {
+      title: "Cases e Estudos",
+      subtitle: "Estudos de caso e análises sobre gestão de produtos",
+      readCase: "Ler case completo",
+      items: {
+        interArcade: {
+          title: "Inter Arcade",
+          subtitle: "Ecossistema de gamificação do SuperApp Inter",
+          description: "Case para aumentar a ativação de clientes do Banco Inter nos primeiros 30 dias",
+          category: "Estudo de Caso",
+          tags: ["Gamificação", "Ativação", "Fintech", "UX"]
+        }
+      }
     },
     
     // Education  
@@ -167,6 +184,7 @@ export const translations = {
         about: "About",
         experience: "Experience",
         projects: "Projects",
+        cases: "Cases",
         education: "Education",
         contact: "Contact"
       },
@@ -245,6 +263,22 @@ export const translations = {
       solution: "Solution",
       results: "Results",
       technologies: "Technologies & Methodologies"
+    },
+    
+    // Cases
+    cases: {
+      title: "Cases & Studies",
+      subtitle: "Case studies and analysis about product management",
+      readCase: "Read full case",
+      items: {
+        interArcade: {
+          title: "Inter Arcade",
+          subtitle: "Gamification ecosystem for Inter SuperApp",
+          description: "Case study to increase customer activation at Banco Inter in the first 30 days",
+          category: "Case Study",
+          tags: ["Gamification", "Activation", "Fintech", "UX"]
+        }
+      }
     },
     
     // Education
