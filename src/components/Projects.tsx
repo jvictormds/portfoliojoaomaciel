@@ -563,7 +563,7 @@ const Projects = () => {
                           )}
 
                           {/* Mel Chatbot Visual - Only for Mel case */}
-                          {index === 5 && (
+                          {index === 6 && (
                             <div>
                               <h4 className="font-semibold mb-4">1° versão da Mel no aplicativo e no whatsapp</h4>
                               <div className="space-y-4">
