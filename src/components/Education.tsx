@@ -98,9 +98,6 @@ const Education = () => {
                     <div>
                       <h4 className="text-xl font-semibold text-primary">{edu.degree}</h4>
                       <h5 className="text-lg font-medium">{edu.institution}</h5>
-                      <Badge variant={edu.status === "Em andamento" ? "default" : "secondary"} className="mt-2">
-                        {edu.status === "Em andamento" ? t.education.status.ongoing : t.education.status.completed}
-                      </Badge>
                     </div>
                     <div className="flex flex-col md:items-end gap-2">
                       <div className="flex items-center gap-2 text-sm text-muted-foreground">
