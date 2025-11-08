@@ -114,17 +114,6 @@ const Education = () => {
                 
                 <CardContent className="space-y-4">
                   <p className="text-muted-foreground">{edu.description}</p>
-                  
-                  <div>
-                    <h6 className="font-semibold mb-2">{t.education.skillsDeveloped}</h6>
-                    <div className="flex flex-wrap gap-2">
-                      {edu.skills.map((skill, skillIndex) => (
-                        <Badge key={skillIndex} variant="secondary" className="text-xs">
-                          {skill}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
                 </CardContent>
               </Card>
             ))}
