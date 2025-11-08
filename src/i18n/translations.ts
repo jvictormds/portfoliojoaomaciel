@@ -6,7 +6,7 @@ export const translations = {
         home: "Início",
         about: "Sobre",
         experience: "Experiência",
-        projects: "Projetos",
+        projects: "Entregas",
         cases: "Cases",
         education: "Formação",
         contact: "Contato"
@@ -192,7 +192,7 @@ export const translations = {
         home: "Home",
         about: "About",
         experience: "Experience",
-        projects: "Projects",
+        projects: "Deliverables",
         cases: "Cases",
         education: "Education",
         contact: "Contact"
