@@ -17,18 +17,6 @@ const Contact = () => {
       label: t.contact.labels.phone,
       value: "+55 (31) 9 9785-7798",
       action: "tel:+5531997857798"
-    },
-    {
-      icon: Linkedin,
-      label: t.contact.labels.linkedin,
-      value: "linkedin.com/in/jvictormds",
-      action: "https://www.linkedin.com/in/jvictormds/"
-    },
-    {
-      icon: MapPin,
-      label: t.contact.labels.location,
-      value: "Belo Horizonte, MG",
-      action: null
     }
   ];
 
