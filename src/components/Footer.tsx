@@ -30,7 +30,7 @@ const Footer = () => {
   return (
     <footer className="bg-card border-t border-border">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="grid md:grid-cols-2 gap-8 mb-8">
           {/* Brand & Description */}
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-primary">João Maciel</h3>
@@ -81,35 +81,6 @@ const Footer = () => {
                   {link.label}
                 </button>
               ))}
-            </div>
-          </div>
-
-          {/* Contact Info */}
-          <div className="space-y-4">
-            <h4 className="font-semibold">{t.footer.contactInfo}</h4>
-            <div className="space-y-2 text-sm text-muted-foreground">
-              <div>
-                <p className="font-medium">{t.contact.labels.email}</p>
-                <a 
-                  href="mailto:joaovictormaciel02@hotmail.com"
-                  className="hover:text-primary transition-smooth"
-                >
-                  joaovictormaciel02@hotmail.com
-                </a>
-              </div>
-              <div>
-                <p className="font-medium">{t.contact.labels.phone}</p>
-                <a 
-                  href="tel:+5531997857798"
-                  className="hover:text-primary transition-smooth"
-                >
-                  +55 (31) 9 9785-7798
-                </a>
-              </div>
-              <div>
-                <p className="font-medium">{t.contact.labels.location}</p>
-                <p>{t.footer.location}</p>
-              </div>
             </div>
           </div>
         </div>
