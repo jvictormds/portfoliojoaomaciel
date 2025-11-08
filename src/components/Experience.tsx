@@ -7,7 +7,7 @@ const Experience = () => {
   const { t } = useLanguage();
   const experiences = [
     {
-      title: "Product Owner",
+      title: "Product owner",
       company: "Banco Mercantil",
       period: "Abril 2021 - Presente",
       location: "Belo Horizonte, MG",
@@ -22,7 +22,7 @@ const Experience = () => {
       skills: ["Product Management", "Metodologias Ágeis", "Liderança", "KPIs", "Growth"]
     },
     {
-      title: "Analista de Negócios Pleno",
+      title: "Analista de negócios",
       company: "Banco Mercantil", 
       period: "Janeiro 2021 - Abril 2021",
       location: "Belo Horizonte, MG",
@@ -37,7 +37,7 @@ const Experience = () => {
       skills: ["Business Intelligence", "Análise de Negócios", "Gestão de Produtos"]
     },
     {
-      title: "Analista de Dados",
+      title: "Analista de dados",
       company: "Banco Mercantil",
       period: "Março 2019 - Janeiro 2021", 
       location: "Belo Horizonte, MG",
