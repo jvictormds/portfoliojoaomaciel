@@ -49,7 +49,7 @@ const Cases = () => {
   ];
 
   return (
-    <section id="cases" className="py-20 bg-muted/30">
+    <section id="cases" className="py-20 pb-5 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-4xl font-bold mb-4">{t.cases.title}</h2>

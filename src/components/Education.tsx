@@ -73,7 +73,7 @@ const Education = () => {
 
 
   return (
-    <section id="education" className="py-20 pb-2.5">
+    <section id="education" className="pt-5 pb-2.5">
       <div className="container mx-auto px-4">
 
         {/* Education */}
