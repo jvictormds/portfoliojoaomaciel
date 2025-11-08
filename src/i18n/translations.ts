@@ -90,7 +90,7 @@ export const translations = {
     
     // Cases
     cases: {
-      title: "Cases e Estudos",
+      title: "Cases",
       subtitle: "Estudos de caso e análises sobre gestão de produtos",
       readCase: "Ler case completo",
       openPdfNewTab: "Abrir em nova aba",
@@ -276,7 +276,7 @@ export const translations = {
     
     // Cases
     cases: {
-      title: "Cases & Studies",
+      title: "Cases",
       subtitle: "Case studies and analysis about product management",
       readCase: "Read full case",
       openPdfNewTab: "Open in new tab",
