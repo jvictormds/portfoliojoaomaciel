@@ -6,8 +6,8 @@ export const translations = {
         home: "Início",
         about: "Sobre",
         experience: "Experiência",
-        projects: "Entregas",
-        cases: "Cases",
+        projects: "Resultados",
+        cases: "Últimas publicações",
         education: "Formação",
         contact: "Contato"
       },
@@ -192,8 +192,8 @@ export const translations = {
         home: "Home",
         about: "About",
         experience: "Experience",
-        projects: "Deliverables",
-        cases: "Cases",
+        projects: "Results",
+        cases: "Latest publications",
         education: "Education",
         contact: "Contact"
       },
