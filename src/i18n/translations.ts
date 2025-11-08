@@ -38,7 +38,7 @@ export const translations = {
     // About
     about: {
       title: "Sobre mim",
-      intro: "7 anos de experiência no setor bancário, atuei como analista de dados, analista de segurança, analista de negócios e atualmente sou product manager na squad responsável pelo aplicativo Mercantil",
+      intro: "🎯 Product owner sênior (PSPO II) com 7 anos de experiência no setor financeiro, focado na estratégia de produto e na gestão do ciclo de vida de produtos digitais (App Mobile). Minha principal missão no Banco Mercantil é aumentar a adesão, aquisição e retenção no aplicativo, alinhando o produto aos OKRs de negócio.\n\n📈 Focado na otimização de performance e KPIs, colidero a estratégia que elevou a penetração de clientes no app de 52% (2023) para 80% (2025). Paralelamente, entregamos um aumento de +34% na base de clientes ativos totais e uma redução de -15% na perda de cadastros (via otimização de reconhecimento facial).\n\n📊 Para atingir esses resultados, utilizo uma forte vivência em roadmap, gestão de stakeholders, Product Discovery, Testes A/B e Análise de Dados, otimizando o fluxo de desenvolvimento ágil (Scrum) para reduzir o lead time e aumentar a velocidade de entrega de valor.",
       profile: {
         title: "Perfil Profissional",
         description1: "Apoio na estratégia do aplicativo do Banco Mercantil, alinhando requisitos ao plano de negócios e focado em impulsionar o crescimento da base de usuários ativos.",
