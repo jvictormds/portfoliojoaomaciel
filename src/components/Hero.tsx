@@ -39,13 +39,13 @@ const Hero = () => {
               </p>
 
               {/* Highlights */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-2">
+              <div className="flex flex-col gap-4 pt-2">
                 {highlights.map((highlight, index) => <div 
                     key={index} 
                     className="text-center p-5 bg-card rounded-lg shadow-medium border-2 border-border/50 hover:border-primary/30 transition-colors animate-fade-in"
                     style={{ animationDelay: `${index * 150}ms` }}
                   >
-                    <div className="text-base font-semibold text-primary leading-snug whitespace-nowrap">
+                    <div className="text-base font-semibold text-primary leading-snug">
                       {highlight}
                     </div>
                   </div>)}
