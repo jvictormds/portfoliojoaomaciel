@@ -34,7 +34,7 @@ const Hero = () => {
                 </h2>
               </div>
               
-              <p className="text-lg text-muted-foreground max-w-lg">
+              <p className="text-lg text-muted-foreground">
                 {t.hero.description}
               </p>
 
