@@ -10,8 +10,6 @@ const Experience = () => {
       title: "Product owner",
       company: "Banco Mercantil",
       period: "Abril 2021 - Presente",
-      location: "Belo Horizonte, MG",
-      type: "CLT",
       description: "Liderança de roadmap e visão estratégica para o aplicativo Mercantil, alinhando requisitos ao plano de negócios do banco.",
       achievements: [
         "+34% na base de clientes ativos no app (2020–2021)",
@@ -25,8 +23,6 @@ const Experience = () => {
       title: "Analista de negócios",
       company: "Banco Mercantil", 
       period: "Janeiro 2021 - Abril 2021",
-      location: "Belo Horizonte, MG",
-      type: "CLT",
       description: "Gestão e análise de performance de canais digitais. Atuação estratégica em BI, planejamento e gestão de produtos.",
       achievements: [
         "Implantação da Mel (IA conversacional) no Site e WhatsApp",
@@ -40,8 +36,6 @@ const Experience = () => {
       title: "Analista de dados",
       company: "Banco Mercantil",
       period: "Março 2019 - Janeiro 2021", 
-      location: "Belo Horizonte, MG",
-      type: "CLT",
       description: "Desenvolvimento de dashboards e painéis de acompanhamento de performance de canais digitais.",
       achievements: [
         "50% de todas as transações feitas diretamente pelos clientes no app",
