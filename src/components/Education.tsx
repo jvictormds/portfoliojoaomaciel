@@ -73,7 +73,7 @@ const Education = () => {
 
 
   return (
-    <section id="education" className="py-20">
+    <section id="education" className="py-20 pb-5">
       <div className="container mx-auto px-4">
         <div className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
