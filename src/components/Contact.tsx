@@ -57,13 +57,6 @@ const Contact = () => {
             {/* Quick Actions */}
             <div className="space-y-3">
                 <Button variant="outline" className="w-full justify-start" asChild>
-                  <a href="/curriculo-joao-maciel.pdf" download>
-                    <Download className="w-4 h-4 md:w-5 md:h-5" />
-                    {t.contact.actions.downloadCV}
-                  </a>
-                </Button>
-                
-                <Button variant="outline" className="w-full justify-start" asChild>
                   <a 
                     href="https://www.linkedin.com/in/jvictormds/" 
                     target="_blank" 
