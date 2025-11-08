@@ -68,14 +68,6 @@ const Education = () => {
       status: "Ativo",
       description: "Competências em Design Thinking e abordagem centrada no usuário para produtos e serviços.",
       level: "Especialização"
-    },
-    {
-      name: "Métricas de Negócios Digitais",
-      issuer: "PM3", 
-      date: "Outubro 2023",
-      status: "Ativo",
-      description: "Foco em indicadores essenciais para mensuração e otimização de performance digital.",
-      level: "Especialização"
     }
   ];
 
