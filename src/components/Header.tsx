@@ -41,7 +41,7 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-sm font-medium hover:text-primary transition-smooth"
+                className="text-sm font-medium text-foreground hover:text-primary transition-all duration-300 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
               >
                 {item.label}
               </button>
@@ -96,7 +96,7 @@ const Header = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-left text-sm font-medium hover:text-primary transition-smooth"
+                  className="text-left text-sm font-medium text-foreground hover:text-primary hover:translate-x-2 transition-all duration-300"
                 >
                   {item.label}
                 </button>
