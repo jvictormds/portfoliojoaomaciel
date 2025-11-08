@@ -33,9 +33,9 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.about.title}</h2>
-          <p className="text-muted-foreground max-w-5xl text-left whitespace-pre-line">
+          <div className="text-muted-foreground text-left whitespace-pre-line leading-relaxed">
             {t.about.intro}
-          </p>
+          </div>
         </div>
 
         <div className="mb-16">
