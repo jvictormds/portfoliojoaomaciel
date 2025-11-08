@@ -227,34 +227,6 @@ const Projects = () => {
         expansion: "+59% WhatsApp",
         credit: "75M originação"
       }
-    },
-    {
-      title: "POC Ticketz.io para pós em Gestão e desenvolvimento de produtos digitais",
-      category: "Product Discovery",
-      period: "2022",
-      summary: "Facilitação do acesso a eventos relevantes no Brasil através de plataforma digital inovadora.",
-      image: "/placeholder-events.jpg",
-      challenge: "Democratizar o acesso a eventos de qualidade e criar uma experiência única para organizadores e participantes.",
-      role: "Product Manager e Discovery Lead", 
-      solution: [
-        "Pesquisa de mercado e análise competitiva",
-        "Definição de personas e jornadas do usuário", 
-        "Prototipagem e testes de usabilidade",
-        "Estratégia de go-to-market",
-        "Framework de métricas e KPIs"
-      ],
-      results: [
-        "DADO A VALIDAR: Modelo de negócio validado",
-        "DADO A VALIDAR: MVP definido",
-        "DADO A VALIDAR: Primeiros testes com usuários",
-        "Framework de descoberta de produtos implementado"
-      ],
-      technologies: ["Product Discovery", "Prototipagem", "Research", "Design Thinking"],
-      metrics: {
-        research: "Market fit",
-        prototype: "MVP ready",
-        validation: "User tested"
-      }
     }
   ];
 
@@ -316,12 +288,6 @@ const Projects = () => {
                     <img 
                       src={melChatbotPreview} 
                       alt="Conversa no WhatsApp com a Mel, chatbot do Banco Mercantil"
-                      className="w-full h-full object-contain max-h-[400px]"
-                    />
-                  ) : index === 7 ? (
-                    <img 
-                      src={ticketzShowcase} 
-                      alt="Ticketz.io - Plataforma de eventos mostrando múltiplos contextos de uso"
                       className="w-full h-full object-contain max-h-[400px]"
                     />
                   ) : (
