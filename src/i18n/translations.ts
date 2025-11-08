@@ -29,7 +29,7 @@ export const translations = {
         retention: "90% de reuso mensal"
       },
       cta: {
-        viewProjects: "Ver Projetos",
+        viewProjects: "Resultados",
         downloadCV: "Download CV",
         linkedin: "LinkedIn"
       }
@@ -215,7 +215,7 @@ export const translations = {
         retention: "90% monthly reuse"
       },
       cta: {
-        viewProjects: "View Projects",
+        viewProjects: "Results",
         downloadCV: "Download CV",
         linkedin: "LinkedIn"
       }
