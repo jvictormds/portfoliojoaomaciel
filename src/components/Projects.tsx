@@ -243,7 +243,11 @@ const Projects = () => {
         </div>
 
         <div className="space-y-8">
-          {projects.map((project, index) => (
+          {projects.map((project, index) => {
+            // Skip "Facilitação da forma de acesso" project (index 1)
+            if (index === 1) return null;
+            
+            return (
             <Card key={index} className="group hover:shadow-strong transition-smooth overflow-hidden">
               <div className="grid md:grid-cols-[300px_1fr] gap-0">
                 {/* Image Section - Left Side */}
@@ -344,14 +348,13 @@ const Projects = () => {
                     </div>
 
                     {/* View Case Button - Fixed at bottom */}
-                    {index !== 1 && (
-                      <Dialog>
-                        <DialogTrigger asChild>
-                          <Button variant="outline" className="w-full group-hover:border-primary transition-smooth mt-auto">
-                            {t.projects.viewCase}
-                            <ExternalLink className="w-4 h-4" />
-                          </Button>
-                        </DialogTrigger>
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button variant="outline" className="w-full group-hover:border-primary transition-smooth mt-auto">
+                          {t.projects.viewCase}
+                          <ExternalLink className="w-4 h-4" />
+                        </Button>
+                      </DialogTrigger>
                       
                       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
                         <DialogHeader>
@@ -578,12 +581,12 @@ const Projects = () => {
                         </div>
                       </DialogContent>
                     </Dialog>
-                    )}
                   </CardContent>
                 </div>
               </div>
             </Card>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
