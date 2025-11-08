@@ -36,6 +36,16 @@ const Cases = () => {
       pdfUrl: "/cases/case-inter-arcade.pdf",
       tags: t.cases.items.interArcade.tags,
     },
+    {
+      id: "acesso-app-mercantil",
+      title: t.cases.items.acessoAppMercantil.title,
+      subtitle: t.cases.items.acessoAppMercantil.subtitle,
+      description: t.cases.items.acessoAppMercantil.description,
+      category: t.cases.items.acessoAppMercantil.category,
+      year: "2024",
+      pdfUrl: "/cases/case-acesso-app-mercantil.pdf",
+      tags: t.cases.items.acessoAppMercantil.tags,
+    },
   ];
 
   return (
