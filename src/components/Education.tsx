@@ -144,13 +144,6 @@ const Education = () => {
                   </div>
                   
                   <p className="text-sm text-muted-foreground">{cert.description}</p>
-                  
-                  <Badge 
-                    variant={cert.status === "Ativo" ? "default" : "secondary"} 
-                    className="text-xs"
-                  >
-                    {cert.status === "Ativo" ? t.education.status.active : cert.status}
-                  </Badge>
                 </CardContent>
               </Card>
             ))}

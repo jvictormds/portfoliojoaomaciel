@@ -118,7 +118,7 @@ export const translations = {
       title: "Formação & Certificações",
       subtitle: "Formação acadêmica sólida e certificações reconhecidas internacionalmente em gestão de produtos e análise de negócios.",
       academic: "Formação Acadêmica",
-      certifications: "Principais Certificações",
+      certifications: "Principais certificações",
       courses: "Cursos Complementares",
       status: {
         ongoing: "Em andamento",
@@ -304,7 +304,7 @@ export const translations = {
       title: "Education & Certifications",
       subtitle: "Solid academic background and internationally recognized certifications in product management and business analysis.",
       academic: "Academic Education",
-      certifications: "Key Certifications",
+      certifications: "Key certifications",
       courses: "Additional Courses",
       status: {
         ongoing: "Ongoing",
