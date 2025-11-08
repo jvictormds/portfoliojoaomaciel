@@ -251,51 +251,51 @@ const Projects = () => {
             <Card key={index} className="group hover:shadow-strong transition-smooth overflow-hidden">
               <div className="grid md:grid-cols-[300px_1fr] gap-0">
                 {/* Image Section - Left Side */}
-                <div className="overflow-hidden bg-muted/30 flex items-center justify-center p-4">
+                <div className="overflow-hidden bg-muted/30 flex items-center justify-center p-6">
                   {index === 0 ? (
                     <img 
                       src={bancoMercantilApp} 
                       alt="Tela do aplicativo Banco Mercantil mostrando cartões Visa Diamante e ofertas para beneficiários do INSS"
-                      className="w-full h-full object-contain max-h-[400px]"
+                      className="w-full h-full object-contain max-h-[280px]"
                     />
                   ) : index === 1 ? (
                     <img 
                       src={acessoCpfPreview} 
                       alt="Tela de acesso do aplicativo Mercantil com login por CPF - versão simplificada"
-                      className="w-full h-full object-contain max-h-[400px]"
+                      className="w-full h-full object-contain max-h-[280px]"
                     />
                   ) : index === 2 ? (
                     <img 
                       src={acoesComerciais} 
                       alt="Exemplos de ações comerciais dinâmicas no aplicativo Mercantil mostrando diferentes ofertas de produtos e serviços"
-                      className="w-full h-full object-contain max-h-[400px]"
+                      className="w-full h-full object-contain max-h-[280px]"
                     />
                   ) : index === 3 ? (
                     <img 
                       src={modernizacaoAreaPreview} 
                       alt="Modernização da área inicial do aplicativo Mercantil - antes e depois"
-                      className="w-full h-full object-contain max-h-[400px]"
+                      className="w-full h-full object-contain max-h-[280px]"
                     />
                   ) : index === 4 ? (
                     <img 
                       src={novaMarcaPreview} 
                       alt="Comparação antes e depois da nova identidade visual do Banco Mercantil"
-                      className="w-full h-full object-contain max-h-[400px]"
+                      className="w-full h-full object-contain max-h-[280px]"
                     />
                   ) : index === 5 ? (
                     <img 
                       src={migracaoPreview} 
                       alt="Aplicativo Mercantil antes e depois da migração de Xamarin para linguagens nativas"
-                      className="w-full h-full object-contain max-h-[400px]"
+                      className="w-full h-full object-contain max-h-[280px]"
                     />
                   ) : index === 6 ? (
                     <img 
                       src={melChatbotPreview} 
                       alt="Conversa no WhatsApp com a Mel, chatbot do Banco Mercantil"
-                      className="w-full h-full object-contain max-h-[400px]"
+                      className="w-full h-full object-contain max-h-[280px]"
                     />
                   ) : (
-                    <div className="bg-gradient-primary flex items-center justify-center h-full w-full min-h-[300px]">
+                    <div className="bg-gradient-primary flex items-center justify-center h-full w-full min-h-[280px]">
                       <div className="text-center text-primary-foreground p-6">
                         <h4 className="font-semibold mb-2">{project.title}</h4>
                         <p className="text-sm opacity-90">Imagem do projeto a ser inserida</p>
