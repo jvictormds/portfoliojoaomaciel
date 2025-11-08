@@ -15,7 +15,7 @@ const Hero = () => {
     }
   };
   const highlights = [t.hero.highlights.growth, t.hero.highlights.credit, t.hero.highlights.retention];
-  return <section id="home" className="min-h-screen flex items-center justify-center pt-8 pb-1">
+  return <section id="home" className="min-h-screen flex items-center justify-center">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
