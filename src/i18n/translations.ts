@@ -21,7 +21,7 @@ export const translations = {
     hero: {
       role: "Product Manager",
       name: "João Maciel",
-      subtitle: "Product manager com foco em estratégia e resultados de negócio",
+      subtitle: "Product manager com foco em estratégia",
       description: "",
       highlights: {
         growth: "+ 28 p.p ativação de clientes desde 2023",
@@ -207,7 +207,7 @@ export const translations = {
     hero: {
       role: "Product Manager",
       name: "João Maciel",
-      subtitle: "Product manager focused on strategy and business results",
+      subtitle: "Product manager focused on strategy",
       description: "",
       highlights: {
         growth: "+ 28 p.p client activation since 2023",
