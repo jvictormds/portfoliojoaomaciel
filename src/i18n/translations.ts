@@ -100,7 +100,7 @@ export const translations = {
           title: "Inter Arcade",
           subtitle: "Ecossistema de gamificação do SuperApp Inter",
           description: "Case para aumentar a ativação de clientes do Banco Inter nos primeiros 30 dias",
-          category: "Estudo de Caso",
+          category: "Proposta para Banco Inter",
           tags: ["Gamificação", "Ativação", "Fintech", "UX"]
         },
         acessoAppMercantil: {
@@ -286,7 +286,7 @@ export const translations = {
           title: "Inter Arcade",
           subtitle: "Gamification ecosystem for Inter SuperApp",
           description: "Case study to increase customer activation at Banco Inter in the first 30 days",
-          category: "Case Study",
+          category: "Proposal for Banco Inter",
           tags: ["Gamification", "Activation", "Fintech", "UX"]
         },
         acessoAppMercantil: {
