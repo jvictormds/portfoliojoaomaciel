@@ -39,7 +39,7 @@ const Experience = () => {
     {
       title: "Analista de Dados",
       company: "Banco Mercantil",
-      period: "Janeiro 2020 - Janeiro 2021", 
+      period: "Março 2019 - Janeiro 2021", 
       location: "Belo Horizonte, MG",
       type: "CLT",
       description: "Desenvolvimento de dashboards e painéis de acompanhamento de performance de canais digitais.",
