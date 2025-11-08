@@ -91,7 +91,7 @@ export const translations = {
     // Cases
     cases: {
       title: "Últimas publicações",
-      subtitle: "Estudos de caso e análises sobre gestão de produtos",
+      subtitle: "Últimas publicações sobre as minhas entregas e resultados",
       readCase: "Ler case completo",
       openPdfNewTab: "Abrir em nova aba",
       pdfViewError: "Não foi possível exibir o PDF no navegador.",
@@ -277,7 +277,7 @@ export const translations = {
     // Cases
     cases: {
       title: "Latest publications",
-      subtitle: "Case studies and analysis about product management",
+      subtitle: "Latest publications about my deliverables and results",
       readCase: "Read full case",
       openPdfNewTab: "Open in new tab",
       pdfViewError: "Could not display PDF in browser.",
