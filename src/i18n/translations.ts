@@ -78,8 +78,8 @@ export const translations = {
     
     // Projects
     projects: {
-      title: "Entregas",
-      subtitle: "Principais projetos desenvolvidos com foco em inovação, crescimento e transformação digital.",
+      title: "Resultados",
+      subtitle: "Principais entregas e resultados dentro do Banco Mercantil",
       viewCase: "Ver mais detalhes",
       challenge: "Desafio",
       role: "Meu Papel",
@@ -264,8 +264,8 @@ export const translations = {
     
     // Projects
     projects: {
-      title: "Deliverables",
-      subtitle: "Main projects developed with focus on innovation, growth and digital transformation.",
+      title: "Results",
+      subtitle: "Main deliverables and results within Banco Mercantil",
       viewCase: "View more details",
       challenge: "Challenge",
       role: "My Role",
