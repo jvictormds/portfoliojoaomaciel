@@ -67,9 +67,7 @@ const Contact = () => {
             </div>
 
             {/* Quick Actions */}
-            <div className="space-y-4">
-              <h3 className="text-xl font-semibold mb-6">{t.contact.quickActions}</h3>
-              <div className="space-y-3">
+            <div className="space-y-3">
                 <Button variant="outline" className="w-full justify-start" asChild>
                   <a href="/curriculo-joao-maciel.pdf" download>
                     <Download className="w-4 h-4 md:w-5 md:h-5" />
@@ -98,7 +96,6 @@ const Contact = () => {
                     {t.contact.actions.scheduleCall}
                   </a>
                 </Button>
-              </div>
             </div>
           </div>
         </div>
