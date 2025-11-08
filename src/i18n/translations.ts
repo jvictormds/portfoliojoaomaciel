@@ -24,9 +24,9 @@ export const translations = {
       subtitle: "Gestor de produtos digitais com foco em resultados",
       description: "Especialista em gestão de produtos digitais no setor bancário, com foco em estratégica e resultados para o negócio.",
       highlights: {
-        growth: "+34% base de clientes ativos",
-        credit: "124% crescimento em crédito",
-        retention: "90% reuso de clientes"
+        growth: "+ 28 p.p ativação de clientes desde 2023",
+        credit: "+ 5.7 milhões de clientes ativados no app",
+        retention: "90% de reuso mensal"
       },
       cta: {
         viewProjects: "Ver Projetos",
@@ -210,9 +210,9 @@ export const translations = {
       subtitle: "Digital product manager focused on results",
       description: "Specialist in digital product management in the banking sector, with focus on strategy and business results.",
       highlights: {
-        growth: "+34% active customer base",
-        credit: "124% credit growth",
-        retention: "90% customer retention"
+        growth: "+ 28 p.p client activation since 2023",
+        credit: "+ 5.7 million customers activated in the app",
+        retention: "90% monthly reuse"
       },
       cta: {
         viewProjects: "View Projects",
