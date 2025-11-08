@@ -56,7 +56,7 @@ const Cases = () => {
           {cases.map((caseItem, index) => (
             <Card
               key={caseItem.id}
-              className="p-6 hover-scale transition-all duration-300 hover:shadow-lg border-l-4 border-l-purple-500"
+              className="p-6 hover-scale transition-all duration-300 hover:shadow-lg border-l-4 border-l-purple-500 flex flex-col h-full"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="flex items-start justify-between mb-4">
@@ -94,7 +94,8 @@ const Cases = () => {
                 ))}
               </div>
 
-              <Dialog>
+              <div className="mt-auto">
+                <Dialog>
                 <DialogTrigger asChild>
                   <Button
                     variant="default"
@@ -147,6 +148,7 @@ const Cases = () => {
                   </div>
                 </DialogContent>
               </Dialog>
+              </div>
             </Card>
           ))}
         </div>
