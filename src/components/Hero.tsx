@@ -42,7 +42,7 @@ const Hero = () => {
               <div className="flex flex-col gap-4 pt-2">
                 {highlights.map((highlight, index) => <div 
                     key={index} 
-                    className="p-5 bg-card rounded-lg shadow-medium border-2 border-border/50 hover:border-primary/30 transition-colors animate-fade-in max-w-md"
+                    className="p-5 bg-card rounded-lg shadow-medium border-2 border-border/50 hover:border-primary/30 transition-colors animate-fade-in w-fit"
                     style={{ animationDelay: `${index * 150}ms` }}
                   >
                     <div className="text-base font-semibold text-primary leading-snug text-left">
