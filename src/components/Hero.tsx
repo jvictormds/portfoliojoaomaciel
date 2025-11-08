@@ -19,9 +19,9 @@ const Hero = () => {
     { text: t.hero.highlights.credit, icon: CreditCard },
     { text: t.hero.highlights.retention, icon: Users }
   ];
-  return <section id="home" className="min-h-screen flex items-center justify-center py-12 lg:py-0 -mt-16">
+  return <section id="home" className="min-h-screen flex items-center justify-center py-12 lg:py-0 -mt-16 mb-16">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Content */}
           <div className="space-y-6 animate-fade-in order-2 lg:order-1">
             <div className="space-y-5">
@@ -90,8 +90,8 @@ const Hero = () => {
           {/* Right Column - Profile Image */}
           <div className="flex justify-center lg:justify-end animate-slide-up order-1 lg:order-2">
             <div className="relative">
-              <div className="w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-strong ring-4 ring-border/20">
-                <img src={profileImage} alt="João Maciel - Product Owner e Business Analyst" className="w-full h-full object-cover" />
+              <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-strong ring-4 ring-border/20">
+                <img src={profileImage} alt="João Maciel - Product Owner e Business Analyst" className="w-full h-full object-cover object-top" />
             </div>
             </div>
           </div>
