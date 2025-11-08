@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Download, ArrowDown, Linkedin, Mail } from "lucide-react";
+import { Download, ArrowDown, Linkedin, Mail, TrendingUp, CreditCard, Users } from "lucide-react";
 import profileImage from "@/assets/joao-profile-real.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -14,7 +14,11 @@ const Hero = () => {
       });
     }
   };
-  const highlights = [t.hero.highlights.growth, t.hero.highlights.credit, t.hero.highlights.retention];
+  const highlights = [
+    { text: t.hero.highlights.growth, icon: TrendingUp },
+    { text: t.hero.highlights.credit, icon: CreditCard },
+    { text: t.hero.highlights.retention, icon: Users }
+  ];
   return <section id="home" className="min-h-screen flex items-center justify-center py-12 lg:py-0 -mt-16">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
@@ -40,15 +44,23 @@ const Hero = () => {
 
               {/* Highlights */}
               <div className="flex flex-col gap-4 pt-2">
-                {highlights.map((highlight, index) => <div 
-                    key={index} 
-                    className="p-5 bg-card rounded-lg shadow-medium border-2 border-border/50 hover:border-primary/30 transition-colors animate-fade-in w-full max-w-sm"
-                    style={{ animationDelay: `${index * 150}ms` }}
-                  >
-                    <div className="text-base font-semibold text-primary leading-snug text-left">
-                      {highlight}
+                {highlights.map((highlight, index) => {
+                  const IconComponent = highlight.icon;
+                  return (
+                    <div 
+                      key={index} 
+                      className="p-5 bg-card rounded-lg shadow-medium border-2 border-border/50 hover:border-primary/30 transition-colors animate-fade-in w-full max-w-sm"
+                      style={{ animationDelay: `${index * 150}ms` }}
+                    >
+                      <div className="flex items-center gap-3">
+                        <IconComponent className="w-5 h-5 text-primary flex-shrink-0" />
+                        <div className="text-base font-semibold text-primary leading-snug text-left">
+                          {highlight.text}
+                        </div>
+                      </div>
                     </div>
-                  </div>)}
+                  );
+                })}
               </div>
             </div>
 
