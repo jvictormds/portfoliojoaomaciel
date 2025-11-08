@@ -107,8 +107,8 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
+        {/* Contact Information */}
+        <div className="max-w-2xl mx-auto">
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-semibold mb-6">
@@ -175,86 +175,6 @@ const Contact = () => {
               </div>
             </div>
           </div>
-
-          {/* Contact Form */}
-          <Card className="shadow-medium">
-            <CardHeader>
-              <CardTitle>{t.contact.formTitle}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="space-y-2">
-                  <Label htmlFor="name">{t.contact.labels.name}</Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    type="text"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                    placeholder={t.contact.placeholders.name}
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="email">{t.contact.labels.email}</Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    placeholder={t.contact.placeholders.email}
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="message">{t.contact.labels.message}</Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    required
-                    placeholder={t.contact.placeholders.message}
-                    rows={5}
-                  />
-                </div>
-
-                <div className="flex items-start space-x-2">
-                  <Checkbox
-                    id="consent"
-                    checked={formData.consent}
-                    onCheckedChange={handleConsentChange}
-                    required
-                  />
-                  <Label htmlFor="consent" className="text-sm leading-relaxed">
-                    {t.contact.consent}
-                  </Label>
-                </div>
-
-                <Button 
-                  type="submit" 
-                  className="w-full" 
-                  variant="hero"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? (
-                    <>
-                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                      {t.contact.actions.sending}
-                    </>
-                  ) : (
-                    <>
-                      <Send className="w-4 h-4" />
-                      {t.contact.actions.send}
-                    </>
-                  )}
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>
