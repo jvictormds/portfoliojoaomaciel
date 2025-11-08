@@ -21,9 +21,9 @@ const Header = () => {
 
   const navigationItems = [
     { label: t.header.nav.home, id: "home" },
+    { label: t.header.nav.cases, id: "cases" },
     { label: t.header.nav.experience, id: "experience" },
     { label: t.header.nav.projects, id: "projects" },
-    { label: t.header.nav.cases, id: "cases" },
   ];
 
   return (
