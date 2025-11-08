@@ -334,7 +334,7 @@ const Projects = () => {
                     </div>
 
                     {/* Technologies */}
-                    <div className="flex flex-wrap gap-1 flex-1">
+                    <div className="flex flex-wrap gap-1">
                       {project.technologies.slice(0, 3).map((tech, techIndex) => (
                         <Badge key={techIndex} variant="secondary" className="text-xs">
                           {tech}
