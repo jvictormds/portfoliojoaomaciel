@@ -75,14 +75,6 @@ const Education = () => {
   return (
     <section id="education" className="py-20 pb-2.5">
       <div className="container mx-auto px-4">
-        <div className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            {t.education.title}
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl">
-            {t.education.subtitle}
-          </p>
-        </div>
 
         {/* Education */}
         <div className="mb-16">
