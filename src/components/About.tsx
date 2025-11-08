@@ -38,21 +38,8 @@ const About = () => {
           </div>
         </div>
 
+        {/* Key Highlights */}
         <div className="mb-16">
-          {/* Professional Summary */}
-          <div className="space-y-6 mb-8">
-            <h3 className="text-2xl font-semibold">{t.about.profile.title}</h3>
-            <div className="space-y-4 text-muted-foreground">
-              <p>
-                {t.about.profile.description1}
-              </p>
-              <p>
-                {t.about.profile.description2}
-              </p>
-            </div>
-          </div>
-
-          {/* Key Highlights */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {highlights.map((item, index) => <Card key={index} className="border-none shadow-soft">
                 <CardContent className="p-6">
