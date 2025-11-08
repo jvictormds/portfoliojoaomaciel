@@ -22,7 +22,7 @@ export const translations = {
       role: "Product Manager",
       name: "João Maciel",
       subtitle: "Gestor de produtos digitais com foco em resultados",
-      description: "Especialista em gestão de produtos digitais no setor bancário, com foco em estratégica e resultados para o negócio.",
+      description: "",
       highlights: {
         growth: "+ 28 p.p ativação de clientes desde 2023",
         credit: "+ 5.7 milhões de clientes ativados no app",
@@ -208,7 +208,7 @@ export const translations = {
       role: "Product Manager",
       name: "João Maciel",
       subtitle: "Digital product manager focused on results",
-      description: "Specialist in digital product management in the banking sector, with focus on strategy and business results.",
+      description: "",
       highlights: {
         growth: "+ 28 p.p client activation since 2023",
         credit: "+ 5.7 million customers activated in the app",
