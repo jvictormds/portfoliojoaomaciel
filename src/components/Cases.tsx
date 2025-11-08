@@ -56,7 +56,11 @@ const Cases = () => {
           {cases.map((caseItem, index) => (
             <Card
               key={caseItem.id}
-              className="p-6 hover-scale transition-all duration-300 hover:shadow-lg border-l-4 border-l-purple-500 flex flex-col h-full"
+              className={`p-6 hover-scale transition-all duration-300 hover:shadow-lg border-l-4 flex flex-col h-full ${
+                caseItem.id === "inter-arcade"
+                  ? "border-l-orange-500"
+                  : "border-l-blue-500"
+              }`}
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="flex items-start justify-between mb-4">
@@ -75,7 +79,13 @@ const Cases = () => {
 
               <div className="mb-4">
                 <div className="flex items-start gap-3 mb-2">
-                  <FileText className="w-5 h-5 text-purple-600 dark:text-purple-400 mt-1 flex-shrink-0" />
+                  <FileText 
+                    className={`w-5 h-5 mt-1 flex-shrink-0 ${
+                      caseItem.id === "inter-arcade"
+                        ? "text-orange-600 dark:text-orange-400"
+                        : "text-blue-600 dark:text-blue-400"
+                    }`}
+                  />
                   <h3 className="text-xl font-bold">{caseItem.title}</h3>
                 </div>
                 <p className="text-sm text-muted-foreground italic mb-3">
@@ -104,7 +114,11 @@ const Cases = () => {
                   <Button
                     variant="default"
                     size="sm"
-                    className="w-full bg-purple-600 hover:bg-purple-700 dark:bg-purple-700 dark:hover:bg-purple-800"
+                    className={`w-full ${
+                      caseItem.id === "inter-arcade"
+                        ? "bg-orange-600 hover:bg-orange-700 dark:bg-orange-700 dark:hover:bg-orange-800"
+                        : "bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-800"
+                    }`}
                   >
                     <FileText className="w-4 h-4" />
                     {t.cases.readCase}
