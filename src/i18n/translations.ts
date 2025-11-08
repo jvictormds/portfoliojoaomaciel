@@ -78,7 +78,7 @@ export const translations = {
     
     // Projects
     projects: {
-      title: "Projetos & Cases",
+      title: "Entregas",
       subtitle: "Principais projetos desenvolvidos com foco em inovação, crescimento e transformação digital.",
       viewCase: "Ver Case Completo",
       challenge: "Desafio",
@@ -264,7 +264,7 @@ export const translations = {
     
     // Projects
     projects: {
-      title: "Projects & Cases",
+      title: "Deliverables",
       subtitle: "Main projects developed with focus on innovation, growth and digital transformation.",
       viewCase: "View Full Case",
       challenge: "Challenge",
