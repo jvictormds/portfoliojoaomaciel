@@ -71,7 +71,7 @@ export const translations = {
     
     // Experience
     experience: {
-      title: "Experiência Profissional",
+      title: "Principais experiências",
       achievements: "Principais Resultados",
       skillsUsed: "Competências Utilizadas"
     },
@@ -257,7 +257,7 @@ export const translations = {
     
     // Experience
     experience: {
-      title: "Professional Experience",
+      title: "Key experiences",
       achievements: "Key Results",
       skillsUsed: "Skills Used"
     },
