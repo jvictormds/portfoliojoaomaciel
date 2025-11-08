@@ -9,7 +9,7 @@ const Education = () => {
     {
       degree: "Business Analytics",
       institution: "Harvard Business School",
-      period: "2025 - Atual",
+      period: "2025",
       status: "Em andamento",
       type: "Especialização",
       description: "Análise de dados, Análise estatística, Análise de negócios, Inteligência Artificial (AI), Desenvolvimento de produtos, Estratégia digital e empresarial.",
