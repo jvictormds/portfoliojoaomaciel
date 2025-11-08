@@ -1,80 +1,9 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { Checkbox } from "@/components/ui/checkbox";
-import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, Linkedin, Download, Send, MapPin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
   const { t } = useLanguage();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-    consent: false
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleConsentChange = (checked: boolean) => {
-    setFormData(prev => ({
-      ...prev,
-      consent: checked
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!formData.consent) {
-      toast({
-        title: t.contact.toasts.consentRequired.title,
-        description: t.contact.toasts.consentRequired.description,
-        variant: "destructive"
-      });
-      return;
-    }
-
-    setIsSubmitting(true);
-    
-    // Simular envio do formulário
-    try {
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      toast({
-        title: t.contact.toasts.success.title,
-        description: t.contact.toasts.success.description,
-      });
-      
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
-        consent: false
-      });
-    } catch (error) {
-      toast({
-        title: t.contact.toasts.error.title,
-        description: t.contact.toasts.error.description,
-        variant: "destructive"
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   const contactInfo = [
     {
@@ -106,33 +35,40 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 pb-32 bg-muted/30">
       <div className="container mx-auto px-4">
+        <div className="max-w-6xl mx-auto">
+          {/* Section Title */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              {t.contact.infoTitle}
+            </h2>
+          </div>
 
-        {/* Contact Information */}
-        <div className="max-w-2xl mx-auto">
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-semibold mb-6">
-                {t.contact.infoTitle}
+          {/* Contact Grid - Responsive Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+            {/* Contact Information */}
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold mb-6">
+                {t.contact.labels.email}
               </h3>
-              <div className="space-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
                 {contactInfo.map((contact, index) => (
-                  <div key={index} className="flex items-center gap-4 p-4 bg-card rounded-lg shadow-soft">
-                    <div className="p-3 bg-primary/10 rounded-full">
-                      <contact.icon className="w-5 h-5 text-primary" />
+                  <div key={index} className="flex items-center gap-3 md:gap-4 p-3 md:p-4 bg-card rounded-lg shadow-soft hover:shadow-md transition-smooth">
+                    <div className="p-2 md:p-3 bg-primary/10 rounded-full shrink-0">
+                      <contact.icon className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                     </div>
-                    <div className="flex-1">
-                      <p className="text-sm font-medium text-muted-foreground">{contact.label}</p>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-xs md:text-sm font-medium text-muted-foreground">{contact.label}</p>
                       {contact.action ? (
                         <a 
                           href={contact.action}
-                          className="text-foreground hover:text-primary transition-smooth"
+                          className="text-sm md:text-base text-foreground hover:text-primary transition-smooth break-all"
                           target={contact.action.startsWith('http') ? '_blank' : undefined}
                           rel={contact.action.startsWith('http') ? 'noopener noreferrer' : undefined}
                         >
                           {contact.value}
                         </a>
                       ) : (
-                        <p className="text-foreground">{contact.value}</p>
+                        <p className="text-sm md:text-base text-foreground break-words">{contact.value}</p>
                       )}
                     </div>
                   </div>
@@ -142,11 +78,11 @@ const Contact = () => {
 
             {/* Quick Actions */}
             <div className="space-y-4">
-              <h4 className="text-lg font-semibold">{t.contact.quickActions}</h4>
+              <h3 className="text-xl font-semibold mb-6">{t.contact.quickActions}</h3>
               <div className="space-y-3">
                 <Button variant="outline" className="w-full justify-start" asChild>
                   <a href="/curriculo-joao-maciel.pdf" download>
-                    <Download className="w-4 h-4" />
+                    <Download className="w-4 h-4 md:w-5 md:h-5" />
                     {t.contact.actions.downloadCV}
                   </a>
                 </Button>
@@ -157,7 +93,7 @@ const Contact = () => {
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
-                    <Linkedin className="w-4 h-4" />
+                    <Linkedin className="w-4 h-4 md:w-5 md:h-5" />
                     {t.contact.actions.connectLinkedIn}
                   </a>
                 </Button>
@@ -168,7 +104,7 @@ const Contact = () => {
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
-                    <Send className="w-4 h-4" />
+                    <Send className="w-4 h-4 md:w-5 md:h-5" />
                     {t.contact.actions.scheduleCall}
                   </a>
                 </Button>
