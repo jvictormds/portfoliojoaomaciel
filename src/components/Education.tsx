@@ -79,14 +79,6 @@ const Education = () => {
     }
   ];
 
-  const additionalCourses = [
-    "IMERSÃO DADOS IA: Análises com Inteligência Artificial - Alura (Set/2023)",
-    "Product Discovery - Produtos Incríveis (Nov/2023)",
-    "Product Led Growth - Produtos Incríveis (Nov/2023)",
-    "Metodologias Ágeis - Escola Conquer (Ago/2023)",
-    "Big Data Fundamentos - Data Science Academy (Ago/2020)",
-    "Microsoft Power BI para Data Science - Data Science Academy (Dez/2019)"
-  ];
 
   return (
     <section id="education" className="py-20">
@@ -193,25 +185,6 @@ const Education = () => {
               </Card>
             ))}
           </div>
-        </div>
-
-        {/* Additional Courses */}
-        <div>
-          <h3 className="text-2xl font-semibold mb-6">
-            {t.education.courses}
-          </h3>
-          <Card className="shadow-soft">
-            <CardContent className="p-6">
-              <div className="grid md:grid-cols-2 gap-4">
-                {additionalCourses.map((course, index) => (
-                  <div key={index} className="flex items-start gap-2">
-                    <span className="text-primary">•</span>
-                    <span className="text-sm">{course}</span>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>
