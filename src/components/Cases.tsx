@@ -1,4 +1,4 @@
-import { FileText } from "lucide-react";
+import { FileText, ExternalLink } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -111,28 +111,41 @@ const Cases = () => {
                     {t.cases.readCase}
                   </Button>
                 </DialogTrigger>
-                <DialogContent className="max-w-6xl h-[90vh]">
-                  <DialogHeader>
-                    <DialogTitle>{caseItem.title}</DialogTitle>
+                <DialogContent className="max-w-[95vw] w-full h-[95vh] p-4 sm:p-6">
+                  <DialogHeader className="pb-4 flex-shrink-0">
+                    <div className="flex items-center justify-between gap-4">
+                      <DialogTitle className="flex-1">{caseItem.title}</DialogTitle>
+                      <Button variant="outline" size="sm" asChild>
+                        <a
+                          href={caseItem.pdfUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          {t.cases.openPdfNewTab}
+                        </a>
+                      </Button>
+                    </div>
                   </DialogHeader>
-                  <div className="w-full h-full flex flex-col gap-4">
+                  <div className="w-full h-[calc(95vh-120px)] overflow-hidden rounded-lg border border-border">
                     <object
                       data={caseItem.pdfUrl}
                       type="application/pdf"
-                      className="w-full flex-1 rounded-md"
+                      className="w-full h-full"
                     >
-                      <div className="flex flex-col items-center justify-center gap-4 p-8">
-                        <p className="text-muted-foreground text-center">
-                          Não foi possível exibir o PDF no navegador.
+                      <div className="flex flex-col items-center justify-center gap-6 p-8 h-full">
+                        <FileText className="w-16 h-16 text-muted-foreground" />
+                        <p className="text-muted-foreground text-center text-lg">
+                          {t.cases.pdfViewError}
                         </p>
-                        <Button asChild>
+                        <Button size="lg" asChild>
                           <a
                             href={caseItem.pdfUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <FileText className="w-4 h-4" />
-                            Abrir PDF em nova aba
+                            <ExternalLink className="w-5 h-5 mr-2" />
+                            {t.cases.openPdfNewTab}
                           </a>
                         </Button>
                       </div>

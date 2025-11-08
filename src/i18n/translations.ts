@@ -93,6 +93,8 @@ export const translations = {
       title: "Cases e Estudos",
       subtitle: "Estudos de caso e análises sobre gestão de produtos",
       readCase: "Ler case completo",
+      openPdfNewTab: "Abrir em nova aba",
+      pdfViewError: "Não foi possível exibir o PDF no navegador.",
       items: {
         interArcade: {
           title: "Inter Arcade",
@@ -277,6 +279,8 @@ export const translations = {
       title: "Cases & Studies",
       subtitle: "Case studies and analysis about product management",
       readCase: "Read full case",
+      openPdfNewTab: "Open in new tab",
+      pdfViewError: "Could not display PDF in browser.",
       items: {
         interArcade: {
           title: "Inter Arcade",
