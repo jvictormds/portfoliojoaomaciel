@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, TrendingUp } from "lucide-react";
+import { Calendar } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Experience = () => {
@@ -84,10 +84,6 @@ const Experience = () => {
                 
                 {/* Achievements */}
                 <div>
-                  <h5 className="font-semibold mb-3 flex items-center gap-2">
-                    <TrendingUp className="w-4 h-4 text-primary" />
-                    {t.experience.achievements}
-                  </h5>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {exp.achievements.map((achievement, achIndex) => (
                       <div key={achIndex} className="flex items-start gap-2 text-sm">
