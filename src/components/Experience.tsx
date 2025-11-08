@@ -50,21 +50,6 @@ const Experience = () => {
       ],
       skills: ["Power BI", "SQL", "SSIS", "APIs", "Análise de Dados"]
     },
-    {
-      title: "Jogador e Vendedor",
-      company: "Perfect World International",
-      period: "Agosto 2019 - Junho 2020",
-      location: "Remoto",
-      type: "Autônomo",
-      description: "Empreendedorismo digital no gaming, comercialização de itens e moedas virtuais com foco no mercado internacional.",
-      achievements: [
-        "Faturamento de mais de R$ 60.000",
-        "Lucro líquido de 33%",
-        "Construção de comunidade no Discord para intermediação",
-        "Identificação de oportunidades de arbitragem de moedas"
-      ],
-      skills: ["Empreendedorismo", "Negociação", "Community Building", "E-commerce"]
-    }
   ];
 
   return (
