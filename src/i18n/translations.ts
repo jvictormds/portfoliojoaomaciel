@@ -108,7 +108,7 @@ export const translations = {
           subtitle: "Como eliminamos R$ 300 mil em custos e alavancamos o crescimento",
           description: "Um case real de produto no Banco Mercantil: quando remover fricção se torna estratégia de crescimento, eficiência operacional e descoberta de novos segmentos.",
           category: "Product management - Banco Mercantil",
-          tags: ["UX", "Mobile", "Redução de Custos", "Analytics", "Banking"]
+          tags: ["Mobile", "Redução de Custos", "Analytics"]
         }
       }
     },
@@ -294,7 +294,7 @@ export const translations = {
           subtitle: "How we eliminated R$ 300K in costs and leveraged growth",
           description: "A real product case at Banco Mercantil: when removing friction becomes a strategy for growth, operational efficiency and discovery of new segments.",
           category: "Product management - Banco Mercantil",
-          tags: ["UX", "Mobile", "Cost Reduction", "Analytics", "Banking"]
+          tags: ["Mobile", "Cost Reduction", "Analytics"]
         }
       }
     },
