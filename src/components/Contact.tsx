@@ -36,20 +36,10 @@ const Contact = () => {
     <section id="contact" className="py-20 pb-32 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          {/* Section Title */}
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              {t.contact.infoTitle}
-            </h2>
-          </div>
-
           {/* Contact Grid - Responsive Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Contact Information */}
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold mb-6">
-                {t.contact.labels.email}
-              </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
                 {contactInfo.map((contact, index) => (
                   <div key={index} className="flex items-center gap-3 md:gap-4 p-3 md:p-4 bg-card rounded-lg shadow-soft hover:shadow-md transition-smooth">
