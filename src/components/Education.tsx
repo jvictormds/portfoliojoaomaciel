@@ -7,7 +7,7 @@ const Education = () => {
   const { t } = useLanguage();
   const education = [
     {
-      degree: "Business Analytics",
+      degree: "Business analytics",
       institution: "Harvard Business School",
       period: "2025",
       status: "Em andamento",
@@ -16,7 +16,7 @@ const Education = () => {
       skills: ["Business Analytics", "AI", "Estratégia Digital", "KPIs", "Product Development"]
     },
     {
-      degree: "Gestão e Desenvolvimento de Produtos Digitais",
+      degree: "Gestão e desenvolvimento de produtos digitais",
       institution: "PUC Minas",
       period: "2022 - 2023",
       status: "Concluído",
