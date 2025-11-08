@@ -100,7 +100,6 @@ const Experience = () => {
 
                 {/* Skills */}
                 <div>
-                  <h5 className="font-semibold mb-3">{t.experience.skillsUsed}</h5>
                   <div className="flex flex-wrap gap-2">
                     {exp.skills.map((skill, skillIndex) => (
                       <Badge key={skillIndex} variant="secondary" className="text-xs">
