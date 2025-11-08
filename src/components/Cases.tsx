@@ -49,7 +49,7 @@ const Cases = () => {
   ];
 
   return (
-    <section id="cases" className="py-5 bg-muted/30">
+    <section id="cases" className="py-2.5 bg-muted/30">
       <div className="container mx-auto px-4">
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
