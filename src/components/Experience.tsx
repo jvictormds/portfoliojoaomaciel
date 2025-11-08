@@ -92,14 +92,14 @@ const Experience = () => {
                     <TrendingUp className="w-4 h-4 text-primary" />
                     {t.experience.achievements}
                   </h5>
-                  <ul className="space-y-2">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {exp.achievements.map((achievement, achIndex) => (
-                      <li key={achIndex} className="flex items-start gap-2 text-sm">
+                      <div key={achIndex} className="flex items-start gap-2 text-sm">
                         <span className="text-primary">•</span>
                         <span>{achievement}</span>
-                      </li>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
 
                 {/* Skills */}
