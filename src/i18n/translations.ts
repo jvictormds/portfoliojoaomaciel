@@ -80,7 +80,7 @@ export const translations = {
     projects: {
       title: "Entregas",
       subtitle: "Principais projetos desenvolvidos com foco em inovação, crescimento e transformação digital.",
-      viewCase: "Ver Case Completo",
+      viewCase: "Ver mais detalhes",
       challenge: "Desafio",
       role: "Meu Papel",
       solution: "Solução",
@@ -266,7 +266,7 @@ export const translations = {
     projects: {
       title: "Deliverables",
       subtitle: "Main projects developed with focus on innovation, growth and digital transformation.",
-      viewCase: "View Full Case",
+      viewCase: "View more details",
       challenge: "Challenge",
       role: "My Role",
       solution: "Solution",

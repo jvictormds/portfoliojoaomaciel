@@ -237,7 +237,7 @@ const Projects = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             {t.projects.title}
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-4xl">
             {t.projects.subtitle}
           </p>
         </div>
@@ -315,7 +315,7 @@ const Projects = () => {
                     </h3>
                   </CardHeader>
                   
-                  <CardContent className="space-y-4 flex-1">
+                  <CardContent className="space-y-4 flex-1 flex flex-col">
                     <p className="text-sm text-muted-foreground">
                       {project.summary}
                     </p>
@@ -330,7 +330,7 @@ const Projects = () => {
                     </div>
 
                     {/* Technologies */}
-                    <div className="flex flex-wrap gap-1">
+                    <div className="flex flex-wrap gap-1 flex-1">
                       {project.technologies.slice(0, 3).map((tech, techIndex) => (
                         <Badge key={techIndex} variant="secondary" className="text-xs">
                           {tech}
@@ -343,14 +343,15 @@ const Projects = () => {
                       )}
                     </div>
 
-                    {/* View Case Button */}
-                    <Dialog>
-                      <DialogTrigger asChild>
-                        <Button variant="outline" className="w-full group-hover:border-primary transition-smooth">
-                          {t.projects.viewCase}
-                          <ExternalLink className="w-4 h-4" />
-                        </Button>
-                      </DialogTrigger>
+                    {/* View Case Button - Fixed at bottom */}
+                    {index !== 1 && (
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <Button variant="outline" className="w-full group-hover:border-primary transition-smooth mt-auto">
+                            {t.projects.viewCase}
+                            <ExternalLink className="w-4 h-4" />
+                          </Button>
+                        </DialogTrigger>
                       
                       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
                         <DialogHeader>
@@ -577,6 +578,7 @@ const Projects = () => {
                         </div>
                       </DialogContent>
                     </Dialog>
+                    )}
                   </CardContent>
                 </div>
               </div>
