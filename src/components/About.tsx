@@ -38,8 +38,8 @@ const About = () => {
           </div>
         </div>
 
-        {/* Key Highlights */}
-        <div className="mb-16">
+        {/* Key Highlights - Disabled */}
+        {/* <div className="mb-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {highlights.map((item, index) => <Card key={index} className="border-none shadow-soft">
                 <CardContent className="p-6">
@@ -49,11 +49,10 @@ const About = () => {
                 </CardContent>
               </Card>)}
           </div>
-        </div>
+        </div> */}
 
-        {/* Skills Section */}
-        <div className="grid lg:grid-cols-3 gap-8">
-          {/* Hard Skills */}
+        {/* Skills Section - Disabled */}
+        {/* <div className="grid lg:grid-cols-3 gap-8">
           <div className="space-y-4">
             <h3 className="text-xl font-semibold">{t.about.skills.hard}</h3>
             <div className="flex flex-wrap gap-2">
@@ -63,7 +62,6 @@ const About = () => {
             </div>
           </div>
 
-          {/* Soft Skills */}
           <div className="space-y-4">
             <h3 className="text-xl font-semibold">{t.about.skills.soft}</h3>
             <div className="flex flex-wrap gap-2">
@@ -73,7 +71,6 @@ const About = () => {
             </div>
           </div>
 
-          {/* Languages */}
           <div className="space-y-4">
             <h3 className="text-xl font-semibold">{t.about.skills.languages}</h3>
             <div className="space-y-3">
@@ -83,7 +80,7 @@ const About = () => {
                 </div>)}
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>;
 };
