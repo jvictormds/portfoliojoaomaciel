@@ -32,7 +32,7 @@ const Cases = () => {
       subtitle: t.cases.items.aberturaContasMercantil.subtitle,
       description: t.cases.items.aberturaContasMercantil.description,
       category: t.cases.items.aberturaContasMercantil.category,
-      year: "2024",
+      year: "2025",
       pdfUrl: "/cases/case-abertura-contas-mercantil.pdf",
       tags: t.cases.items.aberturaContasMercantil.tags,
     },
