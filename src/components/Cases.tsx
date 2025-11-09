@@ -27,6 +27,16 @@ const Cases = () => {
 
   const cases: Case[] = [
     {
+      id: "abertura-contas-mercantil",
+      title: t.cases.items.aberturaContasMercantil.title,
+      subtitle: t.cases.items.aberturaContasMercantil.subtitle,
+      description: t.cases.items.aberturaContasMercantil.description,
+      category: t.cases.items.aberturaContasMercantil.category,
+      year: "2024",
+      pdfUrl: "/cases/case-abertura-contas-mercantil.pdf",
+      tags: t.cases.items.aberturaContasMercantil.tags,
+    },
+    {
       id: "inter-arcade",
       title: t.cases.items.interArcade.title,
       subtitle: t.cases.items.interArcade.subtitle,
@@ -65,7 +75,9 @@ const Cases = () => {
             <Card
               key={caseItem.id}
               className={`p-6 hover-scale transition-all duration-300 hover:shadow-lg border-l-4 flex flex-col h-full ${
-                caseItem.id === "inter-arcade"
+                caseItem.id === "abertura-contas-mercantil"
+                  ? "border-l-green-500"
+                  : caseItem.id === "inter-arcade"
                   ? "border-l-orange-500"
                   : "border-l-blue-500"
               }`}
@@ -75,7 +87,9 @@ const Cases = () => {
                 <Badge 
                   variant="secondary" 
                   className={
-                    caseItem.id === "inter-arcade"
+                    caseItem.id === "abertura-contas-mercantil"
+                      ? "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300"
+                      : caseItem.id === "inter-arcade"
                       ? "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300"
                       : "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300"
                   }
@@ -89,7 +103,9 @@ const Cases = () => {
                 <div className="flex items-start gap-3 mb-2">
                   <FileText 
                     className={`w-5 h-5 mt-1 flex-shrink-0 ${
-                      caseItem.id === "inter-arcade"
+                      caseItem.id === "abertura-contas-mercantil"
+                        ? "text-green-600 dark:text-green-400"
+                        : caseItem.id === "inter-arcade"
                         ? "text-orange-600 dark:text-orange-400"
                         : "text-blue-600 dark:text-blue-400"
                     }`}
@@ -123,7 +139,9 @@ const Cases = () => {
                     variant="default"
                     size="sm"
                     className={`w-full ${
-                      caseItem.id === "inter-arcade"
+                      caseItem.id === "abertura-contas-mercantil"
+                        ? "bg-green-600 hover:bg-green-700 dark:bg-green-700 dark:hover:bg-green-800"
+                        : caseItem.id === "inter-arcade"
                         ? "bg-orange-600 hover:bg-orange-700 dark:bg-orange-700 dark:hover:bg-orange-800"
                         : "bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-800"
                     }`}

@@ -96,6 +96,13 @@ export const translations = {
       openPdfNewTab: "Abrir em nova aba",
       pdfViewError: "Não foi possível exibir o PDF no navegador.",
       items: {
+        aberturaContasMercantil: {
+          title: "Abertura de contas aplicativo Mercantil",
+          subtitle: "De 30 mil leads a R$ 6,3 milhões em oportunidade",
+          description: "Como transformamos dados de comportamento do login por CPF em uma estratégia de crescimento que gerou 4.8 mil novas contas mensais para beneficiários INSS.",
+          category: "Product Design & Growth",
+          tags: ["Product Design", "Growth Strategy", "UX Research", "Data Analysis", "INSS"]
+        },
         interArcade: {
           title: "Inter Arcade",
           subtitle: "Ecossistema de gamificação do SuperApp Inter",
@@ -282,6 +289,13 @@ export const translations = {
       openPdfNewTab: "Open in new tab",
       pdfViewError: "Could not display PDF in browser.",
       items: {
+        aberturaContasMercantil: {
+          title: "Mercantil App Account Opening",
+          subtitle: "From 30k leads to R$ 6.3M opportunity",
+          description: "How we transformed CPF login behavior data into a growth strategy that generated 4.8k new monthly accounts for INSS beneficiaries.",
+          category: "Product Design & Growth",
+          tags: ["Product Design", "Growth Strategy", "UX Research", "Data Analysis", "INSS"]
+        },
         interArcade: {
           title: "Inter Arcade",
           subtitle: "Gamification ecosystem for Inter SuperApp",
