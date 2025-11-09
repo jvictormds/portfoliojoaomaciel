@@ -473,7 +473,7 @@ const Projects = () => {
                           )}
 
                           {/* Nova Marca Visual - Only for nova marca case */}
-                          {index === 3 && (
+                          {index === 4 && (
                             <div>
                               <h4 className="font-semibold mb-4">Comparação Visual: Antes vs Depois</h4>
                               <div className="space-y-4">
