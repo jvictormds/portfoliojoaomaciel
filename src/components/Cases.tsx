@@ -1,8 +1,9 @@
-import { FileText, ExternalLink } from "lucide-react";
+import { FileText, ExternalLink, Eye } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useIsMobile } from "@/hooks/use-mobile";
 import {
   Dialog,
   DialogContent,
@@ -10,6 +11,13 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import {
+  Drawer,
+  DrawerContent,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
 
 interface Case {
   id: string;
@@ -24,6 +32,7 @@ interface Case {
 
 const Cases = () => {
   const { t } = useLanguage();
+  const isMobile = useIsMobile();
 
   const cases: Case[] = [
     {
@@ -133,65 +142,128 @@ const Cases = () => {
               </div>
 
               <div className="mt-auto">
-                <Dialog>
-                <DialogTrigger asChild>
-                  <Button
-                    variant="default"
-                    size="sm"
-                    className={`w-full ${
-                      caseItem.id === "abertura-contas-mercantil"
-                        ? "bg-green-600 hover:bg-green-700 dark:bg-green-700 dark:hover:bg-green-800"
-                        : caseItem.id === "inter-arcade"
-                        ? "bg-orange-600 hover:bg-orange-700 dark:bg-orange-700 dark:hover:bg-orange-800"
-                        : "bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-800"
-                    }`}
-                  >
-                    <FileText className="w-4 h-4" />
-                    {t.cases.readCase}
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="max-w-[95vw] w-full h-[95vh] p-4 sm:p-6">
-                  <DialogHeader className="pb-4 flex-shrink-0">
-                    <div className="flex items-center justify-between gap-4">
-                      <DialogTitle className="flex-1">{caseItem.title}</DialogTitle>
-                      <Button variant="outline" size="sm" asChild>
-                        <a
-                          href={caseItem.pdfUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <ExternalLink className="w-4 h-4 mr-2" />
-                          {t.cases.openPdfNewTab}
-                        </a>
-                      </Button>
-                    </div>
-                  </DialogHeader>
-                  <div className="w-full h-[calc(95vh-120px)] overflow-hidden rounded-lg border border-border">
-                    <object
-                      data={caseItem.pdfUrl}
-                      type="application/pdf"
-                      className="w-full h-full"
+                {isMobile ? (
+                  <div className="flex flex-col gap-2">
+                    <Button
+                      variant="default"
+                      size="sm"
+                      className={`w-full ${
+                        caseItem.id === "abertura-contas-mercantil"
+                          ? "bg-green-600 hover:bg-green-700 dark:bg-green-700 dark:hover:bg-green-800"
+                          : caseItem.id === "inter-arcade"
+                          ? "bg-orange-600 hover:bg-orange-700 dark:bg-orange-700 dark:hover:bg-orange-800"
+                          : "bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-800"
+                      }`}
+                      asChild
                     >
-                      <div className="flex flex-col items-center justify-center gap-6 p-8 h-full">
-                        <FileText className="w-16 h-16 text-muted-foreground" />
-                        <p className="text-muted-foreground text-center text-lg">
-                          {t.cases.pdfViewError}
-                        </p>
-                        <Button size="lg" asChild>
-                          <a
-                            href={caseItem.pdfUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <ExternalLink className="w-5 h-5 mr-2" />
-                            {t.cases.openPdfNewTab}
-                          </a>
+                      <a
+                        href={caseItem.pdfUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        {t.cases.readCase}
+                      </a>
+                    </Button>
+                    <Drawer>
+                      <DrawerTrigger asChild>
+                        <Button variant="outline" size="sm" className="w-full">
+                          <Eye className="w-4 h-4" />
+                          {t.cases.preview || "Preview"}
                         </Button>
-                      </div>
-                    </object>
+                      </DrawerTrigger>
+                      <DrawerContent className="h-[85vh]">
+                        <DrawerHeader className="pb-4">
+                          <DrawerTitle>{caseItem.title}</DrawerTitle>
+                        </DrawerHeader>
+                        <div className="px-4 pb-4 h-[calc(85vh-80px)] overflow-hidden">
+                          <object
+                            data={caseItem.pdfUrl}
+                            type="application/pdf"
+                            className="w-full h-full rounded-lg border border-border"
+                          >
+                            <div className="flex flex-col items-center justify-center gap-4 p-6 h-full">
+                              <FileText className="w-12 h-12 text-muted-foreground" />
+                              <p className="text-muted-foreground text-center">
+                                {t.cases.pdfViewError}
+                              </p>
+                              <Button asChild>
+                                <a
+                                  href={caseItem.pdfUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  <ExternalLink className="w-4 h-4 mr-2" />
+                                  {t.cases.openPdfNewTab}
+                                </a>
+                              </Button>
+                            </div>
+                          </object>
+                        </div>
+                      </DrawerContent>
+                    </Drawer>
                   </div>
-                </DialogContent>
-              </Dialog>
+                ) : (
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button
+                        variant="default"
+                        size="sm"
+                        className={`w-full ${
+                          caseItem.id === "abertura-contas-mercantil"
+                            ? "bg-green-600 hover:bg-green-700 dark:bg-green-700 dark:hover:bg-green-800"
+                            : caseItem.id === "inter-arcade"
+                            ? "bg-orange-600 hover:bg-orange-700 dark:bg-orange-700 dark:hover:bg-orange-800"
+                            : "bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-800"
+                        }`}
+                      >
+                        <FileText className="w-4 h-4" />
+                        {t.cases.readCase}
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-[95vw] w-full h-[95vh] p-4 sm:p-6">
+                      <DialogHeader className="pb-4 flex-shrink-0">
+                        <div className="flex items-center justify-between gap-4">
+                          <DialogTitle className="flex-1">{caseItem.title}</DialogTitle>
+                          <Button variant="outline" size="sm" asChild>
+                            <a
+                              href={caseItem.pdfUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <ExternalLink className="w-4 h-4 mr-2" />
+                              {t.cases.openPdfNewTab}
+                            </a>
+                          </Button>
+                        </div>
+                      </DialogHeader>
+                      <div className="w-full h-[calc(95vh-120px)] overflow-hidden rounded-lg border border-border">
+                        <object
+                          data={caseItem.pdfUrl}
+                          type="application/pdf"
+                          className="w-full h-full"
+                        >
+                          <div className="flex flex-col items-center justify-center gap-6 p-8 h-full">
+                            <FileText className="w-16 h-16 text-muted-foreground" />
+                            <p className="text-muted-foreground text-center text-lg">
+                              {t.cases.pdfViewError}
+                            </p>
+                            <Button size="lg" asChild>
+                              <a
+                                href={caseItem.pdfUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <ExternalLink className="w-5 h-5 mr-2" />
+                                {t.cases.openPdfNewTab}
+                              </a>
+                            </Button>
+                          </div>
+                        </object>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
+                )}
               </div>
             </Card>
           ))}
