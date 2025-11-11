@@ -46,16 +46,6 @@ const Cases = () => {
       tags: t.cases.items.aberturaContasMercantil.tags,
     },
     {
-      id: "oferta-dinamica-mercantil",
-      title: t.cases.items.ofertaDinamicaMercantil.title,
-      subtitle: t.cases.items.ofertaDinamicaMercantil.subtitle,
-      description: t.cases.items.ofertaDinamicaMercantil.description,
-      category: t.cases.items.ofertaDinamicaMercantil.category,
-      year: "2025",
-      pdfUrl: "/cases/case-oferta-dinamica-mercantil.pdf",
-      tags: t.cases.items.ofertaDinamicaMercantil.tags,
-    },
-    {
       id: "inter-arcade",
       title: t.cases.items.interArcade.title,
       subtitle: t.cases.items.interArcade.subtitle,
@@ -74,6 +64,16 @@ const Cases = () => {
       year: "2024",
       pdfUrl: "/cases/case-acesso-app-mercantil.pdf",
       tags: t.cases.items.acessoAppMercantil.tags,
+    },
+    {
+      id: "oferta-dinamica-mercantil",
+      title: t.cases.items.ofertaDinamicaMercantil.title,
+      subtitle: t.cases.items.ofertaDinamicaMercantil.subtitle,
+      description: t.cases.items.ofertaDinamicaMercantil.description,
+      category: t.cases.items.ofertaDinamicaMercantil.category,
+      year: "2023",
+      pdfUrl: "/cases/case-oferta-dinamica-mercantil.pdf",
+      tags: t.cases.items.ofertaDinamicaMercantil.tags,
     },
   ];
 
