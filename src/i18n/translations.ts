@@ -103,6 +103,13 @@ export const translations = {
           category: "Product Design & Growth",
           tags: ["Product Design", "Growth Strategy", "UX Research", "Data Analysis", "INSS"]
         },
+        ofertaDinamicaMercantil: {
+          title: "Oferta de ações comerciais dinâmica",
+          subtitle: "De 2 semanas para 1 dia e R$ 344M em contratações",
+          description: "Como redesenhamos os modelos de oferta de produtos no app e escalamos a receita, transformando o canal em um motor de vendas com ofertas personalizadas.",
+          category: "Product Management - Banco Mercantil",
+          tags: ["CRM Integration", "Dynamic Offers", "Revenue Growth", "Marketing Automation", "Personalization"]
+        },
         interArcade: {
           title: "Inter Arcade",
           subtitle: "Ecossistema de gamificação do SuperApp Inter",
@@ -295,6 +302,13 @@ export const translations = {
           description: "How we transformed CPF login behavior data into a growth strategy that generated 4.8k new monthly accounts for INSS beneficiaries.",
           category: "Product Design & Growth",
           tags: ["Product Design", "Growth Strategy", "UX Research", "Data Analysis", "INSS"]
+        },
+        ofertaDinamicaMercantil: {
+          title: "Dynamic commercial offers",
+          subtitle: "From 2 weeks to 1 day and R$ 344M in contracts",
+          description: "How we redesigned product offer models in the app and scaled revenue, transforming the channel into a sales engine with personalized offers.",
+          category: "Product Management - Banco Mercantil",
+          tags: ["CRM Integration", "Dynamic Offers", "Revenue Growth", "Marketing Automation", "Personalization"]
         },
         interArcade: {
           title: "Inter Arcade",
