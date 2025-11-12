@@ -21,7 +21,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="pt-2.5 pb-32 bg-muted/30">
+    <section id="contact" className="pt-16 pb-16">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Compact Vertical Layout */}

@@ -29,9 +29,9 @@ const About = () => {
     title: t.about.highlights.leadership.title,
     description: t.about.highlights.leadership.description
   }];
-  return <section id="about" className="bg-muted/30 py-16">
+  return <section id="about" className="bg-muted/30 pt-16 pb-16">
       <div className="container mx-auto px-4">
-        <div className="mb-16">
+        <div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.about.title}</h2>
           <div className="text-muted-foreground text-left whitespace-pre-line leading-relaxed">
             {t.about.intro}

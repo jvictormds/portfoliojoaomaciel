@@ -78,9 +78,9 @@ const Cases = () => {
   ];
 
   return (
-    <section id="cases" className="py-20 bg-muted/30 -mt-20">
+    <section id="cases" className="pt-16 pb-16 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="mb-8">
+        <div className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             {t.cases.title}
           </h2>
