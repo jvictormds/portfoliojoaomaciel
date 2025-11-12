@@ -19,7 +19,7 @@ const Hero = () => {
     { text: t.hero.highlights.credit, icon: CreditCard },
     { text: t.hero.highlights.retention, icon: Users }
   ];
-  return <section id="home" className="min-h-screen flex items-center justify-center py-12 lg:py-0 -mt-16 mb-16">
+  return <section id="home" className="min-h-screen flex items-center justify-center pt-24 pb-16 lg:pt-0 lg:-mt-16 mb-16">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Content */}
