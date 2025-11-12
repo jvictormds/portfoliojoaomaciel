@@ -66,7 +66,7 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-3">
-              <Button variant="hero" size="lg" onClick={() => scrollToSection("projects")}>
+              <Button variant="hero" size="lg" onClick={() => scrollToSection("cases")}>
                 {t.hero.cta.viewProjects}
                 <ArrowDown className="w-4 h-4" />
               </Button>
