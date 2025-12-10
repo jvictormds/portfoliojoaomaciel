@@ -5,6 +5,7 @@ import Experience from "@/components/Experience";
 import Cases from "@/components/Cases";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
+import PWAInstallPrompt from "@/components/PWAInstallPrompt";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
         <Education />
         <Contact />
       </main>
+      <PWAInstallPrompt />
     </div>
   );
 };
