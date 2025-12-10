@@ -10,12 +10,22 @@ export function usePWAInstall() {
   const [isInstallable, setIsInstallable] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
   const [isDismissed, setIsDismissed] = useState(false);
+  const [isIOS, setIsIOS] = useState(false);
 
   useEffect(() => {
-    // Check if already installed
+    // Check if already installed (standalone mode)
     if (window.matchMedia("(display-mode: standalone)").matches) {
       setIsInstalled(true);
       return;
+    }
+
+    // Check if iOS Safari
+    const isIOSDevice = /iPad|iPhone|iPod/.test(navigator.userAgent) && !(window as any).MSStream;
+    const isInStandaloneMode = ('standalone' in window.navigator) && (window.navigator as any).standalone;
+    
+    if (isIOSDevice && !isInStandaloneMode) {
+      setIsIOS(true);
+      setIsInstallable(true);
     }
 
     // Check if dismissed in this session
@@ -68,6 +78,7 @@ export function usePWAInstall() {
   return {
     isInstallable: isInstallable && !isInstalled && !isDismissed,
     isInstalled,
+    isIOS,
     promptInstall,
     dismiss,
   };

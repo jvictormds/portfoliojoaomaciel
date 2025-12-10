@@ -204,6 +204,7 @@ export const translations = {
     pwa: {
       installTitle: "Instalar App",
       installDescription: "Adicione à tela inicial para acesso rápido",
+      installDescriptionIOS: "Toque em Compartilhar e depois \"Adicionar à Tela de Início\"",
       installButton: "Instalar"
     }
   },
@@ -413,6 +414,7 @@ export const translations = {
     pwa: {
       installTitle: "Install App",
       installDescription: "Add to home screen for quick access",
+      installDescriptionIOS: "Tap Share then \"Add to Home Screen\"",
       installButton: "Install"
     }
   }
