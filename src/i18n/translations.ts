@@ -198,6 +198,13 @@ export const translations = {
       privacy: "Política de Privacidade",
       terms: "Termos de Uso",
       backToTop: "Voltar ao topo"
+    },
+
+    // PWA
+    pwa: {
+      installTitle: "Instalar App",
+      installDescription: "Adicione à tela inicial para acesso rápido",
+      installButton: "Instalar"
     }
   },
   
@@ -400,6 +407,13 @@ export const translations = {
       privacy: "Privacy Policy",
       terms: "Terms of Use",
       backToTop: "Back to top"
+    },
+
+    // PWA
+    pwa: {
+      installTitle: "Install App",
+      installDescription: "Add to home screen for quick access",
+      installButton: "Install"
     }
   }
 };
