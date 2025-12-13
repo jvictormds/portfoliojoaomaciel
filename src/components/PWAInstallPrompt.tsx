@@ -26,16 +26,16 @@ const PWAInstallPrompt = () => {
           </div>
           <div className="flex-1 min-w-0">
             <h3 className="font-semibold text-sm text-foreground">
-              {t("pwa.installTitle")}
+              {t.pwa.installTitle}
             </h3>
             <p className="text-xs text-muted-foreground">
-              {isIOS ? t("pwa.installDescriptionIOS") : t("pwa.installDescription")}
+              {isIOS ? t.pwa.installDescriptionIOS : t.pwa.installDescription}
             </p>
           </div>
           <div className="flex items-center gap-2 flex-shrink-0">
             {!isIOS && (
               <Button size="sm" onClick={promptInstall}>
-                {t("pwa.installButton")}
+                {t.pwa.installButton}
               </Button>
             )}
             <Button
