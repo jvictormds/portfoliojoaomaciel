@@ -7,10 +7,15 @@
     <meta name="description" content="Product Manager | Mobile app">
     <meta name="author" content="João Maciel" />
     
-    <!-- Preload Critical Resources for iOS Performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="dns-prefetch" href="https://storage.googleapis.com" />
+    <!-- Critical CSS Inline - eliminates render-blocking requests -->
+    <style>
+      :root{--background:250 100% 98%;--foreground:210 11% 15%;--primary:213 94% 68%;--card:0 0% 100%;--muted:210 17% 95%;--muted-foreground:210 6% 46%;--border:210 20% 88%}
+      .dark{--background:210 11% 8%;--foreground:210 17% 90%;--card:210 11% 11%;--muted:210 11% 15%;--border:210 11% 15%}
+      *,::before,::after{box-sizing:border-box;border-width:0;border-style:solid}
+      html{line-height:1.5;-webkit-text-size-adjust:100%;font-family:ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji"}
+      body{margin:0;background-color:hsl(var(--background));color:hsl(var(--foreground));-webkit-font-smoothing:antialiased}
+      #root{min-height:100vh}
+    </style>
     
     <!-- Preload profile image for faster LCP -->
     <link rel="preload" as="image" href="/profile-hero.webp" type="image/webp" fetchpriority="high" />
