@@ -125,6 +125,13 @@ export const translations = {
           description: "Um case real de produto no Banco Mercantil: quando remover fricção se torna estratégia de crescimento, eficiência operacional e descoberta de novos segmentos.",
           category: "Product management - Banco Mercantil",
           tags: ["Mobile", "Redução de Custos", "Analytics"]
+        },
+        zarpLocaliza: {
+          title: "Zarp Carros Usados - Localiza&Co",
+          subtitle: "Dos objetivos estratégicos a um plano de produto",
+          description: "Planejamento 2025: Como definir OKRs e priorizar iniciativas para atacar o gargalo de aprovação de crédito e aumentar a velocidade de venda de carros usados.",
+          category: "Estudo de caso - Localiza&Co",
+          tags: ["OKRs", "Planejamento", "Product Strategy", "RICE", "Financiamento Digital"]
         }
       }
     },
@@ -335,6 +342,13 @@ export const translations = {
           description: "A real product case at Banco Mercantil: when removing friction becomes a strategy for growth, operational efficiency and discovery of new segments.",
           category: "Product management - Banco Mercantil",
           tags: ["Mobile", "Cost Reduction", "Analytics"]
+        },
+        zarpLocaliza: {
+          title: "Zarp Used Cars - Localiza&Co",
+          subtitle: "From strategic objectives to a product plan",
+          description: "2025 Planning: How to define OKRs and prioritize initiatives to tackle the credit approval bottleneck and increase used car sales velocity.",
+          category: "Case study - Localiza&Co",
+          tags: ["OKRs", "Planning", "Product Strategy", "RICE", "Digital Financing"]
         }
       }
     },
