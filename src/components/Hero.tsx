@@ -91,7 +91,16 @@ const Hero = () => {
           <div className="flex justify-center lg:justify-end animate-slide-up order-1 lg:order-2">
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-strong ring-4 ring-border/20">
-                <img src={profileImage} alt="João Maciel - Product Owner e Business Analyst" className="w-full h-full object-cover object-top" loading="lazy" />
+                <img 
+                  src={profileImage} 
+                  alt="João Maciel - Product Owner e Business Analyst" 
+                  className="w-full h-full object-cover object-top"
+                  width={384}
+                  height={384}
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                />
             </div>
             </div>
           </div>
