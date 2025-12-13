@@ -7,12 +7,22 @@ import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { toast } from '@/hooks/use-toast';
 import { Lock } from 'lucide-react';
-import { z } from 'zod';
 
-const loginSchema = z.object({
-  email: z.string().email('Email inválido').max(255, 'Email muito longo'),
-  password: z.string().min(6, 'Senha deve ter no mínimo 6 caracteres').max(100, 'Senha muito longa'),
-});
+const validateLogin = (email: string, password: string): string | null => {
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return 'Email inválido';
+  }
+  if (email.length > 255) {
+    return 'Email muito longo';
+  }
+  if (!password || password.length < 6) {
+    return 'Senha deve ter no mínimo 6 caracteres';
+  }
+  if (password.length > 100) {
+    return 'Senha muito longa';
+  }
+  return null;
+};
 
 const AdminLogin = () => {
   const [email, setEmail] = useState('');
@@ -32,11 +42,11 @@ const AdminLogin = () => {
     e.preventDefault();
     
     // Validate input
-    const validation = loginSchema.safeParse({ email, password });
-    if (!validation.success) {
+    const validationError = validateLogin(email, password);
+    if (validationError) {
       toast({
         title: "Erro de validação",
-        description: validation.error.errors[0].message,
+        description: validationError,
         variant: "destructive",
       });
       return;
