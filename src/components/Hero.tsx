@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Download, ArrowDown, Linkedin, Mail, TrendingUp, CreditCard, Users } from "lucide-react";
-import profileImage from "@/assets/joao-profile-real.jpg";
+import { Download, ArrowDown, Linkedin, TrendingUp, CreditCard, Users } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+
+// Usar imagem do public/ para evitar bundling e permitir preload
+const profileImageWebP = "/profile-hero.webp";
+const profileImageJpg = "/profile-hero.jpg";
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -91,17 +94,20 @@ const Hero = () => {
           <div className="flex justify-center lg:justify-end animate-slide-up order-1 lg:order-2">
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-strong ring-4 ring-border/20">
-                <img 
-                  src={profileImage} 
-                  alt="João Maciel - Product Owner e Business Analyst" 
-                  className="w-full h-full object-cover object-top"
-                  width={384}
-                  height={384}
-                  loading="eager"
-                  fetchPriority="high"
-                  decoding="async"
-                />
-            </div>
+                <picture>
+                  <source srcSet={profileImageWebP} type="image/webp" />
+                  <img 
+                    src={profileImageJpg} 
+                    alt="João Maciel - Product Owner e Business Analyst" 
+                    className="w-full h-full object-cover object-top"
+                    width={384}
+                    height={384}
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
+                  />
+                </picture>
+              </div>
             </div>
           </div>
         </div>
