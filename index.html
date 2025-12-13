@@ -113,7 +113,26 @@
 </head>
 
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Fallback content for iOS debugging -->
+      <div style="display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:system-ui,sans-serif;background:#f8fafc;">
+        <p style="color:#64748b;">Carregando...</p>
+      </div>
+    </div>
+    
+    <!-- Service Worker cleanup for iOS -->
+    <script>
+      (function() {
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.getRegistrations().then(function(registrations) {
+            for (var i = 0; i < registrations.length; i++) {
+              registrations[i].update();
+            }
+          });
+        }
+      })();
+    </script>
+    
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
