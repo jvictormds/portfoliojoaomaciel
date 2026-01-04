@@ -238,7 +238,7 @@ export const translations = {
     hero: {
       role: "AI Product Specialist",
       name: "João Maciel",
-      subtitle: "Product manager focused on strategy",
+      subtitle: "Product manager specialized in AI and Innovation",
       description: "",
       highlights: {
         growth: "+ 28 p.p client activation since 2023",
