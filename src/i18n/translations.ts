@@ -19,7 +19,7 @@ export const translations = {
     
     // Hero
     hero: {
-      role: "Product Manager",
+      role: "AI Product Specialist",
       name: "João Maciel",
       subtitle: "Product manager com foco em estratégia",
       description: "",
@@ -236,7 +236,7 @@ export const translations = {
     
     // Hero
     hero: {
-      role: "Product Manager",
+      role: "AI Product Specialist",
       name: "João Maciel",
       subtitle: "Product manager focused on strategy",
       description: "",
