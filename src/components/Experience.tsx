@@ -69,7 +69,7 @@ const Experience = () => {
               <CardHeader className="pb-4">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                   <div>
-                    <h3 className="text-xl font-semibold text-primary">{exp.title}</h3>
+                    <h3 className={`text-xl font-semibold ${exp.company === "Unimed BH" ? "text-emerald-700 dark:text-emerald-500" : "text-primary"}`}>{exp.title}</h3>
                     <h4 className="text-lg font-medium">{exp.company}</h4>
                   </div>
                   <div className="flex flex-col md:items-end gap-2">
