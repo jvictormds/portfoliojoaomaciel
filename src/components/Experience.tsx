@@ -7,6 +7,14 @@ const Experience = () => {
   const { t } = useLanguage();
   const experiences = [
     {
+      title: "Product Manager Especialista | IA & Inovação",
+      company: "Unimed BH",
+      period: "Janeiro 2026 - Presente",
+      description: "Liderança de roadmap de soluções de IA para o ecossistema interno e externo da Unimed e demais parceiros e clientes do Horizontes Hub.",
+      achievements: [],
+      skills: ["Product Management", "Inteligência Artificial", "Inovação", "GenAI", "Liderança", "Estratégia de Produto"]
+    },
+    {
       title: "Product owner",
       company: "Banco Mercantil",
       period: "Abril 2021 - Janeiro 2026",
