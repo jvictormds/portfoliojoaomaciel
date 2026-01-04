@@ -9,7 +9,7 @@ const Experience = () => {
     {
       title: "Product owner",
       company: "Banco Mercantil",
-      period: "Abril 2021 - Presente",
+      period: "Abril 2021 - Janeiro 2026",
       description: "Liderança de roadmap e visão estratégica para o aplicativo Mercantil, alinhando requisitos ao plano de negócios do banco.",
       achievements: [
         "+34% na base de clientes ativos no app (2020–2021)",
