@@ -95,6 +95,7 @@ export const translations = {
       categoryDeliveries: "Entregas e resultados",
       categoryCases: "Cases e estudos",
       readCase: "Ler case completo",
+      testCase: "Testar agora",
       openPdfNewTab: "Abrir em nova aba",
       pdfViewError: "Não foi possível exibir o PDF no navegador.",
       items: {
@@ -132,6 +133,13 @@ export const translations = {
           description: "Planejamento 2025: Como definir OKRs e priorizar iniciativas para atacar o gargalo de aprovação de crédito e aumentar a velocidade de venda de carros usados.",
           category: "Estudo de caso - Localiza&Co",
           tags: ["OKRs", "Planejamento", "Product Strategy", "RICE", "Financiamento Digital"]
+        },
+        ondeIrDigital: {
+          title: "Onde Ir Digital",
+          subtitle: "Do 'não sei pra onde ir' ao encaminhamento certo em menos de 1 minuto",
+          description: "Como transformamos a dúvida mais cara da jornada do beneficiário — 'qual canal de saúde devo usar agora?' — em uma triagem conversacional com IA, entregue dentro do WhatsApp, sem diagnóstico e com guardrails clínicos.",
+          category: "Product Management & IA — Unimed BH / Horizontes Hub",
+          tags: ["GenAI", "Conversational UX", "Triagem em saúde", "WhatsApp", "Prompt Engineering", "LLM Guardrails", "Discovery"]
         }
       }
     },
@@ -312,6 +320,7 @@ export const translations = {
       categoryDeliveries: "Deliveries and results",
       categoryCases: "Cases and studies",
       readCase: "Read full case",
+      testCase: "Try it now",
       openPdfNewTab: "Open in new tab",
       pdfViewError: "Could not display PDF in browser.",
       items: {
@@ -349,6 +358,13 @@ export const translations = {
           description: "2025 Planning: How to define OKRs and prioritize initiatives to tackle the credit approval bottleneck and increase used car sales velocity.",
           category: "Case study - Localiza&Co",
           tags: ["OKRs", "Planning", "Product Strategy", "RICE", "Digital Financing"]
+        },
+        ondeIrDigital: {
+          title: "Onde Ir Digital",
+          subtitle: "From 'I don't know where to go' to the right channel in under 1 minute",
+          description: "How we turned the costliest question in the member journey — 'which healthcare channel should I use now?' — into an AI conversational triage delivered inside WhatsApp, with no diagnosis and clinical guardrails.",
+          category: "Product Management & AI — Unimed BH / Horizontes Hub",
+          tags: ["GenAI", "Conversational UX", "Healthcare triage", "WhatsApp", "Prompt Engineering", "LLM Guardrails", "Discovery"]
         }
       }
     },

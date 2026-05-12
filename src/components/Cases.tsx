@@ -26,7 +26,8 @@ interface Case {
   description: string;
   category: string;
   year: string;
-  pdfUrl: string;
+  pdfUrl?: string;
+  testUrl?: string;
   tags: string[];
 }
 
@@ -90,6 +91,16 @@ const Cases = () => {
       pdfUrl: "/cases/case-inter-arcade.pdf",
       tags: t.cases.items.interArcade.tags,
     },
+    {
+      id: "onde-ir-digital",
+      title: t.cases.items.ondeIrDigital.title,
+      subtitle: t.cases.items.ondeIrDigital.subtitle,
+      description: t.cases.items.ondeIrDigital.description,
+      category: t.cases.items.ondeIrDigital.category,
+      year: "2026",
+      testUrl: "https://horizonteshub.com/ondeir",
+      tags: t.cases.items.ondeIrDigital.tags,
+    },
   ];
 
   return (
@@ -132,37 +143,58 @@ const Cases = () => {
   );
 };
 
+// Color theme map per case id
+const caseColors: Record<string, { border: string; badge: string; icon: string; button: string }> = {
+  "abertura-contas-mercantil": {
+    border: "border-l-green-500",
+    badge: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300",
+    icon: "text-green-600 dark:text-green-400",
+    button: "bg-green-600 hover:bg-green-700 dark:bg-green-700 dark:hover:bg-green-800",
+  },
+  "oferta-dinamica-mercantil": {
+    border: "border-l-purple-500",
+    badge: "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300",
+    icon: "text-purple-600 dark:text-purple-400",
+    button: "bg-purple-600 hover:bg-purple-700 dark:bg-purple-700 dark:hover:bg-purple-800",
+  },
+  "inter-arcade": {
+    border: "border-l-orange-500",
+    badge: "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300",
+    icon: "text-orange-600 dark:text-orange-400",
+    button: "bg-orange-600 hover:bg-orange-700 dark:bg-orange-700 dark:hover:bg-orange-800",
+  },
+  "zarp-localiza": {
+    border: "border-l-teal-500",
+    badge: "bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300",
+    icon: "text-teal-600 dark:text-teal-400",
+    button: "bg-teal-600 hover:bg-teal-700 dark:bg-teal-700 dark:hover:bg-teal-800",
+  },
+  "onde-ir-digital": {
+    border: "border-l-emerald-600",
+    badge: "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300",
+    icon: "text-emerald-700 dark:text-emerald-400",
+    button: "bg-emerald-700 hover:bg-emerald-800 dark:bg-emerald-700 dark:hover:bg-emerald-800",
+  },
+};
+
+const defaultColors = {
+  border: "border-l-blue-500",
+  badge: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300",
+  icon: "text-blue-600 dark:text-blue-400",
+  button: "bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-800",
+};
+
 // Extracted CaseCard component for reuse
-const CaseCard = ({ caseItem, index, isMobile, t }: { caseItem: Case; index: number; isMobile: boolean; t: any }) => (
+const CaseCard = ({ caseItem, index, isMobile, t }: { caseItem: Case; index: number; isMobile: boolean; t: any }) => {
+  const colors = caseColors[caseItem.id] ?? defaultColors;
+
+  return (
   <Card
-    className={`p-6 hover-scale transition-all duration-300 hover:shadow-lg border-l-4 flex flex-col h-full ${
-      caseItem.id === "abertura-contas-mercantil"
-        ? "border-l-green-500"
-        : caseItem.id === "oferta-dinamica-mercantil"
-        ? "border-l-purple-500"
-        : caseItem.id === "inter-arcade"
-        ? "border-l-orange-500"
-        : caseItem.id === "zarp-localiza"
-        ? "border-l-teal-500"
-        : "border-l-blue-500"
-    }`}
+    className={`p-6 hover-scale transition-all duration-300 hover:shadow-lg border-l-4 flex flex-col h-full ${colors.border}`}
     style={{ animationDelay: `${index * 100}ms` }}
   >
     <div className="flex items-start justify-between mb-4">
-      <Badge 
-        variant="secondary" 
-        className={
-          caseItem.id === "abertura-contas-mercantil"
-            ? "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300"
-            : caseItem.id === "oferta-dinamica-mercantil"
-            ? "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300"
-            : caseItem.id === "inter-arcade"
-            ? "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300"
-            : caseItem.id === "zarp-localiza"
-            ? "bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300"
-            : "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300"
-        }
-      >
+      <Badge variant="secondary" className={colors.badge}>
         {caseItem.category}
       </Badge>
       <span className="text-sm text-muted-foreground">{caseItem.year}</span>
@@ -170,19 +202,7 @@ const CaseCard = ({ caseItem, index, isMobile, t }: { caseItem: Case; index: num
 
     <div className="mb-4">
       <div className="flex items-start gap-3 mb-2">
-        <FileText 
-          className={`w-5 h-5 mt-1 flex-shrink-0 ${
-            caseItem.id === "abertura-contas-mercantil"
-              ? "text-green-600 dark:text-green-400"
-              : caseItem.id === "oferta-dinamica-mercantil"
-              ? "text-purple-600 dark:text-purple-400"
-              : caseItem.id === "inter-arcade"
-              ? "text-orange-600 dark:text-orange-400"
-              : caseItem.id === "zarp-localiza"
-              ? "text-teal-600 dark:text-teal-400"
-              : "text-blue-600 dark:text-blue-400"
-          }`}
-        />
+        <FileText className={`w-5 h-5 mt-1 flex-shrink-0 ${colors.icon}`} />
         <h3 className="text-xl font-bold">{caseItem.title}</h3>
       </div>
       <p className="text-sm text-muted-foreground italic mb-3">
@@ -195,149 +215,126 @@ const CaseCard = ({ caseItem, index, isMobile, t }: { caseItem: Case; index: num
 
     <div className="flex flex-wrap gap-2 mb-4">
       {caseItem.tags.map((tag, tagIndex) => (
-        <Badge
-          key={tagIndex}
-          variant="outline"
-          className="text-xs bg-muted/50"
-        >
+        <Badge key={tagIndex} variant="outline" className="text-xs bg-muted/50">
           {tag}
         </Badge>
       ))}
     </div>
 
-    <div className="mt-auto">
-      {isMobile ? (
-        <div className="flex flex-col gap-2">
-          <Button
-            variant="default"
-            size="sm"
-            className={`w-full ${
-              caseItem.id === "abertura-contas-mercantil"
-                ? "bg-green-600 hover:bg-green-700 dark:bg-green-700 dark:hover:bg-green-800"
-                : caseItem.id === "oferta-dinamica-mercantil"
-                ? "bg-purple-600 hover:bg-purple-700 dark:bg-purple-700 dark:hover:bg-purple-800"
-                : caseItem.id === "inter-arcade"
-                ? "bg-orange-600 hover:bg-orange-700 dark:bg-orange-700 dark:hover:bg-orange-800"
-                : caseItem.id === "zarp-localiza"
-                ? "bg-teal-600 hover:bg-teal-700 dark:bg-teal-700 dark:hover:bg-teal-800"
-                : "bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-800"
-            }`}
-            asChild
-          >
-            <a
-              href={caseItem.pdfUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+    <div className="mt-auto flex flex-col gap-2">
+      {caseItem.testUrl && (
+        <Button
+          variant="default"
+          size="sm"
+          className={`w-full ${colors.button}`}
+          asChild
+        >
+          <a href={caseItem.testUrl} target="_blank" rel="noopener noreferrer">
+            <ExternalLink className="w-4 h-4" />
+            {t.cases.testCase}
+          </a>
+        </Button>
+      )}
+
+      {caseItem.pdfUrl && (
+        isMobile ? (
+          <>
+            <Button
+              variant={caseItem.testUrl ? "outline" : "default"}
+              size="sm"
+              className={`w-full ${caseItem.testUrl ? "" : colors.button}`}
+              asChild
             >
-              <ExternalLink className="w-4 h-4" />
-              {t.cases.readCase}
-            </a>
-          </Button>
-          <Drawer>
-            <DrawerTrigger asChild>
-              <Button variant="outline" size="sm" className="w-full">
-                <Eye className="w-4 h-4" />
-                {t.cases.preview || "Preview"}
+              <a href={caseItem.pdfUrl} target="_blank" rel="noopener noreferrer">
+                <ExternalLink className="w-4 h-4" />
+                {t.cases.readCase}
+              </a>
+            </Button>
+            <Drawer>
+              <DrawerTrigger asChild>
+                <Button variant="outline" size="sm" className="w-full">
+                  <Eye className="w-4 h-4" />
+                  {t.cases.preview || "Preview"}
+                </Button>
+              </DrawerTrigger>
+              <DrawerContent className="h-[85vh]">
+                <DrawerHeader className="pb-4">
+                  <DrawerTitle>{caseItem.title}</DrawerTitle>
+                </DrawerHeader>
+                <div className="px-4 pb-4 h-[calc(85vh-80px)] overflow-hidden">
+                  <object
+                    data={caseItem.pdfUrl}
+                    type="application/pdf"
+                    className="w-full h-full rounded-lg border border-border"
+                  >
+                    <div className="flex flex-col items-center justify-center gap-4 p-6 h-full">
+                      <FileText className="w-12 h-12 text-muted-foreground" />
+                      <p className="text-muted-foreground text-center">
+                        {t.cases.pdfViewError}
+                      </p>
+                      <Button asChild>
+                        <a href={caseItem.pdfUrl} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          {t.cases.openPdfNewTab}
+                        </a>
+                      </Button>
+                    </div>
+                  </object>
+                </div>
+              </DrawerContent>
+            </Drawer>
+          </>
+        ) : (
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button
+                variant={caseItem.testUrl ? "outline" : "default"}
+                size="sm"
+                className={`w-full ${caseItem.testUrl ? "" : colors.button}`}
+              >
+                <FileText className="w-4 h-4" />
+                {t.cases.readCase}
               </Button>
-            </DrawerTrigger>
-            <DrawerContent className="h-[85vh]">
-              <DrawerHeader className="pb-4">
-                <DrawerTitle>{caseItem.title}</DrawerTitle>
-              </DrawerHeader>
-              <div className="px-4 pb-4 h-[calc(85vh-80px)] overflow-hidden">
+            </DialogTrigger>
+            <DialogContent className="max-w-[95vw] w-full h-[95vh] p-4 sm:p-6">
+              <DialogHeader className="pb-4 flex-shrink-0">
+                <div className="flex items-center justify-between gap-4">
+                  <DialogTitle className="flex-1">{caseItem.title}</DialogTitle>
+                  <Button variant="outline" size="sm" asChild>
+                    <a href={caseItem.pdfUrl} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      {t.cases.openPdfNewTab}
+                    </a>
+                  </Button>
+                </div>
+              </DialogHeader>
+              <div className="w-full h-[calc(95vh-120px)] overflow-hidden rounded-lg border border-border">
                 <object
                   data={caseItem.pdfUrl}
                   type="application/pdf"
-                  className="w-full h-full rounded-lg border border-border"
+                  className="w-full h-full"
                 >
-                  <div className="flex flex-col items-center justify-center gap-4 p-6 h-full">
-                    <FileText className="w-12 h-12 text-muted-foreground" />
-                    <p className="text-muted-foreground text-center">
+                  <div className="flex flex-col items-center justify-center gap-6 p-8 h-full">
+                    <FileText className="w-16 h-16 text-muted-foreground" />
+                    <p className="text-muted-foreground text-center text-lg">
                       {t.cases.pdfViewError}
                     </p>
-                    <Button asChild>
-                      <a
-                        href={caseItem.pdfUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <ExternalLink className="w-4 h-4 mr-2" />
+                    <Button size="lg" asChild>
+                      <a href={caseItem.pdfUrl} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-5 h-5 mr-2" />
                         {t.cases.openPdfNewTab}
                       </a>
                     </Button>
                   </div>
                 </object>
               </div>
-            </DrawerContent>
-          </Drawer>
-        </div>
-      ) : (
-        <Dialog>
-          <DialogTrigger asChild>
-            <Button
-              variant="default"
-              size="sm"
-              className={`w-full ${
-                caseItem.id === "abertura-contas-mercantil"
-                  ? "bg-green-600 hover:bg-green-700 dark:bg-green-700 dark:hover:bg-green-800"
-                  : caseItem.id === "oferta-dinamica-mercantil"
-                  ? "bg-purple-600 hover:bg-purple-700 dark:bg-purple-700 dark:hover:bg-purple-800"
-                  : caseItem.id === "inter-arcade"
-                  ? "bg-orange-600 hover:bg-orange-700 dark:bg-orange-700 dark:hover:bg-orange-800"
-                  : caseItem.id === "zarp-localiza"
-                  ? "bg-teal-600 hover:bg-teal-700 dark:bg-teal-700 dark:hover:bg-teal-800"
-                  : "bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-800"
-              }`}
-            >
-              <FileText className="w-4 h-4" />
-              {t.cases.readCase}
-            </Button>
-          </DialogTrigger>
-          <DialogContent className="max-w-[95vw] w-full h-[95vh] p-4 sm:p-6">
-            <DialogHeader className="pb-4 flex-shrink-0">
-              <div className="flex items-center justify-between gap-4">
-                <DialogTitle className="flex-1">{caseItem.title}</DialogTitle>
-                <Button variant="outline" size="sm" asChild>
-                  <a
-                    href={caseItem.pdfUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    {t.cases.openPdfNewTab}
-                  </a>
-                </Button>
-              </div>
-            </DialogHeader>
-            <div className="w-full h-[calc(95vh-120px)] overflow-hidden rounded-lg border border-border">
-              <object
-                data={caseItem.pdfUrl}
-                type="application/pdf"
-                className="w-full h-full"
-              >
-                <div className="flex flex-col items-center justify-center gap-6 p-8 h-full">
-                  <FileText className="w-16 h-16 text-muted-foreground" />
-                  <p className="text-muted-foreground text-center text-lg">
-                    {t.cases.pdfViewError}
-                  </p>
-                  <Button size="lg" asChild>
-                    <a
-                      href={caseItem.pdfUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <ExternalLink className="w-5 h-5 mr-2" />
-                      {t.cases.openPdfNewTab}
-                    </a>
-                  </Button>
-                </div>
-              </object>
-            </div>
-          </DialogContent>
-        </Dialog>
+            </DialogContent>
+          </Dialog>
+        )
       )}
     </div>
   </Card>
-);
+  );
+};
 
 export default Cases;
