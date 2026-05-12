@@ -320,6 +320,7 @@ export const translations = {
       categoryDeliveries: "Deliveries and results",
       categoryCases: "Cases and studies",
       readCase: "Read full case",
+      testCase: "Try it now",
       openPdfNewTab: "Open in new tab",
       pdfViewError: "Could not display PDF in browser.",
       items: {
