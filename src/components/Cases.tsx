@@ -91,6 +91,16 @@ const Cases = () => {
       pdfUrl: "/cases/case-inter-arcade.pdf",
       tags: t.cases.items.interArcade.tags,
     },
+    {
+      id: "onde-ir-digital",
+      title: t.cases.items.ondeIrDigital.title,
+      subtitle: t.cases.items.ondeIrDigital.subtitle,
+      description: t.cases.items.ondeIrDigital.description,
+      category: t.cases.items.ondeIrDigital.category,
+      year: "2026",
+      testUrl: "https://horizonteshub.com/ondeir",
+      tags: t.cases.items.ondeIrDigital.tags,
+    },
   ];
 
   return (
