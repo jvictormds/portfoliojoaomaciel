@@ -26,7 +26,8 @@ interface Case {
   description: string;
   category: string;
   year: string;
-  pdfUrl: string;
+  pdfUrl?: string;
+  testUrl?: string;
   tags: string[];
 }
 
