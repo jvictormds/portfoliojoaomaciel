@@ -133,6 +133,13 @@ export const translations = {
           description: "Planejamento 2025: Como definir OKRs e priorizar iniciativas para atacar o gargalo de aprovação de crédito e aumentar a velocidade de venda de carros usados.",
           category: "Estudo de caso - Localiza&Co",
           tags: ["OKRs", "Planejamento", "Product Strategy", "RICE", "Financiamento Digital"]
+        },
+        ondeIrDigital: {
+          title: "Onde Ir Digital",
+          subtitle: "Do 'não sei pra onde ir' ao encaminhamento certo em menos de 1 minuto",
+          description: "Como transformamos a dúvida mais cara da jornada do beneficiário — 'qual canal de saúde devo usar agora?' — em uma triagem conversacional com IA, entregue dentro do WhatsApp, sem diagnóstico e com guardrails clínicos.",
+          category: "Product Management & IA — Unimed BH / Horizontes Hub",
+          tags: ["GenAI", "Conversational UX", "Triagem em saúde", "WhatsApp", "Prompt Engineering", "LLM Guardrails", "Discovery"]
         }
       }
     },
