@@ -95,6 +95,7 @@ export const translations = {
       categoryDeliveries: "Entregas e resultados",
       categoryCases: "Cases e estudos",
       readCase: "Ler case completo",
+      testCase: "Testar agora",
       openPdfNewTab: "Abrir em nova aba",
       pdfViewError: "Não foi possível exibir o PDF no navegador.",
       items: {
