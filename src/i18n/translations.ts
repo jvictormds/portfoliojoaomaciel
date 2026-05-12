@@ -358,6 +358,13 @@ export const translations = {
           description: "2025 Planning: How to define OKRs and prioritize initiatives to tackle the credit approval bottleneck and increase used car sales velocity.",
           category: "Case study - Localiza&Co",
           tags: ["OKRs", "Planning", "Product Strategy", "RICE", "Digital Financing"]
+        },
+        ondeIrDigital: {
+          title: "Onde Ir Digital",
+          subtitle: "From 'I don't know where to go' to the right channel in under 1 minute",
+          description: "How we turned the costliest question in the member journey — 'which healthcare channel should I use now?' — into an AI conversational triage delivered inside WhatsApp, with no diagnosis and clinical guardrails.",
+          category: "Product Management & AI — Unimed BH / Horizontes Hub",
+          tags: ["GenAI", "Conversational UX", "Healthcare triage", "WhatsApp", "Prompt Engineering", "LLM Guardrails", "Discovery"]
         }
       }
     },
