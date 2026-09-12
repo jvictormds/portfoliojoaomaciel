@@ -1,36 +1,48 @@
-# Adicionar case "Onde Ir Digital"
+# Página do case "Onde Ir" — /cases/onde-ir
 
-## Onde entra
-Subseção **"Cases e estudos"** (ao lado do Inter Arcade e Zarp Localiza), pois é um piloto/POC do Horizontes Hub — Unimed BH.
+Criar uma subpágina dedicada ao case, com narrativa em dois atos (o produto dentro da Unimed-BH e a virada para produto de mercado), seguindo o design e a tipografia já usados no site.
 
-## Mudanças
+## Estrutura da página
 
-### 1. `src/i18n/translations.ts`
-Adicionar item `ondeIrDigital` em `cases.items` (PT e EN), no padrão dos demais:
+1. **Abertura** — título "Do 'não sei pra onde ir' ao encaminhamento certo em menos de 1 minuto", com 4 números de destaque (+80% adesão, +85% satisfação, +99% assertividade, +100 mil acessos) e dois botões: conhecer o produto e assistir à apresentação.
+2. **O desafio** — números assistenciais de 2025 e por que a decisão de "onde ir" é caríssima.
+3. **Ato 1 — dentro da Unimed-BH**
+   - A solução em 3 passos (conversa, interpretação, coordenação do cuidado)
+   - O produto na prática: carrossel com as telas do app
+   - Segurança clínica: protocolos, comitê médico, guardrails, contingência
+   - Ciclo de vida: linha do tempo de Ago 2024 a Ago 2026
+   - Bastidores e campanha de lançamento
+   - Resultados: bloco de tela cheia com o **18,4%** em destaque máximo
+   - Vídeo do AWS Summit (carrega só ao clicar)
+4. **Ato 2 — produto de mercado** (troca de paleta)
+   - A virada de chave
+   - Antes x Agora: arquitetura monolítica vs. multiagente + requisitos de produto (multi-tenant, LLM-agnóstico, escala)
+   - Tecnologia AWS (bloco compacto)
+   - Eficiência e retorno: ~29% de redução de custo, ROI 5,29% atual e 111,15% projetado
+   - O produto no mercado, com botão para ondeirdigital.horizonteshub.com.br
+5. **Fechamento** — "O que eu fiz neste case" (escrevo um rascunho em primeira pessoa para você revisar) + botões de contato/voltar aos cases.
 
-- **title:** "Onde Ir Digital"
-- **subtitle (PT):** "Do 'não sei pra onde ir' ao encaminhamento certo em menos de 1 minuto"
-- **description (PT):** Texto curto do card já fornecido pelo usuário
-- **category (PT):** "Product Management & IA — Unimed BH / Horizontes Hub"
-- **tags:** `["GenAI", "Conversational UX", "Triagem em saúde", "WhatsApp", "Prompt Engineering", "LLM Guardrails", "Discovery"]`
+## Imagens
 
-Adicionar também duas novas chaves de UI em `cases`:
-- `testCase: "Testar agora"` / `"Try it now"`
+Extraio as telas do app e a imagem do site do produto direto do PDF do AWS Summit que você enviou, recorto e otimizo para a web. Se alguma sair com qualidade baixa, eu aviso e você pode enviar a versão original.
 
-### 2. `src/components/Cases.tsx`
-- Estender a interface `Case` com campo opcional `testUrl?: string` (e `pdfUrl` opcional, já que este case não terá PDF inicialmente).
-- Adicionar `ondeIrDigital` ao array `studies` (ano `2026`, `testUrl: "https://horizonteshub.com/ondeir"`, sem `pdfUrl`).
-- Definir cor temática própria: **emerald** (verde Unimed) — borda do card, badge, ícone e botão.
-- Atualizar `CaseCard`:
-  - Se houver `testUrl` e não houver `pdfUrl`: renderizar **apenas** o botão "Testar agora" como `<a target="_blank">` com ícone `ExternalLink` (sem Dialog/Drawer de PDF).
-  - Se ambos existirem: mostrar "Testar agora" + "Ler case completo" (preparado para o futuro).
-  - Manter comportamento atual quando só houver `pdfUrl`.
+## Card na home
 
-### 3. Mapeamento de cores
-Adicionar branch `ondeIrDigital → emerald` nos blocos condicionais de cor (border-l, badge, ícone, botão) — mantendo o padrão atual de classes Tailwind por id.
+O card "Onde Ir Digital" passa a ter dois botões: **Ler case completo** (leva para a nova página) e **Testar agora** (link externo). O link externo é atualizado para ondeirdigital.horizonteshub.com.br.
 
-## Observação
-O texto longo da "página do case" não é exibido hoje (os cases longos vivem em PDFs). Quando você gerar/enviar o PDF, eu adiciono `pdfUrl: "/cases/case-onde-ir-digital.pdf"` e o botão "Ler case completo" aparece automaticamente.
+## Ritmo visual
 
-## Pergunta antes de implementar
-Quer que eu siga com o tema **verde Unimed (emerald)** para esse card e use a categoria exatamente como acima, ou prefere ajustar algo?
+Alternância de fundo claro/escuro a cada dois blocos, barra de âncoras fixa no topo ("O desafio · Unimed-BH · Resultados · Produto de mercado"), animações discretas de entrada, números grandes nos blocos de métrica. No celular: linha do tempo vertical e carrossel de telas com rolagem por encaixe.
+
+## Detalhes técnicos
+
+- Nova rota `/cases/onde-ir` em `src/App.tsx`, com carregamento sob demanda, e nova página em `src/pages/cases/OndeIr.tsx` dividida em componentes de bloco.
+- Conteúdo em pt-BR estruturado num arquivo de dados próprio do case, pronto para receber a versão EN depois (o toggle atual continua funcionando; a página abre em pt).
+- Extração de imagens do PDF com `pdfimages`, conversão para WebP e publicação via Lovable Assets.
+- YouTube com facade (thumbnail + iframe só no clique).
+- SEO por página: title "Onde Ir — Case de Product Management e IA | João Maciel", meta description do plano, Open Graph, um único H1, H2 por seção, alt em todas as imagens, contraste AA.
+- Reaproveitamento de Card, Badge e Button já existentes; nenhuma cor fora dos tokens do tema, com o verde Unimed como acento do case.
+
+## Pendência
+
+Ainda preciso do **link do vídeo no YouTube**. Sem ele, deixo o bloco do vídeo pronto e oculto, e ativo assim que você mandar o link.
