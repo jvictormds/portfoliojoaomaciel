@@ -92,10 +92,10 @@ export const ondeIrCase = {
     eyebrow: "O produto",
     title: "A nova porta de entrada do cliente Unimed-BH",
     screens: [
-      { src: telaApp.url, caption: "Início da jornada no app" },
-      { src: telaChat.url, caption: "O cliente inicia o chat com a IA" },
-      { src: telaConversa.url, caption: "Conversa e investigação dos sintomas" },
-      { src: telaAgendamento.url, caption: "Recomendação assistencial e agendamento" },
+      { src: telaApp, caption: "Início da jornada no app" },
+      { src: telaChat, caption: "O cliente inicia o chat com a IA" },
+      { src: telaConversa, caption: "Conversa e investigação dos sintomas" },
+      { src: telaAgendamento, caption: "Recomendação assistencial e agendamento" },
     ],
   },
 
@@ -274,7 +274,7 @@ export const ondeIrCase = {
     title: "Onde Ir Digital",
     text: "O produto que nasceu como solução interna hoje é ofertado para operadoras e cooperativas de todo o país, no marketplace de agentes de IA do Horizontes Hub.",
     cta: "Conhecer o Onde Ir Digital",
-    image: hubFoto.url,
+    image: hubFoto,
     imageAlt: "Escritório do Horizontes Hub, onde o Onde Ir Digital é desenvolvido",
   },
 
