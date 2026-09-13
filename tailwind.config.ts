@@ -47,6 +47,14 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        ondeir: {
+          DEFAULT: "hsl(var(--case-onde-ir))",
+          foreground: "hsl(var(--case-onde-ir-foreground))",
+          soft: "hsl(var(--case-onde-ir-soft))",
+          deep: "hsl(var(--case-onde-ir-deep))",
+          "deep-foreground": "hsl(var(--case-onde-ir-deep-foreground))",
+          accent: "hsl(var(--case-onde-ir-accent))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
