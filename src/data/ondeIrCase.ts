@@ -1,8 +1,8 @@
-import telaApp from "@/assets/onde-ir/tela-1-app.webp.asset.json";
-import telaChat from "@/assets/onde-ir/tela-2-chat.webp.asset.json";
-import telaConversa from "@/assets/onde-ir/tela-3-conversa.webp.asset.json";
-import telaAgendamento from "@/assets/onde-ir/tela-4-agendamento.webp.asset.json";
-import hubFoto from "@/assets/onde-ir/horizontes-hub.webp.asset.json";
+import telaApp from "@/assets/onde-ir/tela-1-app.webp";
+import telaChat from "@/assets/onde-ir/tela-2-chat.webp";
+import telaConversa from "@/assets/onde-ir/tela-3-conversa.webp";
+import telaAgendamento from "@/assets/onde-ir/tela-4-agendamento.webp";
+import hubFoto from "@/assets/onde-ir/horizontes-hub.webp";
 
 export const PRODUCT_URL = "https://ondeirdigital.horizonteshub.com.br";
 
