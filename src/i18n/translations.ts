@@ -140,6 +140,13 @@ export const translations = {
           description: "Como transformamos a dúvida mais cara da jornada do beneficiário — 'qual canal de saúde devo usar agora?' — em uma triagem conversacional com IA, entregue dentro do WhatsApp, sem diagnóstico e com guardrails clínicos.",
           category: "Product Management & IA — Unimed BH / Horizontes Hub",
           tags: ["GenAI", "Conversational UX", "Triagem em saúde", "WhatsApp", "Prompt Engineering", "LLM Guardrails", "Discovery"]
+        },
+        mais60Saude: {
+          title: "Mais 60 Saúde",
+          subtitle: "Agente de IA para acompanhamento assistencial de pacientes 60+ via WhatsApp",
+          description: "Um agente construído no Cogfy Messenger que conduz triagens periódicas em linguagem acolhedora, estrutura as respostas do paciente e gera resumos clínicos automáticos para a equipe de enfermagem.",
+          category: "Product Management & IA — HealthTech / Cogfy",
+          tags: ["GenAI", "HealthTech", "Conversational Design", "Prompt Engineering", "Cogfy Messenger", "WhatsApp", "Healthcare AI"]
         }
       }
     },
