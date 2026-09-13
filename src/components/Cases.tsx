@@ -1,4 +1,5 @@
 import { FileText, ExternalLink, Eye } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -28,6 +29,7 @@ interface Case {
   year: string;
   pdfUrl?: string;
   testUrl?: string;
+  pageUrl?: string;
   tags: string[];
 }
 
@@ -98,7 +100,8 @@ const Cases = () => {
       description: t.cases.items.ondeIrDigital.description,
       category: t.cases.items.ondeIrDigital.category,
       year: "2026",
-      testUrl: "https://horizonteshub.com/ondeir",
+      pageUrl: "/cases/onde-ir",
+      testUrl: "https://ondeirdigital.horizonteshub.com.br",
       tags: t.cases.items.ondeIrDigital.tags,
     },
   ];
@@ -222,11 +225,25 @@ const CaseCard = ({ caseItem, index, isMobile, t }: { caseItem: Case; index: num
     </div>
 
     <div className="mt-auto flex flex-col gap-2">
-      {caseItem.testUrl && (
+      {caseItem.pageUrl && (
         <Button
           variant="default"
           size="sm"
           className={`w-full ${colors.button}`}
+          asChild
+        >
+          <Link to={caseItem.pageUrl}>
+            <FileText className="w-4 h-4" />
+            {t.cases.readCase}
+          </Link>
+        </Button>
+      )}
+
+      {caseItem.testUrl && (
+        <Button
+          variant={caseItem.pageUrl ? "outline" : "default"}
+          size="sm"
+          className={`w-full ${caseItem.pageUrl ? "" : colors.button}`}
           asChild
         >
           <a href={caseItem.testUrl} target="_blank" rel="noopener noreferrer">

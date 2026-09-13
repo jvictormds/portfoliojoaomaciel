@@ -12,6 +12,9 @@ import NotFound from "./pages/NotFound";
 const AdminLogin = lazy(() => import("./pages/AdminLogin"));
 const AdminRoutes = lazy(() => import("./components/admin/AdminRoutes"));
 
+// Case pages - lazy loaded
+const CaseOndeIr = lazy(() => import("./pages/cases/OndeIr"));
+
 const App = () => (
   <LanguageProvider>
     <TooltipProvider>
@@ -21,6 +24,14 @@ const App = () => (
         <Routes>
           {/* Public routes - no auth or query overhead */}
           <Route path="/" element={<Index />} />
+          <Route
+            path="/cases/onde-ir"
+            element={
+              <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Carregando...</div>}>
+                <CaseOndeIr />
+              </Suspense>
+            }
+          />
           
           {/* Admin routes - lazy loaded with auth and QueryClientProvider */}
           <Route 
