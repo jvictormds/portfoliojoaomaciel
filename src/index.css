@@ -67,6 +67,14 @@ All colors MUST be HSL.
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Case "Onde Ir" — acento verde Unimed */
+    --case-onde-ir: 154 62% 32%;
+    --case-onde-ir-foreground: 0 0% 100%;
+    --case-onde-ir-soft: 154 45% 95%;
+    --case-onde-ir-deep: 172 55% 11%;
+    --case-onde-ir-deep-foreground: 154 30% 96%;
+    --case-onde-ir-accent: 300 32% 34%;
   }
 
   .dark {
@@ -110,6 +118,14 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Case "Onde Ir" — acento verde Unimed (escuro) */
+    --case-onde-ir: 154 55% 42%;
+    --case-onde-ir-foreground: 172 55% 8%;
+    --case-onde-ir-soft: 172 40% 14%;
+    --case-onde-ir-deep: 172 50% 8%;
+    --case-onde-ir-deep-foreground: 154 25% 92%;
+    --case-onde-ir-accent: 300 30% 62%;
   }
 }
 
