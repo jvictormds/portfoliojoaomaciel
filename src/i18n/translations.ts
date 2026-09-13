@@ -372,6 +372,13 @@ export const translations = {
           description: "How we turned the costliest question in the member journey — 'which healthcare channel should I use now?' — into an AI conversational triage delivered inside WhatsApp, with no diagnosis and clinical guardrails.",
           category: "Product Management & AI — Unimed BH / Horizontes Hub",
           tags: ["GenAI", "Conversational UX", "Healthcare triage", "WhatsApp", "Prompt Engineering", "LLM Guardrails", "Discovery"]
+        },
+        mais60Saude: {
+          title: "Mais 60 Saúde",
+          subtitle: "AI agent for care follow-up of 60+ patients over WhatsApp",
+          description: "An agent built on Cogfy Messenger that runs periodic check-ins in warm, simple language, structures the patient's answers and generates automatic clinical summaries for the nursing team.",
+          category: "Product Management & AI — HealthTech / Cogfy",
+          tags: ["GenAI", "HealthTech", "Conversational Design", "Prompt Engineering", "Cogfy Messenger", "WhatsApp", "Healthcare AI"]
         }
       }
     },
