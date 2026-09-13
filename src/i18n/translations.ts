@@ -396,8 +396,9 @@ export const translations = {
           category: "Product Management & AI — Unimed BH / Horizontes Hub",
           tags: ["GenAI", "Conversational Design", "Business AI", "Lead Qualification", "Prompt Engineering", "Cogfy Messenger", "WhatsApp"]
         }
-
+      }
     },
+
     
     // Education
     education: {
