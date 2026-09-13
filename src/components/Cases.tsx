@@ -28,6 +28,7 @@ interface Case {
   year: string;
   pdfUrl?: string;
   testUrl?: string;
+  pageUrl?: string;
   tags: string[];
 }
 
@@ -98,7 +99,8 @@ const Cases = () => {
       description: t.cases.items.ondeIrDigital.description,
       category: t.cases.items.ondeIrDigital.category,
       year: "2026",
-      testUrl: "https://horizonteshub.com/ondeir",
+      pageUrl: "/cases/onde-ir",
+      testUrl: "https://ondeirdigital.horizonteshub.com.br",
       tags: t.cases.items.ondeIrDigital.tags,
     },
   ];
