@@ -114,7 +114,18 @@ const Cases = () => {
       pageUrl: "/cases/mais-60-saude",
       tags: t.cases.items.mais60Saude.tags,
     },
+    {
+      id: "atendimento-horizontes-hub",
+      title: t.cases.items.atendimentoHorizontesHub.title,
+      subtitle: t.cases.items.atendimentoHorizontesHub.subtitle,
+      description: t.cases.items.atendimentoHorizontesHub.description,
+      category: t.cases.items.atendimentoHorizontesHub.category,
+      year: "2026",
+      pageUrl: "/cases/atendimento-horizontes-hub",
+      tags: t.cases.items.atendimentoHorizontesHub.tags,
+    },
   ];
+
 
   return (
     <section id="cases" className="pt-16 pb-16 bg-muted/30">
@@ -194,7 +205,14 @@ const caseColors: Record<string, { border: string; badge: string; icon: string; 
     icon: "text-emerald-700 dark:text-emerald-400",
     button: "bg-emerald-700 hover:bg-emerald-800 dark:bg-emerald-700 dark:hover:bg-emerald-800",
   },
+  "atendimento-horizontes-hub": {
+    border: "border-l-sky-600",
+    badge: "bg-sky-100 text-sky-800 dark:bg-sky-900/30 dark:text-sky-300",
+    icon: "text-sky-700 dark:text-sky-400",
+    button: "bg-sky-700 hover:bg-sky-800 dark:bg-sky-700 dark:hover:bg-sky-800",
+  },
 };
+
 
 const defaultColors = {
   border: "border-l-blue-500",

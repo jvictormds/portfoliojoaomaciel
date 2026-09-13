@@ -63,6 +63,15 @@ export default {
           "deep-foreground": "hsl(var(--case-mais60-deep-foreground))",
           accent: "hsl(var(--case-mais60-accent))",
         },
+        hub: {
+          DEFAULT: "hsl(var(--case-hub))",
+          foreground: "hsl(var(--case-hub-foreground))",
+          soft: "hsl(var(--case-hub-soft))",
+          deep: "hsl(var(--case-hub-deep))",
+          "deep-foreground": "hsl(var(--case-hub-deep-foreground))",
+          accent: "hsl(var(--case-hub-accent))",
+        },
+
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

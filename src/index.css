@@ -83,7 +83,16 @@ All colors MUST be HSL.
     --case-mais60-deep: 265 45% 13%;
     --case-mais60-deep-foreground: 265 25% 96%;
     --case-mais60-accent: 152 55% 38%;
+
+    /* Case "Atendimento Horizontes Hub" — acento azul-petróleo */
+    --case-hub: 196 78% 34%;
+    --case-hub-foreground: 0 0% 100%;
+    --case-hub-soft: 196 70% 95%;
+    --case-hub-deep: 202 60% 11%;
+    --case-hub-deep-foreground: 196 25% 96%;
+    --case-hub-accent: 168 60% 36%;
   }
+
 
   .dark {
     --background: 210 11% 8%;
@@ -142,7 +151,16 @@ All colors MUST be HSL.
     --case-mais60-deep: 265 40% 9%;
     --case-mais60-deep-foreground: 265 20% 93%;
     --case-mais60-accent: 152 45% 55%;
+
+    /* Case "Atendimento Horizontes Hub" — acento azul-petróleo (escuro) */
+    --case-hub: 196 75% 62%;
+    --case-hub-foreground: 202 60% 9%;
+    --case-hub-soft: 200 40% 16%;
+    --case-hub-deep: 202 55% 8%;
+    --case-hub-deep-foreground: 196 20% 93%;
+    --case-hub-accent: 168 50% 55%;
   }
+
 }
 
 @layer base {

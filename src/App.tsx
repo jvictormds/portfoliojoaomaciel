@@ -15,6 +15,8 @@ const AdminRoutes = lazy(() => import("./components/admin/AdminRoutes"));
 // Case pages - lazy loaded
 const CaseOndeIr = lazy(() => import("./pages/cases/OndeIr"));
 const CaseMais60 = lazy(() => import("./pages/cases/Mais60Saude"));
+const CaseHorizontesHub = lazy(() => import("./pages/cases/AtendimentoHorizontesHub"));
+
 
 const App = () => (
   <LanguageProvider>
@@ -41,6 +43,15 @@ const App = () => (
               </Suspense>
             }
           />
+          <Route
+            path="/cases/atendimento-horizontes-hub"
+            element={
+              <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Carregando...</div>}>
+                <CaseHorizontesHub />
+              </Suspense>
+            }
+          />
+
           
           {/* Admin routes - lazy loaded with auth and QueryClientProvider */}
           <Route 
