@@ -14,6 +14,7 @@ const AdminRoutes = lazy(() => import("./components/admin/AdminRoutes"));
 
 // Case pages - lazy loaded
 const CaseOndeIr = lazy(() => import("./pages/cases/OndeIr"));
+const CaseMais60 = lazy(() => import("./pages/cases/Mais60Saude"));
 
 const App = () => (
   <LanguageProvider>
@@ -29,6 +30,14 @@ const App = () => (
             element={
               <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Carregando...</div>}>
                 <CaseOndeIr />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/cases/mais-60-saude"
+            element={
+              <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Carregando...</div>}>
+                <CaseMais60 />
               </Suspense>
             }
           />

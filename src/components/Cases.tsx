@@ -104,6 +104,16 @@ const Cases = () => {
       testUrl: "https://ondeir.horizonteshub.com.br",
       tags: t.cases.items.ondeIrDigital.tags,
     },
+    {
+      id: "mais-60-saude",
+      title: t.cases.items.mais60Saude.title,
+      subtitle: t.cases.items.mais60Saude.subtitle,
+      description: t.cases.items.mais60Saude.description,
+      category: t.cases.items.mais60Saude.category,
+      year: "2026",
+      pageUrl: "/cases/mais-60-saude",
+      tags: t.cases.items.mais60Saude.tags,
+    },
   ];
 
   return (
@@ -171,6 +181,12 @@ const caseColors: Record<string, { border: string; badge: string; icon: string; 
     badge: "bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300",
     icon: "text-teal-600 dark:text-teal-400",
     button: "bg-teal-600 hover:bg-teal-700 dark:bg-teal-700 dark:hover:bg-teal-800",
+  },
+  "mais-60-saude": {
+    border: "border-l-violet-600",
+    badge: "bg-violet-100 text-violet-800 dark:bg-violet-900/30 dark:text-violet-300",
+    icon: "text-violet-700 dark:text-violet-400",
+    button: "bg-violet-700 hover:bg-violet-800 dark:bg-violet-700 dark:hover:bg-violet-800",
   },
   "onde-ir-digital": {
     border: "border-l-emerald-600",

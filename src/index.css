@@ -75,6 +75,14 @@ All colors MUST be HSL.
     --case-onde-ir-deep: 172 55% 11%;
     --case-onde-ir-deep-foreground: 154 30% 96%;
     --case-onde-ir-accent: 300 32% 34%;
+
+    /* Case "Mais 60 Saúde" — acento violeta da marca */
+    --case-mais60: 265 65% 45%;
+    --case-mais60-foreground: 0 0% 100%;
+    --case-mais60-soft: 265 60% 96%;
+    --case-mais60-deep: 265 45% 13%;
+    --case-mais60-deep-foreground: 265 25% 96%;
+    --case-mais60-accent: 152 55% 38%;
   }
 
   .dark {
@@ -126,6 +134,14 @@ All colors MUST be HSL.
     --case-onde-ir-deep: 172 50% 8%;
     --case-onde-ir-deep-foreground: 154 25% 92%;
     --case-onde-ir-accent: 300 30% 62%;
+
+    /* Case "Mais 60 Saúde" — acento violeta da marca (escuro) */
+    --case-mais60: 265 70% 70%;
+    --case-mais60-foreground: 265 45% 10%;
+    --case-mais60-soft: 265 35% 16%;
+    --case-mais60-deep: 265 40% 9%;
+    --case-mais60-deep-foreground: 265 20% 93%;
+    --case-mais60-accent: 152 45% 55%;
   }
 }
 
