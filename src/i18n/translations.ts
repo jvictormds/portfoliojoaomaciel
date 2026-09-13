@@ -147,7 +147,15 @@ export const translations = {
           description: "Um agente construído no Cogfy Messenger que conduz triagens periódicas em linguagem acolhedora, estrutura as respostas do paciente e gera resumos clínicos automáticos para a equipe de enfermagem.",
           category: "Product Management & IA — HealthTech / Cogfy",
           tags: ["GenAI", "HealthTech", "Conversational Design", "Prompt Engineering", "Cogfy Messenger", "WhatsApp", "Healthcare AI"]
+        },
+        atendimentoHorizontesHub: {
+          title: "Atendimento Horizontes Hub",
+          subtitle: "Agente de IA no WhatsApp para atendimento institucional e roteamento de negócios",
+          description: "Um agente construído no Cogfy Messenger que reconhece a intenção de cada contato — cliente, startup, parceiro ou investidor — responde com base no conteúdo oficial do Hub e direciona a pessoa para o canal correto de produtos, eventos, investimentos ou conexões.",
+          category: "Product Management & IA — Unimed BH / Horizontes Hub",
+          tags: ["GenAI", "Conversational Design", "Business AI", "Lead Qualification", "Prompt Engineering", "Cogfy Messenger", "WhatsApp"]
         }
+
       }
     },
     
@@ -380,7 +388,15 @@ export const translations = {
           category: "Product Management & AI — HealthTech / Cogfy",
           tags: ["GenAI", "HealthTech", "Conversational Design", "Prompt Engineering", "Cogfy Messenger", "WhatsApp", "Healthcare AI"]
         }
-      }
+        },
+        atendimentoHorizontesHub: {
+          title: "Horizontes Hub Support",
+          subtitle: "WhatsApp AI agent for institutional support and business routing",
+          description: "An agent built on Cogfy Messenger that recognises each contact's intent — customer, startup, partner or investor — answers from the Hub's official content and routes people to the right channel for products, events, investments or connections.",
+          category: "Product Management & AI — Unimed BH / Horizontes Hub",
+          tags: ["GenAI", "Conversational Design", "Business AI", "Lead Qualification", "Prompt Engineering", "Cogfy Messenger", "WhatsApp"]
+        }
+
     },
     
     // Education
