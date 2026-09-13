@@ -387,8 +387,8 @@ export const translations = {
           description: "An agent built on Cogfy Messenger that runs periodic check-ins in warm, simple language, structures the patient's answers and generates automatic clinical summaries for the nursing team.",
           category: "Product Management & AI — HealthTech / Cogfy",
           tags: ["GenAI", "HealthTech", "Conversational Design", "Prompt Engineering", "Cogfy Messenger", "WhatsApp", "Healthcare AI"]
-        }
         },
+
         atendimentoHorizontesHub: {
           title: "Horizontes Hub Support",
           subtitle: "WhatsApp AI agent for institutional support and business routing",
