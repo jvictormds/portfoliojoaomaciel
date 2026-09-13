@@ -4,7 +4,7 @@ import telaConversa from "@/assets/onde-ir/tela-3-conversa.webp";
 import telaAgendamento from "@/assets/onde-ir/tela-4-agendamento.webp";
 import hubFoto from "@/assets/onde-ir/horizontes-hub.webp";
 
-export const PRODUCT_URL = "https://ondeirdigital.horizonteshub.com.br";
+export const PRODUCT_URL = "https://ondeir.horizonteshub.com.br";
 
 /** Link do vídeo do AWS Summit. Enquanto vazio, o bloco do vídeo fica oculto. */
 export const YOUTUBE_URL = "";

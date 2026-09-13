@@ -101,7 +101,7 @@ const Cases = () => {
       category: t.cases.items.ondeIrDigital.category,
       year: "2026",
       pageUrl: "/cases/onde-ir",
-      testUrl: "https://ondeirdigital.horizonteshub.com.br",
+      testUrl: "https://ondeir.horizonteshub.com.br",
       tags: t.cases.items.ondeIrDigital.tags,
     },
   ];
