@@ -145,12 +145,13 @@ const Mais60Saude = () => {
                 </Reveal>
               </div>
 
-              <Reveal delay={200}>
+              <Reveal delay={200} className="mx-auto w-full max-w-[280px]">
                 <PhoneFrame
                   src={c.product.screens[0].src}
                   alt="Conversa de boas-vindas do agente Mais 60 Saúde no WhatsApp"
                   priority
                 />
+
                 <p className="mt-4 text-center text-xs text-muted-foreground">
                   {c.hero.demoNote}
                 </p>
